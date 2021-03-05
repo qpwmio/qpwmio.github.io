@@ -81,7 +81,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
-<li>邮箱：<a href="mailto:&#104;&#117;&#x73;&#x74;&#103;&#111;&#x63;&#107;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#104;&#117;&#x73;&#x74;&#103;&#111;&#x63;&#107;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#x68;&#117;&#x73;&#116;&#x67;&#111;&#99;&#107;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#x68;&#117;&#x73;&#116;&#x67;&#111;&#99;&#107;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
@@ -95,23 +95,6 @@
         <tag>post</tag>
         <tag>Markdown</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>考研规划</title>
-    <url>/2021/02/24/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#考研计划时间线</td></tr></table>
-    
-<span id="more"></span>
-# title1
-## title2
-### title3
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
-# categories:
- 列表：
- - computer
- - computer-aided-art
-
-]]></content>
   </entry>
   <entry>
     <title>Hello World/曹圣洁的第一篇博客</title>
@@ -181,11 +164,31 @@
       </tags>
   </entry>
   <entry>
+    <title>考研规划</title>
+    <url>/2021/02/24/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#考研计划时间线</td></tr></table>
+
+<span id="more"></span>
+
+<h1 id="title1"><a href="#title1" class="headerlink" title="title1"></a>title1</h1><h2 id="title2"><a href="#title2" class="headerlink" title="title2"></a>title2</h2><h3 id="title3"><a href="#title3" class="headerlink" title="title3"></a>title3</h3><p>More info: <a href="/source/_html/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92%E5%AF%BC%E5%9B%BE.html">Click</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
+<h1 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h1><p> 列表：</p>
+<ul>
+<li>computer</li>
+<li>computer-aided-art</li>
+</ul>
+]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+  </entry>
+  <entry>
     <title>音乐外链</title>
     <url>/2021/02/19/%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/</url>
     <content><![CDATA[<p>篝火旁</p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518725853&auto=0&height=66"></iframe>
 
+<p><img src="/images/Instagram.jpg"></p>
 ]]></content>
       <categories>
         <category>生活</category>
