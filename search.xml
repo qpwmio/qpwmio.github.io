@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Youtube-dl常见用法</title>
+    <url>/2021/03/26/Youtube-dl/</url>
+    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#导语</td></tr></table>
+
+<span id="more"></span>
+
+<p><a href="https://github.com/ytdl-org/youtube-dl/">youtube-dl</a> 是一款命令行下的视频下载工具，看着名称像是 YouTube 下载工具，其实这款工具不仅支持 YouTube ，还支持非常多的视频网站，比如优酷、爱奇艺、 bilibili 等，在写这篇日志的时候，暂时不支持腾讯视频。</p>
+<p><strong>youtube-dl 常用地址：</strong></p>
+<ul>
+<li>官网：<a href="https://ytdl-org.github.io/youtube-dl/index.html">https://ytdl-org.github.io/youtube-dl/index.html</a></li>
+<li>github：<a href="https://github.com/ytdl-org/youtube-dl/">https://github.com/ytdl-org/youtube-dl/</a></li>
+<li>支持的网站：<a href="https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md">https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md</a></li>
+</ul>
+<h2 id="youtube-dl-的安装"><a href="#youtube-dl-的安装" class="headerlink" title="youtube-dl 的安装"></a>youtube-dl 的安装</h2><p><strong>linux 下的安装方法：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;yt-dl.org&#x2F;downloads&#x2F;latest&#x2F;youtube-dl -O &#x2F;usr&#x2F;local&#x2F;bin&#x2F;youtube-dl</span><br><span class="line">chmod a+rx &#x2F;usr&#x2F;local&#x2F;bin&#x2F;youtube-dl</span><br></pre></td></tr></table></figure>
+
+<p><strong>macOS 下的安装方法：</strong></p>
+<p>Linux 下的安装方法也适合 macOS ，也可以使用 <a href="https://brew.sh/">brew</a> 安装。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew install youtube-dl ffmpeg</span><br></pre></td></tr></table></figure>
+
+<h2 id="youtube-dl的常见用法"><a href="#youtube-dl的常见用法" class="headerlink" title="youtube-dl的常见用法"></a>youtube-dl的常见用法</h2><p><strong>视频相关</strong></p>
+<p>默认情况下，youtube-dl会自动选择一个视频，但是这个视频不一定是质量最好的，我们可以自己选择需要下载的视频。</p>
+<p>因为 YouTube 采用了音视频分离的方式，如果安装了 ffmpeg，youtube-dl 会下载质量最好的视频和音频进行合并。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">youtube-dl https:&#x2F;&#x2F;www.youtube.com&#x2F;playlist?list&#x3D;PLd9hCvj34W5hIJ855osxqJ-fjgsmNB69n --playlist-start 11 --playlist-end 20</span><br></pre></td></tr></table></figure>
+
+<p><code>-F</code> ：列出所有的音视频文件</p>
+<p><img src="https://s.wker.com/uploads/2019/09/youtube-dl-F.png" alt="youtube-dl -F 参数的用法"></p>
+<p><code>-f 137,136,135</code> ：下载指定的文件，这里的137就是 <code>-F</code> 列表中的 format code</p>
+<p><code>-f 135-137,248-250</code> ：下载指定的文件</p>
+<p><code>-f bestvideo+bestaudio</code> ：YouTube 高质量的视频是音视频分离的，如果安装了 ffmpeg ，下载完成会自动把高质量的音视频整合成在一起。也可以指定 bestvideo 的格式，如果没有，还可以指定第二种格式，比如 <code>-f bestvideo[ext=mp4]/bestvideo[ext=webm]+bestaudio[ext=m4a]</code>，没有 mp4 格式，下载 webm 格式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">youtube-dl --proxy socks5:&#x2F;&#x2F;127.0.0.1:1080 https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v&#x3D;0pdGhuAiViA -f 137+140</span><br></pre></td></tr></table></figure>
+
+<p><code>--playlist-start 41</code> ：下载播放列表的起始</p>
+<p><code>--playlist-end 50</code> ：下载播放列表的结束</p>
+<p><code>--playlist-items ITEM_SPEC</code>：下载播放列表里特定的选集，比如 –playlist-items 1,3,5,7-10，就会下载1、3、5、7、8、9、10集。</p>
+<p><strong>音频相关</strong></p>
+<p>youtube-dl 功能非常强大，可以直接用 <code>-F</code> 参数查看音频文件进行下载，可以把视频下载下来转换成音频，但需要安装 ffmpeg 。</p>
+<p><code>-x, --extract-audio</code> ：将视频文件转换为纯音频文件（需要安装 ffmpeg）</p>
+<p><code>--audio-format FORMAT</code> ：指定音频格式: “best”, “aac”, “flac”, “mp3”, “m4a”, “opus”, “vorbis”, 或者 “wav”，默认是“best”，可以和 -x 搭配使用</p>
+<p><code>--embed-thumbnail</code> ：给音频文件写入封面</p>
+<p><strong>字幕相关</strong></p>
+<p><code>--write-sub</code> ：下载字幕文件</p>
+<p><code>--write-auto-sub</code> ：下载自动生成的字幕文件，仅支持 YouTube</p>
+<p><code>--all-subs</code> ：下载所有可用的字幕</p>
+<p><code>--list-subs</code> ：列出可下载的字幕</p>
+<p><code>--sub-format FORMAT</code> ：字幕格式，接受格式偏好，如：“srt”（指定格式）或者“ass/srt/vtt”（首选格式，没有ass就下载src，没有src就下载vtt）</p>
+<p><code>--sub-lang LANGS</code> ：要下载多种语言的字幕，可以用逗号分隔，先使用 –list-subs 表示可用的语言标签</p>
+<p><code>--embed-subs</code> ：把字幕合并到视频中，只支持 mp4、mkv 和 webm 格式的视频</p>
+<p><strong>其他参数</strong></p>
+<p><code>-U</code> ：升级 youtube-dl</p>
+<p><code>--version</code> ：查看 youtube-dl 的版本</p>
+<p><code>--proxy URL</code> ：设置代理，比如：–proxy socks5://127.0.0.1:1080</p>
+<p><code>-a, --batch-file FILE</code> ：从文件中获取需要下载的URL</p>
+<p><code>-r, --limit-rate RATE</code> ：下载限速（写法： 50K 或者 4.2M）</p>
+<p><code>-R, --retries RETRIES</code> ：重试次数 （默认10）， 也可以使用“infinite”</p>
+<p><code>-u, --username USERNAME</code> ：登录后下载，这是用户名</p>
+<p><code>-p, --password PASSWORD</code> ：设置账户登录密码，如果此选项未使用，youtube-dl将交互式地询问</p>
+<p><code>--sleep-interval SECONDS</code> ：在下载多个视频时，设置每个视频的下载间隔，单位为秒</p>
+<p><code>--merge-output-format FORMAT</code> ：在下载的时候，有的时候需要 ffmpeg 对视频和音频进行合并，可以定义合并后的视频格式，可以是 mkv 、mp4、ogg、webm 或者 flv。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在使用 youtube-dl 的时候，记得经常升级，因为一些视频网站会修改页面的布局或者代码，如果不及时升级，可能会解析不了部分数据导致视频下载不了。</p>
+<p><strong>扩展阅读：</strong></p>
+<p><a href="https://clipgrab.org/">ClipGrab</a>，一款命令行下的 YouTube 视频下载工具。</p>
+<p><a href="https://www.ffmpeg.org/">ffmpeg</a>, A complete, cross-platform solution to record, convert and stream audio and video.</p>
+<p><a href="https://www.4kdownload.com/products/product-videodownloader">4K Video Downloader</a>, 4K Video Downloader is cross-platform, which allows downloading videos, playlists, channels and subtitles from YouTube, Facebook, Vimeo and other video sites in high quality.</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>视频下载</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>视频下载</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown学习笔记</title>
     <url>/2021/02/22/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>@(网页基础设计)[马克飞象, 帮助, Markdown]</p>
@@ -81,7 +156,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
-<li>邮箱：<a href="mailto:&#104;&#117;&#x73;&#x74;&#103;&#x6f;&#99;&#107;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#104;&#117;&#x73;&#x74;&#103;&#x6f;&#99;&#107;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#x68;&#117;&#x73;&#116;&#x67;&#x6f;&#99;&#x6b;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;">&#x68;&#117;&#x73;&#116;&#x67;&#x6f;&#99;&#x6b;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
@@ -121,28 +196,6 @@
       <tags>
         <tag>建站</tag>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>考研规划</title>
-    <url>/2021/02/24/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#考研计划时间线</td></tr></table>
-
-<span id="more"></span>
-
-<h1 id="title1"><a href="#title1" class="headerlink" title="title1"></a>title1</h1><h2 id="title2"><a href="#title2" class="headerlink" title="title2"></a>title2</h2><h3 id="title3"><a href="#title3" class="headerlink" title="title3"></a>title3</h3><p>More info: <a href="/source/_html/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92%E5%AF%BC%E5%9B%BE.html">Click</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
-<h1 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h1><p> 列表：</p>
-<ul>
-<li>computer</li>
-<li>computer-aided-art</li>
-</ul>
-]]></content>
-      <categories>
-        <category>考研</category>
-      </categories>
-      <tags>
-        <tag>考研</tag>
       </tags>
   </entry>
   <entry>
@@ -186,22 +239,6 @@
       </tags>
   </entry>
   <entry>
-    <title>音乐外链</title>
-    <url>/2021/02/19/%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/</url>
-    <content><![CDATA[<p>篝火旁</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518725853&auto=0&height=66"></iframe>
-
-<p><img src="/images/Instagram.jpg"></p>
-]]></content>
-      <categories>
-        <category>生活</category>
-        <category>音乐</category>
-      </categories>
-      <tags>
-        <tag>music</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>淘汰</title>
     <url>/2021/03/15/%E6%B7%98%E6%B1%B0/</url>
     <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#好听</td></tr></table>
@@ -216,6 +253,47 @@
  列表：
  - computer
  - computer-aided-art
+
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>音乐</category>
+      </categories>
+      <tags>
+        <tag>music</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>考研规划</title>
+    <url>/2021/02/24/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#考研计划时间线</td></tr></table>
+
+<span id="more"></span>
+
+<h1 id="title1"><a href="#title1" class="headerlink" title="title1"></a>title1</h1><h2 id="title2"><a href="#title2" class="headerlink" title="title2"></a>title2</h2><h3 id="title3"><a href="#title3" class="headerlink" title="title3"></a>title3</h3><p>More info: <a href="/source/_html/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92%E5%AF%BC%E5%9B%BE.html">Click</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
+<h1 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h1><p> 列表：</p>
+<ul>
+<li>computer</li>
+<li>computer-aided-art</li>
+</ul>
+]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>考研</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>篝火旁</title>
+    <url>/2021/02/19/%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/</url>
+    <content><![CDATA[<p>篝火旁</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518725853&auto=0&height=66"></iframe>
+
+
+
+
 
 ]]></content>
       <categories>
