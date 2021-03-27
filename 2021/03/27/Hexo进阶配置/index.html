@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.lug.ustc.edu.cn/css?family=Monda:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"qpwmio.gitee.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="#Hexo 搭建个人博客系列：进阶设置篇 本篇文章介绍了如何为 Hexo 博客集成更多强大的功能。  第一章介绍了在站点中集成基于三方插件的数据统计服务，包括站点 PV 和 PU 统计、站点运行时间统计、文章 PV 统计、站点和文章字数统计等。 第二张介绍了针对于站点的个性化设置方案，包括添加搞怪的网页标题，添加站内搜索功能，添加热门文章排行榜页面，添加豆瓣阅读 &#x2F; 电影 &#x2F; 游戏等资料页面，添加">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo进阶配置">
+<meta property="og:url" content="https://qpwmio.gitee.io/2021/03/27/Hexo%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="Aurora">
+<meta property="og:description" content="#Hexo 搭建个人博客系列：进阶设置篇 本篇文章介绍了如何为 Hexo 博客集成更多强大的功能。  第一章介绍了在站点中集成基于三方插件的数据统计服务，包括站点 PV 和 PU 统计、站点运行时间统计、文章 PV 统计、站点和文章字数统计等。 第二张介绍了针对于站点的个性化设置方案，包括添加搞怪的网页标题，添加站内搜索功能，添加热门文章排行榜页面，添加豆瓣阅读 &#x2F; 电影 &#x2F; 游戏等资料页面，添加">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/busuanzi-site-footer.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/site-running-time.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-pageviews.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/LeanCloud-Counter-class.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/site-word-count.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-word-count.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/title-trick.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/local-search.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/top10.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/LeanCloud-bug.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/douban-movies.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/Tidio.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/tidio-public-key.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/Tidio-appearance.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-feedback.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-feedback-screenshot.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-site-id.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-setup-incoming.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/valine-comments.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-copyright.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-reward.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/fancybox.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/related-post.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/rating.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/rate-vote-via.png">
+<meta property="og:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-encrypt.png">
+<meta property="article:published_time" content="2021-03-27T01:38:03.000Z">
+<meta property="article:modified_time" content="2021-03-27T01:56:38.725Z">
+<meta property="article:author" content="曹圣洁">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/busuanzi-site-footer.png">
+
+<link rel="canonical" href="https://qpwmio.gitee.io/2021/03/27/Hexo%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Hexo进阶配置 | Aurora</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Aurora" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Aurora</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">不欺暗室</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">9</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">10</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">9</span></a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://qpwmio.gitee.io/2021/03/27/Hexo%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="曹圣洁">
+      <meta itemprop="description" content="尽兴">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aurora">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo进阶配置
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-27 09:38:03 / 修改时间：09:56:38" itemprop="dateCreated datePublished" datetime="2021-03-27T09:38:03+08:00">2021-03-27</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <table><tr><td bgcolor=#D1EEEE>#Hexo 搭建个人博客系列：进阶设置篇</td></tr></table>
+本篇文章介绍了如何为 Hexo 博客集成更多强大的功能。
+
+<p>第一章介绍了在站点中集成基于三方插件的数据统计服务，包括站点 PV 和 PU 统计、站点运行时间统计、文章 PV 统计、站点和文章字数统计等。</p>
+<p>第二张介绍了针对于站点的个性化设置方案，包括添加搞怪的网页标题，添加站内搜索功能，添加热门文章排行榜页面，添加豆瓣阅读 / 电影 / 游戏等资料页面，添加在线聊天和即时反馈等功能。</p>
+<p>第三章介绍了针对于文章页面的个性化设置方案，包括在文章末尾添加评论组件、评分组件、打赏入口、版权声明、推荐文章等，为文章中的图片添加点击灯箱效果，以及为文章设置访问密码。</p>
+<span id="more"></span>
+<h1 id="数据统计"><a href="#数据统计" class="headerlink" title="数据统计"></a>数据统计</h1><h2 id="站点访问量统计"><a href="#站点访问量统计" class="headerlink" title="站点访问量统计"></a>站点访问量统计</h2><p>该功能由 <a target="_blank" rel="noopener" href="http://ibruce.info/2015/04/04/busuanzi/">不蒜子</a> 提供，效果如下图：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/busuanzi-site-footer.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/busuanzi-site-footer.png" alt="站点访问统计"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/busuanzi-site-footer.png">站点访问统计</a></p>
+<p>左侧数据表示独立访客数 UV，右侧数据表示网站浏览量 PV，访客数和浏览量的区别在于一个用户连续点击 n 篇文章，会记录 n 次浏览量，但只记录一次访客数。</p>
+<p>由于不蒜子是基于域名来进行统计计算的，所以通过 localhost:4000 端口访问的时候统计数据 PV 和 UV 都会异常的大，属于正常现象。</p>
+<p>在页脚布局模板文件首行添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_partial\footer.swig&lt;script</span><br><span class="line">  async</span><br><span class="line">  src&#x3D;&quot;https:&#x2F;&#x2F;dn-lbstatics.qbox.me&#x2F;busuanzi&#x2F;2.3&#x2F;busuanzi.pure.mini.js&quot;</span><br><span class="line">&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在主题配置文件中做出如下修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.ymlbusuanzi_count:</span><br><span class="line">  enable: true</span><br><span class="line">  total_visitors: true # 访客数</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true # 访问量</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: false</span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></table></figure>
+
+<p>刷新浏览器即可生效。</p>
+<p>高阶用法：通过修改代码来自定义统计文案，如果你想使用本站统计文案，需要对不蒜子的代码做出如下修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_third-party\analytics\busuanzi-counter.swig  &#123;% if theme.busuanzi_count.total_visitors %&#125;</span><br><span class="line">-   &lt;span class&#x3D;&quot;site-uv&quot; title&#x3D;&quot;&#123;&#123; __(&#39;footer.total_visitors&#39;) &#125;&#125;&quot;&gt;</span><br><span class="line">+   &lt;span class&#x3D;&quot;site-uv&quot;&gt;</span><br><span class="line">+     &#123;&#123; __(&#39;footer.total_visitors&#39;, &#39;&lt;span class&#x3D;&quot;busuanzi-value&quot; id&#x3D;&quot;busuanzi_value_site_uv&quot;&gt;&lt;&#x2F;span&gt;&#39;) &#125;&#125;</span><br><span class="line">-     &lt;i class&#x3D;&quot;fa fa-&#123;&#123; theme.busuanzi_count.total_visitors_icon &#125;&#125;&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">-     &lt;span class&#x3D;&quot;busuanzi-value&quot; id&#x3D;&quot;busuanzi_value_site_uv&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;span&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">  &#123;% if theme.busuanzi_count.total_views %&#125;</span><br><span class="line">-   &lt;span class&#x3D;&quot;site-pv&quot; title&#x3D;&quot;&#123;&#123; __(&#39;footer.total_views&#39;) &#125;&#125;&quot;&gt;</span><br><span class="line">+   &lt;span class&#x3D;&quot;site-pv&quot;&gt;</span><br><span class="line">+     &#123;&#123; __(&#39;footer.total_views&#39;, &#39;&lt;span class&#x3D;&quot;busuanzi-value&quot; id&#x3D;&quot;busuanzi_value_site_pv&quot;&gt;&lt;&#x2F;span&gt;&#39;) &#125;&#125;</span><br><span class="line">-     &lt;i class&#x3D;&quot;fa fa-&#123;&#123; theme.busuanzi_count.total_views_icon &#125;&#125;&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">-     &lt;span class&#x3D;&quot;busuanzi-value&quot; id&#x3D;&quot;busuanzi_value_site_pv&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;span&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在自定义样式文件中添加如下样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_custom&#x2F;custom.styl&#x2F;&#x2F;修改不蒜子数据颜色</span><br><span class="line">.busuanzi-value &#123;</span><br><span class="line">  color: #1890ff;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后修改统计表述文案：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">themes\next\languages\zh-CN.ymlfooter:</span><br><span class="line">  total_views: &quot;历经 %s 次回眸才与你相遇&quot;</span><br><span class="line">  total_visitors: &quot;我的第 %s 位朋友，&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="站点运行时间统计"><a href="#站点运行时间统计" class="headerlink" title="站点运行时间统计"></a>站点运行时间统计</h2><p>本章节受 <a target="_blank" rel="noopener" href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html">reuixiy | 打造个性超赞博客 Hexo+NexT+GitHubPages 的超深度优化 #5.7</a> 启发，自行重构了代码逻辑。</p>
+<p>在站点底部显示站点已运行时间，效果如下：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/site-running-time.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/site-running-time.png" alt="站点运行时间"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/site-running-time.png">站点运行时间</a></p>
+<p>在主题自定义布局文件中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">thems\next\layout_custom\custom.swig&#123;# 页脚站点运行时间统计 #&#125; &#123;% if theme.footer.ages.enable %&#125;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;moment@2.22.2&#x2F;moment.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;moment-precise-range-plugin@1.3.0&#x2F;moment-precise-range.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  function timer() &#123;</span><br><span class="line">    var ages &#x3D; moment.preciseDiff(moment(),moment(&#123;&#123; theme.footer.ages.birthday &#125;&#125;,&quot;YYYYMMDD&quot;));</span><br><span class="line">    ages &#x3D; ages.replace(&#x2F;years?&#x2F;, &quot;年&quot;);</span><br><span class="line">    ages &#x3D; ages.replace(&#x2F;months?&#x2F;, &quot;月&quot;);</span><br><span class="line">    ages &#x3D; ages.replace(&#x2F;days?&#x2F;, &quot;天&quot;);</span><br><span class="line">    ages &#x3D; ages.replace(&#x2F;hours?&#x2F;, &quot;小时&quot;);</span><br><span class="line">    ages &#x3D; ages.replace(&#x2F;minutes?&#x2F;, &quot;分&quot;);</span><br><span class="line">    ages &#x3D; ages.replace(&#x2F;seconds?&#x2F;, &quot;秒&quot;);</span><br><span class="line">    ages &#x3D; ages.replace(&#x2F;\d+&#x2F;g, &#39;&lt;span style&#x3D;&quot;color:&#123;&#123; theme.footer.ages.color &#125;&#125;&quot;&gt;$&amp;&lt;&#x2F;span&gt;&#39;);</span><br><span class="line">    div.innerHTML &#x3D; &#96;&#123;&#123; __(&#39;footer.age&#39;)&#125;&#125; $&#123;ages&#125;&#96;;</span><br><span class="line">  &#125;</span><br><span class="line">  var div &#x3D; document.createElement(&quot;div&quot;);</span><br><span class="line">  &#x2F;&#x2F;插入到copyright之后</span><br><span class="line">  var copyright &#x3D; document.querySelector(&quot;.copyright&quot;);</span><br><span class="line">  document.querySelector(&quot;.footer-inner&quot;).insertBefore(div, copyright.nextSibling);</span><br><span class="line">  timer();</span><br><span class="line">  setInterval(&quot;timer()&quot;,1000)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果 custom.swig 文件不存在，需要手动新建并在布局页面中 body 末尾引入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_layout.swig      ...</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;exturl.swig&#39; %&#125;</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;bookmark.swig&#39; %&#125;</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;copy-code.swig&#39; %&#125;</span><br><span class="line"></span><br><span class="line">+     &#123;% include &#39;_custom&#x2F;custom.swig&#39; %&#125;</span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">  &lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>修改主题配置文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.yml  footer:</span><br><span class="line">    ...</span><br><span class="line">+   ages:</span><br><span class="line">+     # site running time</span><br><span class="line">+     enable: true</span><br><span class="line">+     # birthday of your site</span><br><span class="line">+     birthday: 20181001</span><br><span class="line">+     # color of number</span><br><span class="line">+     color: &quot;#1890ff&quot;</span><br></pre></td></tr></table></figure>
+
+<p>然后补全对应文案：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">themes\next\languages\zh-CN.yml  footer:</span><br><span class="line">    powered: &quot;由 %s 强力驱动&quot;</span><br><span class="line">    theme: 主题</span><br><span class="line">+   age: 我已在此等候你</span><br><span class="line">    total_views: &quot;历经 %s 次回眸才与你相遇&quot;</span><br><span class="line">    total_visitors: &quot;我的第 %s 位朋友，&quot;</span><br></pre></td></tr></table></figure>
+
+<p>刷新浏览器即可生效。</p>
+<p>日期统计计算功能由 <a target="_blank" rel="noopener" href="https://momentjs.com/">moment</a> 和 <a target="_blank" rel="noopener" href="https://github.com/codebox/moment-precise-range">moment-precise-range</a> 提供，也可用原生 JS Date 对象来实现。</p>
+<h2 id="文章访问量统计"><a href="#文章访问量统计" class="headerlink" title="文章访问量统计"></a>文章访问量统计</h2><p>本章节参考 <a target="_blank" rel="noopener" href="https://notes.doublemine.me/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud">夏末 | 为 NexT 主题添加文章阅读量统计功能</a></p>
+<p>该功能基于 <a target="_blank" rel="noopener" href="https://leancloud.cn/">LeanCloud</a> 提供后端数据服务，效果如下：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-pageviews.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-pageviews.png" alt="文章访问量"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-pageviews.png">文章访问量</a></p>
+<p>在 LeanCloud 上注册账号并创建应用，新建一个名为 Counter 的 Class，ACL 权限设置为 <strong>无限制</strong>：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/LeanCloud-Counter-class.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/LeanCloud-Counter-class.png" alt="新建Counter类"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/LeanCloud-Counter-class.png">新建Counter类</a></p>
+<p>在 LeanCloud 中的 Class 可以理解为数据库中的数据表。Counter 用于存储记录文章访问量，记录是以 url 作为唯一依据的，所以根据默认的 permalink 组成结构，如果你更改了文章的发布日期和标题中的任意一个，都会造成文章阅读数值的清零重计。</p>
+<p>在控制台的 <strong>设置</strong> -&gt; <strong>应用 Key</strong> 中获取 App ID 和 App Key 填入到主题配置文件中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.ymlleancloud_visitors:</span><br><span class="line">  enable: true</span><br><span class="line">  app_id: ***&lt;app_id***</span><br><span class="line">  app_key: ***&lt;app_key&gt;***</span><br><span class="line">  security: false</span><br><span class="line">  betterPerformance: false</span><br></pre></td></tr></table></figure>
+
+<p>站点上线后可以在 <strong>设置</strong> -&gt; <strong>安全中心</strong> 中添加博客域名到 Web 安全域名中，设置后仅可在该域名下通过 JavaScript SDK 调用服务器资源，借以保护 LeanCloud 应用的数据安全。</p>
+<p>如果想要自定义 PV 表述文案，可以修改文章布局模板中的相关代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_macro\post.swig  &#123;# LeanCould PageView #&#125;</span><br><span class="line">    ...</span><br><span class="line">    &#123;% if theme.post_meta.item_text %&#125;</span><br><span class="line">-     &lt;span class&#x3D;&quot;post-meta-item-text&quot;&gt;&#123;&#123;__(&#39;post.views&#39;) + __(&#39;symbol.colon&#39;) &#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">+     &lt;span class&#x3D;&quot;post-meta-item-text&quot;&gt;&#123;&#123;__(&#39;post.views&#39;)&#125;&#125; &lt;&#x2F;span&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">    &lt;span class&#x3D;&quot;leancloud-visitors-count&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">+   &lt;span&gt;℃&lt;&#x2F;span&gt;</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+
+<p>修改统计表述文案：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">themes&#x2F;next&#x2F;languages&#x2F;zh-CN.ymlpost:</span><br><span class="line">  views: 热度</span><br></pre></td></tr></table></figure>
+
+<p>刷新浏览器即可生效。</p>
+<p>如果遇到如下报错，可能是你配置了 <code>security: true</code> 但又没有做好安全策略配置。</p>
+<blockquote>
+<p>阅读次数： Counter not initialized! See more at console err msg.</p>
+</blockquote>
+<p>有以下两种解决方案：</p>
+<ul>
+<li>下载安装 <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-leancloud-counter-security">hexo-leancloud-counter-security</a> 插件</li>
+<li>在主题配置中设置 <code>security: false</code></li>
+</ul>
+<p>个人推荐第二种，简单粗暴。</p>
+<p>除了 LeanCloud，不蒜子也能提供文章阅读次数统计，但是不蒜子的统计结果只会在文章页显示，而不会显示在首页列表中，相关讨论可以参见 <a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next/issues/801">阅读计数。对比 LeanCloud 和不蒜子</a></p>
+<h2 id="站点及文章字数统计"><a href="#站点及文章字数统计" class="headerlink" title="站点及文章字数统计"></a>站点及文章字数统计</h2><p>该功能由 <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-symbols-count-time">hexo-symbols-count-time</a> 提供，效果如下图：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/site-word-count.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/site-word-count.png" alt="站点字数统计"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/site-word-count.png">站点字数统计</a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-word-count.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-word-count.png" alt="文章字数统计"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-word-count.png">文章字数统计</a></p>
+<p>在根目录下执行如下命令安装相关依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+
+<p>启用该功能需要同时修改站点配置文件和主题配置文件。</p>
+<p>将如下配置项添加到<strong>站点配置文件</strong>中，这些配置项主要用于控制每项统计信息是否显示。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">_config.ymlsymbols_count_time:</span><br><span class="line">  symbols: true # 统计单篇文章字数</span><br><span class="line">  time: false # 取消估算单篇文章阅读时间</span><br><span class="line">  total_symbols: true # 统计站点总字数</span><br><span class="line">  total_time: false # 取消估算站点总阅读时间</span><br></pre></td></tr></table></figure>
+
+<p>在<strong>主题配置文件</strong>中做如下修改，这些配置项主要用于控制统计信息的显示样式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.ymlsymbols_count_time:</span><br><span class="line">  separated_meta: false # 统计信息不换行显示</span><br><span class="line">  item_text_post: true # 文章统计信息中是否显示“本文字数&#x2F;阅读时长”等描述文字</span><br><span class="line">  item_text_total: true # 站点统计信息中是否显示“本文字数&#x2F;阅读时长”等描述文字</span><br><span class="line">  awl: 4 # Average Word Length：平均字符长度</span><br><span class="line">  wpm: 275 # Words Per Minute：阅读速度</span><br></pre></td></tr></table></figure>
+
+<p>汉字的平均字符长度为 1.5，如果在文章中使用纯中文进行写作（没有混杂英文），那么推荐设置 <code>awl: 2</code> 及 <code>wpm: 300</code>，但是如果文章中存在英文，建议设置 <code>awl: 4</code> 及 <code>wpm: 275</code>。</p>
+<p>因为修改了站点配置文件，所以需要重新启动服务器才能生效。</p>
+<h1 id="站点个性化设置"><a href="#站点个性化设置" class="headerlink" title="站点个性化设置"></a>站点个性化设置</h1><h2 id="搞怪网页标题"><a href="#搞怪网页标题" class="headerlink" title="搞怪网页标题"></a>搞怪网页标题</h2><p>本章节参考 <a target="_blank" rel="noopener" href="https://diygod.me/2153/">DIYgod | 我藏好了哦</a></p>
+<p>离开和进入页面时动态修改 Tab 标签中的标题。</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/title-trick.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/title-trick.png" alt="搞怪网页标题"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/title-trick.png">搞怪网页标题</a></p>
+<p>在主题自定义布局文件中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_custom\custom.swig&#123;# 搞怪网页标题 #&#125; &#123;% if theme.title_trick.enable %&#125;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  var OriginTitile &#x3D; document.title;</span><br><span class="line">  var titleTime;</span><br><span class="line">  document.addEventListener(&quot;visibilitychange&quot;, function() &#123;</span><br><span class="line">    if (document.hidden) &#123;</span><br><span class="line">      document.title &#x3D; &quot;&#123;&#123; theme.title_trick.leave &#125;&#125;&quot; + OriginTitile;</span><br><span class="line">      clearTimeout(titleTime);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      document.title &#x3D; &quot;&#123;&#123; theme.title_trick.enter &#125;&#125;&quot; + OriginTitile;</span><br><span class="line">      titleTime &#x3D; setTimeout(function() &#123;</span><br><span class="line">        document.title &#x3D; OriginTitile;</span><br><span class="line">      &#125;, 2000);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果 custom.swig 文件不存在，需要手动新建并在布局页面中 body 末尾引入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_layout.swig      ...</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;exturl.swig&#39; %&#125;</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;bookmark.swig&#39; %&#125;</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;copy-code.swig&#39; %&#125;</span><br><span class="line"></span><br><span class="line">+     &#123;% include &#39;_custom&#x2F;custom.swig&#39; %&#125;</span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">  &lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在主题配置文件中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.yml# a trick on website title</span><br><span class="line">title_trick:</span><br><span class="line">  enable: true</span><br><span class="line">  leave: &quot;(つェ⊂)我藏好了哦~&quot;</span><br><span class="line">  enter: &quot;(*´∇｀*) 被你发现啦~&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h2><p>该功能由 <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 提供，效果如下图：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/local-search.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/local-search.png" alt="站内搜索"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/local-search.png">站内搜索</a></p>
+<p>在根目录下执行以下命令安装相关依赖：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>在<strong>主题配置</strong>文件中修改相关字段：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.ymllocal_search:</span><br><span class="line">  enable: true</span><br><span class="line">  trigger: auto # 每次输入改变都执行搜索</span><br><span class="line">  top_n_per_article: 3 # 每篇文章显示的搜索结果数量</span><br><span class="line">  unescape: false</span><br></pre></td></tr></table></figure>
+
+<p>在<strong>站点配置</strong>文件中添加以下字段：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">_config.ymlsearch:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post # 指定搜索范围，可选 post | page | all</span><br><span class="line">  format: html # 指定页面内容形式，可选 html | raw (Markdown) | excerpt | more</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+<p>在自定义样式文件中添加如下样式规则来增加搜索弹窗的页边距：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">themes\next\source\css_custom\custom.styl&#x2F;&#x2F;增加搜索弹窗的页边距</span><br><span class="line">.local-search-popup #local-search-result &#123;</span><br><span class="line">  padding: 25px 40px</span><br><span class="line">  height: calc(100% - 95px)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你同时在站点内启用了 wobblewindow 边缘摆动效果，则有可能会出现背景蒙版叠加在弹窗之前的问题，这种层级叠加异常的问题主要是因为 wobblewindow 中修改了弹窗父元素的 <code>position</code> 定位和 <code>z-index</code> 优先级，目前只能通过修改 localsearch 源码来修复该 Bug：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_third-party\search\localsearch.swig  $.ajax(&#123;</span><br><span class="line">    url: path,</span><br><span class="line">    dataType: isXml ? &quot;xml&quot; : &quot;json&quot;,</span><br><span class="line">    async: true,</span><br><span class="line">    success: function(res) &#123;</span><br><span class="line">      &#x2F;&#x2F; get the contents from search data</span><br><span class="line">      isfetched &#x3D; true;</span><br><span class="line">-     $(&#39;.popup&#39;).detach().appendTo(&#39;.header-inner&#39;);</span><br><span class="line">+     $(&#39;.popup&#39;).detach().appendTo(&#39;body&#39;);</span><br><span class="line">      var datas &#x3D; isXml ? $(&quot;entry&quot;, res).map(function() &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">          title: $(&quot;title&quot;, this).text(),</span><br><span class="line">          content: $(&quot;content&quot;,this).text(),</span><br><span class="line">          url: $(&quot;url&quot; , this).text()</span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;).get() : res;</span><br><span class="line">      ...</span><br></pre></td></tr></table></figure>
+
+<h2 id="热门文章排行榜"><a href="#热门文章排行榜" class="headerlink" title="热门文章排行榜"></a>热门文章排行榜</h2><p>本章节部分思路参考 <a target="_blank" rel="noopener" href="https://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">nMask | Hexo 搭建博客教程 #7.16</a>，自行进行了代码重构。</p>
+<p>添加文章阅读次数排行统计页面，效果如下图：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/top10.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/top10.png" alt="热门文章排行榜"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/top10.png">热门文章排行榜</a></p>
+<p>该功能同样是基于 LeanCloud 提供的后端服务支持。具体实现方案如下：</p>
+<p>在站点目录下执行以下命令新建页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page top</span><br></pre></td></tr></table></figure>
+
+<p>在主题配置文件中新增一项菜单入口：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.yml  menu:</span><br><span class="line">    home: &#x2F; || home</span><br><span class="line">+   top: &#x2F;top&#x2F; || signal</span><br><span class="line">    tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">    categories: &#x2F;categories&#x2F; || th</span><br><span class="line">    archives: &#x2F;archives&#x2F; || archive</span><br><span class="line">    about: &#x2F;about&#x2F; || user</span><br></pre></td></tr></table></figure>
+
+<p>在语言包中新增菜单中文：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">themes\next\languages\zh-CN.yml  menu:</span><br><span class="line">    home: 首页</span><br><span class="line">    archives: 归档</span><br><span class="line">    categories: 分类</span><br><span class="line">    tags: 标签</span><br><span class="line">    about: 关于</span><br><span class="line">+   top: 排行榜</span><br></pre></td></tr></table></figure>
+
+<p>然后在新增的排行榜页面内添加以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">source\top\index.md---</span><br><span class="line">title: 热门文章Top 10</span><br><span class="line">comments: false</span><br><span class="line">date: 2018-10-30 00:54:50</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">&lt;div id&#x3D;&quot;post-rank&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src&#x3D;&quot;&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;leancloud-storage@3.10.0&#x2F;dist&#x2F;av-min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  var APP_ID &#x3D; ******;  &#x2F;&#x2F;输入个人LeanCloud账号AppID</span><br><span class="line">  var APP_KEY &#x3D; ******;  &#x2F;&#x2F;输入个人LeanCloud账号AppKey</span><br><span class="line">  AV.init(&#123;</span><br><span class="line">    appId: APP_ID,</span><br><span class="line">    appKey: APP_KEY</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  var query &#x3D; new AV.Query(&#39;Counter&#39;);&#x2F;&#x2F;表名</span><br><span class="line">  query.descending(&#39;time&#39;); &#x2F;&#x2F;结果按阅读次数降序排序</span><br><span class="line">  query.limit(10);  &#x2F;&#x2F;最终只返回10条结果</span><br><span class="line">  query.find().then( response &#x3D;&gt; &#123;</span><br><span class="line">    var content &#x3D; response.reduce( (accum, &#123;attributes&#125;) &#x3D;&gt; &#123;</span><br><span class="line">      accum +&#x3D; &#96;&lt;p&gt;&lt;div class&#x3D;&quot;prefix&quot;&gt;热度 $&#123;attributes.time&#125; ℃&lt;&#x2F;div&gt;&lt;div&gt;&lt;a href&#x3D;&quot;$&#123;attributes.url&#125;&quot;&gt;$&#123;attributes.title&#125;&lt;&#x2F;a&gt;&lt;&#x2F;div&gt;&lt;&#x2F;p&gt;&#96;</span><br><span class="line">      return accum;</span><br><span class="line">    &#125;,&quot;&quot;)</span><br><span class="line">    document.querySelector(&quot;#post-rank&quot;).innerHTML &#x3D; content;</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch( error &#x3D;&gt; &#123;</span><br><span class="line">    console.log(error);</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">  #post-rank &#123;</span><br><span class="line">    text-align: center;</span><br><span class="line">  &#125;</span><br><span class="line">  #post-rank .prefix &#123;</span><br><span class="line">    color: #ff4d4f;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>本是根据 <a target="_blank" rel="noopener" href="https://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">nMask | Hexo 搭建博客教程 #7.16</a> 引入 v0.6.1 的脚本来实现该功能，结果发现出现如下 Bug：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/LeanCloud-bug.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/LeanCloud-bug.png" alt="LeanCloud v0.6.1 Bug"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/LeanCloud-bug.png">LeanCloud v0.6.1 Bug</a></p>
+<p>后来根据 <a target="_blank" rel="noopener" href="https://leancloud.cn/docs/leanstorage_guide-js.html">LeanCloud | JavaScript SDK 安装指南</a> 引入 v3.10.0 的最新脚本，使用过程中虽然功能正常，但是控制台有报错信息:</p>
+<blockquote>
+<p>Uncaught TypeError: Cannot redefine property: applicationId</p>
+</blockquote>
+<h2 id="豆瓣阅读-电影-游戏"><a href="#豆瓣阅读-电影-游戏" class="headerlink" title="豆瓣阅读 / 电影 / 游戏"></a>豆瓣阅读 / 电影 / 游戏</h2><p>本章节参考 <a target="_blank" rel="noopener" href="https://github.com/mythsman/hexo-douban">mythsman/hexo-douban README.md</a></p>
+<p>为站点添加豆瓣阅读 / 电影 / 游戏页面，效果如下：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/douban-movies.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/douban-movies.png" alt="豆瓣电影"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/douban-movies.png">豆瓣电影</a></p>
+<p>在根目录下执行以下命令安装相关依赖：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-douban --save</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件中添加以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">_config.ymldouban:</span><br><span class="line">  user: # 个人豆瓣ID</span><br><span class="line">  builtin: false</span><br><span class="line">  book:</span><br><span class="line">    title: &quot;This is my book title&quot;</span><br><span class="line">    quote: &quot;This is my book quote&quot;</span><br><span class="line">  movie:</span><br><span class="line">    title: &quot;This is my movie title&quot;</span><br><span class="line">    quote: &quot;This is my movie quote&quot;</span><br><span class="line">  game:</span><br><span class="line">    title: &quot;This is my game title&quot;</span><br><span class="line">    quote: &quot;This is my game quote&quot;</span><br><span class="line">  timeout: 10000</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>user: 填写豆瓣 ID。登陆豆瓣后点击<strong>个人主页</strong>，此时 url 中最后一段即是用户 ID，一般情况下会是一段数字，如果设置了个人域名的话，则个人域名即为 ID。</li>
+<li>builtin: 是否将生成页面的功能嵌入 <code>hexo s</code> 和 <code>hexo g</code> 中。</li>
+<li>timeout: 爬取数据的超时时间。</li>
+</ul>
+<p>如果只想生成某一个页面（比如只生成读书页面），把其他的配置项注释掉即可。</p>
+<p>在主题配置文件中新增菜单入口：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.yml  menu:</span><br><span class="line">    home: &#x2F; || home</span><br><span class="line">    tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">    categories: &#x2F;categories&#x2F; || th</span><br><span class="line">    archives: &#x2F;archives&#x2F; || tasks</span><br><span class="line">+   books: &#x2F;books&#x2F; || book</span><br><span class="line">+   movies: &#x2F;movies&#x2F; || video-camera</span><br><span class="line">+   games: &#x2F;games&#x2F; || gamepad</span><br></pre></td></tr></table></figure>
+
+<p>在语言包中新增菜单中文：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">themes\next\language\zh_CN.yml  menu:</span><br><span class="line">    home: 首页</span><br><span class="line">    archives: 归档</span><br><span class="line">    categories: 分类</span><br><span class="line">    tags: 标签</span><br><span class="line">+   movies: 电影</span><br><span class="line">+   books: 读书</span><br><span class="line">+   games: 游戏</span><br></pre></td></tr></table></figure>
+
+<p>然后在根目录下执行以下命令生成豆瓣阅读 / 电影 / 游戏页面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo douban</span><br></pre></td></tr></table></figure>
+
+<p>可选参数:</p>
+<ul>
+<li>-b | –books: 只生成豆瓣读书页面</li>
+<li>-m | –movies: 只生成豆瓣电影页面</li>
+<li>-g | –games: 只生成豆瓣游戏页面</li>
+</ul>
+<p>执行命令后，插件会根据用户提供的 ID 爬取豆瓣中的数据信息并在 <code>public</code> 目录下生成对应的页面，当服务器启动或部署后会将页面显示在对应的菜单路由下。</p>
+<p>如果在站点配置中设置了 <code>douban.builtin: false</code>，则每次豆瓣数据变动后需要手动执行一次 <code>hexo douban</code> 来刷新页面数据。如果设置了 <code>douban.builtin: true</code>，则每次执行 <code>hexo s</code> 和 <code>hexo g</code> 的时候将会自动同时执行 <code>hexo douban</code> 命令，但这样可能会增加打包编译的时间。建议如果豆瓣数据变动不频繁的情况下该项设为 <code>false</code> 即可。</p>
+<p>通常大家都喜欢用 <code>hexo d</code> 来作为 <code>hexo deploy</code> 命令的简化，但是当安装了 <code>hexo douban</code> 之后， <code>hexo d</code> 就会有歧义而无法执行，因为 <code>hexo douban</code> 跟 <code>hexo deploy</code> 的 Alias 都是 <code>hexo d</code>。</p>
+<h2 id="在线聊天"><a href="#在线聊天" class="headerlink" title="在线聊天"></a>在线聊天</h2><p>在线聊天算是一个比较成熟的 SaaS 商业应用了，业内产品如 <a target="_blank" rel="noopener" href="https://www.tidiochat.com/">Tidio</a>、 <a target="_blank" rel="noopener" href="https://talkjs.com/">TalkJS</a>、<a target="_blank" rel="noopener" href="https://www.intercom.com/">Intercom</a>、<a target="_blank" rel="noopener" href="https://www.tawk.to/">tawk.to</a> 等，使用体验都很好，交互界面也很干净别致。经过比较，本站最终选择了 Tidio：</p>
+<ul>
+<li>在个人博客这种业务场景中，几乎用不到它的收费功能，可以算是终身免费了。</li>
+<li>Tidio 提供了多种消息回复渠道，包括网页、桌面应用、iOS/Android APP（需要 Google play 服务支持）。</li>
+<li>除了在线聊天，Tidio 还可以在线发送邮件，以及关联接收 Fackbook 消息。</li>
+<li>在几款产品的界面风格中，还是 Tidio 看起来更加优雅一些，深得我爱。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/Tidio.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/Tidio.png" alt="Tidio 界面"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/Tidio.png">Tidio 界面</a></p>
+<p>首先需要<a target="_blank" rel="noopener" href="https://www.tidiochat.com/panel/login">注册 Tidio 账号</a>，根据引导填写应用信息。进入控制台后，在 <strong>SETTINGS</strong> -&gt; <strong>Developer</strong> -&gt; <strong>Project data</strong> 中获取到 Public Key：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/tidio-public-key.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/tidio-public-key.png" alt="Tidio Public Key"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/tidio-public-key.png">Tidio Public Key</a></p>
+<p>在主题配置文件下添加以下代码并补全 Public Key：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.yml# Tidio online chat</span><br><span class="line"># see: https:&#x2F;&#x2F;www.tidiochat.com</span><br><span class="line">tidio:</span><br><span class="line">  enable: true</span><br><span class="line">  key: # Public_Key</span><br></pre></td></tr></table></figure>
+
+<p>在主题自定义布局文件中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_custom\custom.swig&#123;# Tidio 在线联系功能 #&#125; &#123;% if theme.tidio.enable %&#125;</span><br><span class="line">&lt;script async src&#x3D;&quot;&#x2F;&#x2F;code.tidio.co&#x2F;&#123;&#123; theme.tidio.key &#125;&#125;.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>为避免代码加载阻塞页面渲染，需要为脚本添加 <code>async</code> 属性使其异步加载。</p>
+<p>如果 custom.swig 文件不存在，需要手动新建并在布局页面中 body 末尾引入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_layout.swig      ...</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;exturl.swig&#39; %&#125;</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;bookmark.swig&#39; %&#125;</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;copy-code.swig&#39; %&#125;</span><br><span class="line"></span><br><span class="line">+     &#123;% include &#39;_custom&#x2F;custom.swig&#39; %&#125;</span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">  &lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>刷新页面即可在右下角看到 Tidio 的会话标志了。接下来可以在 Tidio 控制台的 <strong>Channel</strong> -&gt; <strong>Live chat</strong> -&gt; <strong>Appearance</strong> 中根据提示定制聊天对话框的主题外观和语言包：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/Tidio-appearance.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/Tidio-appearance.png" alt="定制Tidio样式与功能"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/Tidio-appearance.png">定制Tidio样式与功能</a></p>
+<h2 id="行为监测与反馈"><a href="#行为监测与反馈" class="headerlink" title="行为监测与反馈"></a>行为监测与反馈</h2><p><a target="_blank" rel="noopener" href="https://www.hotjar.com/">Hotjar</a> 是一款轻量级的监测分析工具，能够提供用户行为监测和用户反馈分析，相比 Google Analysis 而言，它没有复杂的监测指标与分析报表，更加的简单实用，并且为免费用户提供 2000pv/day 的数据采集服务，适用于小型网站或个人博客的监测分析。</p>
+<p>Hotjar 主要提供 <strong>ANALYTICS</strong> 和 <strong>FEEDBACK</strong> 两大类服务。</p>
+<p>ANALYTICS 主要用于用户交互行为的监测分析，属于客观分析，包括以下四项具体功能：</p>
+<ul>
+<li>Heatmaps: 通过热力图可视化用户的鼠标交互行为，帮助理解用户动机和需求。</li>
+<li>Recording: 记录用户在站点的行为轨迹，了解应用的可用性以及用户遭遇的问题。</li>
+<li>Funnels: 记录每个页面或者步骤的用户流失率。</li>
+<li>Forms: 记录表单中每一项输入的完成率，完成时间以及用户流失率。</li>
+</ul>
+<p>FEEDBACK 主要为用户提供反馈渠道，收集用户观点与数据，属于主观分析，包括以下四项具体功能：</p>
+<ul>
+<li>Incoming: 即时反馈，了解用户对页面的评价。</li>
+<li>Polls: 投票反馈，获取某个问题的用户答案。</li>
+<li>Surveys: 问卷调查，以问卷形式获取用户反馈。</li>
+<li>Recruiters: 获取用户信息，招募用户用于用户调查或测试反馈。</li>
+</ul>
+<p>Hotjar 通过以上八项具体而实用的功能为用户提供主客观相结合的监测分析服务，可以说它是所有轻量级分析工具中唯一做到了主客观相结合的，同时也是所有主客观分析工具中，做的最轻量的。</p>
+<p>更多功能介绍请参考 <a target="_blank" rel="noopener" href="https://www.hotjar.com/tour">Hotjar Features</a></p>
+<p>本站点中应用了 Incoming 即时反馈功能，读者可以通过该渠道评价页面或者提交勘误，点击悬挂在屏幕右侧的 Feedback 按钮弹出对话框，点击人物头像评价后将会跳转到如下界面：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-feedback.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-feedback.png" alt="Hotjar Incoming Feedback"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-feedback.png">Hotjar Incoming Feedback</a></p>
+<p>你可以在此页面输入反馈内容，并通过点击左下角的按钮在当前页面上标识目标元素，之后 hotjar 会将反馈内容连同带有高亮标识的页面截图一起提交到后台：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-feedback-screenshot.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-feedback-screenshot.png" alt="Incoming Feedback with screenshot "></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-feedback-screenshot.png">Incoming Feedback with screenshot</a></p>
+<p>更多关于 Incoming Feedback 的介绍请参考 <a target="_blank" rel="noopener" href="https://www.hotjar.com/incoming-feedback">Incoming Feedback by Hotjar</a></p>
+<p>在站点中集成 Hotjar 的各项功能，需要先 <a target="_blank" rel="noopener" href="https://insights.hotjar.com/register">注册 Hotjar 账号</a>，根据指引一步步填写站点信息，然后在控制面板首页中获取 site ID：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-site-id.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-site-id.png" alt="Hotjar site ID"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-site-id.png">Hotjar site ID</a></p>
+<p>在主题配置文件下添加以下代码并补全 site ID：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.yml# Hotjar</span><br><span class="line"># see: https:&#x2F;&#x2F;www.hotjar.com&#x2F;</span><br><span class="line">hotjar:</span><br><span class="line">  enable: true</span><br><span class="line">  siteID: # site ID</span><br></pre></td></tr></table></figure>
+
+<p>在主题自定义布局文件中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_custom\custom.swig&#123;# hotjar 页面反馈 #&#125; &#123;% if theme.hotjar.enable %&#125;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  (function(h,o,t,j,a,r)&#123;</span><br><span class="line">    h.hj&#x3D;h.hj||function()&#123;(h.hj.q&#x3D;h.hj.q||[]).push(arguments)&#125;;</span><br><span class="line">    h._hjSettings&#x3D;&#123;hjid:&#123;&#123; theme.hotjar.siteID &#125;&#125;,hjsv:6&#125;;</span><br><span class="line">    a&#x3D;o.getElementsByTagName(&#39;head&#39;)[0];</span><br><span class="line">    r&#x3D;o.createElement(&#39;script&#39;);r.async&#x3D;1;</span><br><span class="line">    r.src&#x3D;t+h._hjSettings.hjid+j+h._hjSettings.hjsv;</span><br><span class="line">    a.appendChild(r);</span><br><span class="line">  &#125;)(window,document,&#39;https:&#x2F;&#x2F;static.hotjar.com&#x2F;c&#x2F;hotjar-&#39;,&#39;.js?sv&#x3D;&#39;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果 custom.swig 文件不存在，需要手动新建并在布局页面中 body 末尾引入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_layout.swig      ...</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;exturl.swig&#39; %&#125;</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;bookmark.swig&#39; %&#125;</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;copy-code.swig&#39; %&#125;</span><br><span class="line"></span><br><span class="line">+     &#123;% include &#39;_custom&#x2F;custom.swig&#39; %&#125;</span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">  &lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如此即可将 Hotjar 嵌入到站内，接下来在 Hotjar 控制台菜单中点击 Incoming，然后根据引导一步步配置即时反馈服务即可：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-setup-incoming.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-setup-incoming.png" alt="配置 Incoming Feedback"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-setup-incoming.png">配置 Incoming Feedback</a></p>
+<p>如果你在本站内发现了错别字、病句、失效链接、代码缩进不一致，可以通过页面右侧的 Feedback 反馈。</p>
+<h1 id="文章页面个性化设置"><a href="#文章页面个性化设置" class="headerlink" title="文章页面个性化设置"></a>文章页面个性化设置</h1><h2 id="添加评论功能"><a href="#添加评论功能" class="headerlink" title="添加评论功能"></a>添加评论功能</h2><p>Next 支持多款评论系统：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://disqus.com/">Disqus</a>：欧美 UI 风格，支持 Tweet、Facebook 等国外社交软件的三方登陆和一键分享。 <a target="_blank" rel="noopener" href="https://blog.disqus.com/disqus-welcomes-the-spruce">Demo</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/imsun/gitment">gitment</a>：必须用 github 账号登陆才能评论，支持 Markdown 语法，与 github issues 页面风格一致 <a target="_blank" rel="noopener" href="https://imsun.github.io/gitment/">Demo</a></li>
+<li><a target="_blank" rel="noopener" href="https://valine.js.org/">Valine</a>：支持匿名评论，支持 Markdown 语法，界面简洁美观</li>
+<li><a target="_blank" rel="noopener" href="http://changyan.kuaizhan.com/">畅言</a>：国产评论系统，可区分热评和最新评论，论坛贴吧风</li>
+<li><a target="_blank" rel="noopener" href="https://www.livere.com/">来必力</a>：支持插入图片和 GIF，支持国内外多种社交媒体的三方登陆 <a target="_blank" rel="noopener" href="https://www.livere.com/city-demo">Demo</a></li>
+</ul>
+<p>博客的评论系统不需要太过复杂的功能，我的要求是一定要轻量级，足够简洁美观，并且支持 Markdown 语法，因此我首选 Valine 和 gitment，这两个评论系统都是由国内个人开发的，在此向开发者致敬。</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/valine-comments.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/valine-comments.png" alt="Valine 评论系统"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/valine-comments.png">Valine 评论系统</a></p>
+<p>Next 已经内置了 Valine 组件，在主题配置文件中开启评论功能即可，同时，由于 Valine 是基于 Leancloud 提供后端服务的，所以需要填写 LeanCloud 的 App ID 和 App Key。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.ymlvaline:</span><br><span class="line">  enable: true</span><br><span class="line">  appid:  ***&lt;app_id***</span><br><span class="line">  appkey: ***&lt;app_key&gt;***</span><br><span class="line">  notify: false  # 收到新评论是否邮件通知</span><br><span class="line">  verify: false  # 是否开启验证码</span><br><span class="line">  placeholder:  # 默认填充文字</span><br><span class="line">  avatar: mm  # 设置默认评论列表</span><br><span class="line">  guest_info: nick,mail  # 评论区头部表单</span><br><span class="line">  pageSize: 10  # 每页评论数</span><br><span class="line">  visitor: true  # 同时开启文章阅读次数统计</span><br></pre></td></tr></table></figure>
+
+<p>Valine 也附带了阅读统计功能，可以在 Valine 配置项中设置 <code>visitor: true</code> 开启该功能。为避免后端服务冲突，建议不要同时启用 Valine 的阅读统计功能和 <code>leancloud_visitors</code>。</p>
+<p>关于如何在收到评论时发送邮件提醒请参照 <a target="_blank" rel="noopener" href="http://www.zhaojun.im/hexo-valine-admin/">赵俊 | Hexo 优化 — Valine 扩展之邮件通知</a></p>
+<p>Next 暂时不支持通过配置的方式隐藏文章标题下的评论数量，如要隐藏，可在自定义样式文件中添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_custom&#x2F;custom.styl&#x2F;&#x2F;屏蔽标题下的评论数量</span><br><span class="line">.post-comments-count &#123;</span><br><span class="line">  display: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你是轻度洁癖患者，想要隐藏评论区的浏览器和操作系统版本号以拥有更加干净的评论界面，可在自定义样式文件中添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_custom&#x2F;custom.styl&#x2F;&#x2F;屏蔽评论组件的多余信息</span><br><span class="line">#comments .vsys &#123;</span><br><span class="line">  display: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="文末版权声明"><a href="#文末版权声明" class="headerlink" title="文末版权声明"></a>文末版权声明</h2><p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-copyright.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-copyright.png" alt="文章版权声明"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-copyright.png">文章版权声明</a></p>
+<p>在主题配置文件中开启文章底部的版权声明，版权声明默认使用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，用户可以根据自身需要修改 <code>licence</code> 字段变更协议。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.ymlpost_copyright:</span><br><span class="line">  enable: true</span><br><span class="line">  license: &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by-nc-sa&#x2F;4.0&#x2F;&quot; rel&#x3D;&quot;external nofollow&quot; target&#x3D;&quot;_blank&quot;&gt;CC BY-NC-SA 4.0&lt;&#x2F;a&gt;</span><br></pre></td></tr></table></figure>
+
+<p>默认版权声明中只有 <strong>本文作者</strong>、<strong>本文链接</strong>、<strong>版权声明</strong> 三项，如果你想添加更多内容，如 <strong>创建时间</strong>、<strong>修改时间</strong>、<strong>引用链接</strong> 等，需要修改版权声明的相关代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_macro\post-copyright.swig&lt;!-- JS库 clipboard 拷贝内容到粘贴板--&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;clipboard.js&#x2F;2.0.1&#x2F;clipboard.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- JS库 sweetalert 显示提示信息--&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;sweetalert&#x2F;dist&#x2F;sweetalert.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;ul class&#x3D;&quot;post-copyright&quot;&gt;</span><br><span class="line">  &lt;!-- 本文标题 --&gt;</span><br><span class="line">  &lt;li&gt;</span><br><span class="line">    &lt;strong&gt;&#123;&#123; __(&#39;post.copyright.title&#39;) + __(&#39;symbol.colon&#39;) &#125;&#125; &lt;&#x2F;strong&gt;</span><br><span class="line">    &#123;&#123; post.title &#125;&#125;</span><br><span class="line">  &lt;&#x2F;li&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- 本文作者 --&gt;</span><br><span class="line">  &lt;li class&#x3D;&quot;post-copyright-author&quot;&gt;</span><br><span class="line">    &lt;strong&gt;&#123;&#123; __(&#39;post.copyright.author&#39;) + __(&#39;symbol.colon&#39;) &#125;&#125; &lt;&#x2F;strong&gt;</span><br><span class="line">    &#123;&#123; post.author | default(author) &#125;&#125;</span><br><span class="line">  &lt;&#x2F;li&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- 创建时间 --&gt;</span><br><span class="line">  &lt;li&gt;</span><br><span class="line">    &lt;strong&gt;&#123;&#123; __(&#39;post.created&#39;) + __(&#39;symbol.colon&#39;) &#125;&#125; &lt;&#x2F;strong&gt;</span><br><span class="line">    &#123;&#123; post.date.format(&quot;YYYY年MM月DD日 - HH时MM分&quot;) &#125;&#125;</span><br><span class="line">  &lt;&#x2F;li&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- 修改时间 --&gt;</span><br><span class="line">  &lt;li&gt;</span><br><span class="line">    &lt;strong&gt;&#123;&#123; __(&#39;post.modified&#39;) + __(&#39;symbol.colon&#39;) &#125;&#125; &lt;&#x2F;strong&gt;</span><br><span class="line">    &#123;&#123; post.updated.format(&quot;YYYY年MM月DD日 - HH时MM分&quot;) &#125;&#125;</span><br><span class="line">  &lt;&#x2F;li&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- 引用链接 --&gt;</span><br><span class="line">  &lt;li class&#x3D;&quot;post-copyright-link&quot;&gt;</span><br><span class="line">    &lt;strong&gt;&#123;&#123; __(&#39;post.copyright.link&#39;) + __(&#39;symbol.colon&#39;) &#125;&#125;&lt;&#x2F;strong&gt;</span><br><span class="line">    &lt;a href&#x3D;&quot;&#123;&#123; post.url | default(post.permalink) &#125;&#125;&quot; title&#x3D;&quot;&#123;&#123; post.title &#125;&#125;&quot;</span><br><span class="line">      &gt;&#123;&#123; post.url | default(post.permalink) &#125;&#125;&lt;&#x2F;a</span><br><span class="line">    &gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;copy-path&quot; title&#x3D;&quot;点击复制引用链接&quot;</span><br><span class="line">      &gt;&lt;i</span><br><span class="line">        style&#x3D;&quot;cursor: pointer&quot;</span><br><span class="line">        class&#x3D;&quot;fa fa-clipboard&quot;</span><br><span class="line">        data-clipboard-text&#x3D;&quot;[&#123;&#123; post.author | default(author) &#125;&#125;&#39;s Blog | &#123;&#123; post.title &#125;&#125;](&#123;&#123; post.permalink &#125;&#125;)&quot;</span><br><span class="line">        aria-label&#x3D;&quot;&#123;&#123; __(&#39;post.copy_success&#39;) &#125;&#125;&quot;</span><br><span class="line">      &gt;&lt;&#x2F;i</span><br><span class="line">    &gt;&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;&#x2F;li&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- 版权声明 --&gt;</span><br><span class="line">  &lt;li class&#x3D;&quot;post-copyright-license&quot;&gt;</span><br><span class="line">    &lt;strong</span><br><span class="line">      &gt;&#123;&#123; __(&#39;post.copyright.license_title&#39;) + __(&#39;symbol.colon&#39;) &#125;&#125;</span><br><span class="line">    &lt;&#x2F;strong&gt;</span><br><span class="line">    &#123;&#123; __(&#39;post.copyright.license_content&#39;, theme.post_copyright.license) &#125;&#125;</span><br><span class="line">  &lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  var clipboard &#x3D; new ClipboardJS(&quot;.fa-clipboard&quot;);</span><br><span class="line">  clipboard.on(&quot;success&quot;, function(target) &#123;</span><br><span class="line">    var message &#x3D; document.createElement(&quot;div&quot;);</span><br><span class="line">    message.innerHTML &#x3D;</span><br><span class="line">      &#39;&lt;i class&#x3D;&quot;fa fa-check-circle message-icon&quot;&gt;&lt;&#x2F;i&gt;&lt;span class&#x3D;&quot;message-content&quot;&gt;&#39; +</span><br><span class="line">      target.trigger.getAttribute(&quot;aria-label&quot;) +</span><br><span class="line">      &quot;&lt;&#x2F;span&gt;&quot;;</span><br><span class="line">    swal(&#123;</span><br><span class="line">      content: message,</span><br><span class="line">      className: &quot;copy-success-message&quot;,</span><br><span class="line">      timer: 1000,</span><br><span class="line">      button: false</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在版权样式文件中添加如下样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">themes\next\source\css_common\components\post\post-copyright.styl.swal-overlay &#123;</span><br><span class="line">  background-color: transparent;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.copy-success-message &#123;</span><br><span class="line">  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);</span><br><span class="line">  border-radius: 4px;</span><br><span class="line">  width: auto;</span><br><span class="line">  margin: 16x 0px;</span><br><span class="line">  vertical-align: top;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.copy-success-message .swal-content &#123;</span><br><span class="line">  margin: 0px 0px !important;</span><br><span class="line">  padding: 10px 16px;</span><br><span class="line">  line-height: 1em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.copy-success-message .message-icon &#123;</span><br><span class="line">  color: #52c41a;</span><br><span class="line">  margin-right: 8px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.copy-success-message .message-content &#123;</span><br><span class="line">  font-size: 14px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后补全版权信息文案字段：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">themes&#x2F;next&#x2F;languages&#x2F;zh-CN.ymlpost:</span><br><span class="line">  created: 创建时间</span><br><span class="line">  modified: 修改时间</span><br><span class="line">  copy_success: 复制成功</span><br><span class="line">  copyright:</span><br><span class="line">    title: 本文标题</span><br><span class="line">    author: 本文作者</span><br><span class="line">    link: 引用链接</span><br><span class="line">    license_title: 版权声明</span><br><span class="line">    license_content: &quot;本博客所有文章除特别声明外，均采用 %s 许可协议。转载请注明出处！&quot;</span><br></pre></td></tr></table></figure>
+
+<p>点击引用链接后的图标 即可快捷复制 Markdown 引用链接，并将弹出复制成功的提示语。该功能主要借助 <a target="_blank" rel="noopener" href="https://clipboardjs.com/">clipboard</a> 和 <a target="_blank" rel="noopener" href="https://sweetalert.js.org/">sweetalert</a> 两个 js 库来实现，并参考 <a target="_blank" rel="noopener" href="https://ant.design/components/message/">antDesign | message 组件</a> 重写了弹框样式。</p>
+<p>在实际使用过程中，并非每篇文章都需要版权声明，如果转载了别人的文章，文末再出现个人版权声明就不太合适。此时可在 Front-Matter 中设定变量 <code>copyright</code> 用于控制是否显示版权信息。修改文章布局模板中相关代码，使得只有当主题配置文件中 <code>post_copyright.enable</code> 字段和 <code>page.copyright</code> 字段同时为 <code>true</code> 时才会插入版权声明：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">themes&#x2F;next&#x2F;layout&#x2F;_macro&#x2F;post.swig- &#123;% if theme.post_copyright.enable and not is_index %&#125;</span><br><span class="line">+ &#123;% if theme.post_copyright.enable and page.copyright and not is_index %&#125;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &#123;% include &#39;post-copyright.swig&#39; with &#123; post: post &#125; %&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>为了批量为每篇新文章设定该变量并赋默认值，可以修改草稿模板内容，这样以来每篇草稿发布为正文后都会默认显示底部版权信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scaffolds\draft.md  title: &#123;&#123; title &#125;&#125;</span><br><span class="line">  tags:</span><br><span class="line">  categories:</span><br><span class="line">+ copyright: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加打赏功能"><a href="#添加打赏功能" class="headerlink" title="添加打赏功能"></a>添加打赏功能</h2><p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-reward.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-reward.png" alt="文章打赏功能"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-reward.png">文章打赏功能</a></p>
+<p>启用主题配置文件中的打赏相关字段，并将个人收款码图片置于 themes\next\source\images\ 目录下，注意保持图片命名与配置文件中一致：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.ymlreward_comment:</span><br><span class="line">wechatpay: &#x2F;images&#x2F;wechatpay.png</span><br><span class="line">alipay: &#x2F;images&#x2F;alipay.jpg</span><br></pre></td></tr></table></figure>
+
+<p>如果要关闭悬停收款码上的文字抖动效果，可以在自定义样式文件中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_custom&#x2F;custom.styl&#x2F;&#x2F;关闭打赏收款码的文字抖动效果</span><br><span class="line">#QR &gt; div:hover p &#123;</span><br><span class="line">  animation: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>并非每个页面都需要开启打赏功能，可以在 Front-Matter 中添加 <code>reward</code> 字段来控制是否在本文章中添加打赏信息，然后修改文章布局模板中相关的判定条件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">themes&#x2F;next&#x2F;layout&#x2F;_macro&#x2F;post.swig- &#123;% if (theme.alipay or theme.wechatpay or theme.bitcoin) and not is_index %&#125;</span><br><span class="line">+ &#123;% if ( post.reward and (theme.alipay or theme.wechatpay or theme.bitcoin) and not is_index %&#125;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &#123;% include &#39;reward.swig&#39; %&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>为了方便可在草稿模板 scaffolds\draft.md 中统一添加 <code>reward</code> 字段默认值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scaffolds\draft.md  title: &#123;&#123; title &#125;&#125;</span><br><span class="line">  tags:</span><br><span class="line">  categories:</span><br><span class="line">+ reward: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加图片灯箱"><a href="#添加图片灯箱" class="headerlink" title="添加图片灯箱"></a>添加图片灯箱</h2><p>添加灯箱功能，实现点击图片后放大聚焦图片，并支持幻灯片播放、全屏播放、缩略图、快速分享到社交媒体等，该功能由 <a target="_blank" rel="noopener" href="https://github.com/fancyapps/fancybox">fancyBox</a> 提供，效果如下：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/fancybox.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/fancybox.png" alt="fancyBox 灯箱"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/fancybox.png">fancyBox 灯箱</a></p>
+<p>在根目录下执行以下命令安装相关依赖：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;theme-next-fancybox3 themes&#x2F;next&#x2F;source&#x2F;lib&#x2F;fancybox</span><br></pre></td></tr></table></figure>
+
+<p>在主题配置文件中设置 <code>fancybox: true</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.ymlfancybox: true</span><br></pre></td></tr></table></figure>
+
+<p>刷新浏览器即可生效。</p>
+<h2 id="相关文章推荐"><a href="#相关文章推荐" class="headerlink" title="相关文章推荐"></a>相关文章推荐</h2><p>该功能由 <a target="_blank" rel="noopener" href="https://github.com/tea3/hexo-related-popular-posts">hexo-related-popular-posts</a> 插件提供，效果如下：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/related-post.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/related-post.png" alt="相关文章推荐"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/related-post.png">相关文章推荐</a></p>
+<p>在站点根目录中执行以下命令安装依赖：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-related-popular-posts --save</span><br></pre></td></tr></table></figure>
+
+<p>在主题配置文件中开启相关文章推荐功能：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.ymlrelated_posts:</span><br><span class="line">  enable: true</span><br><span class="line">  title: # custom header, leave empty to use the default one</span><br><span class="line">  display_in_home: false</span><br><span class="line">  params:</span><br><span class="line">    maxCount: 5</span><br></pre></td></tr></table></figure>
+
+<p>此时会在每篇文章结尾根据标签相关性和内容相关性来推荐相关文章。</p>
+<p>事实上并非每篇文章都需要开启该功能，可在文章 Front-Matter 中设置 <code>related_posts</code> 字段来控制是否在文末显示相关文章，然后修改文章布局模板中相关的判定条件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">themes&#x2F;next&#x2F;layout&#x2F;_macro&#x2F;post.swig- &#123;% if theme.related_posts.enable and (theme.related_posts.display_in_home or not is_index) %&#125;</span><br><span class="line">+ &#123;% if theme.related_posts.enable and (theme.related_posts.display_in_home or not is_index) and post.related_posts %&#125;</span><br><span class="line">    &#123;% include &#39;post-related.swig&#39; with &#123; post: post &#125; %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>为了方便可在草稿模板 scaffolds\draft.md 中统一添加 <code>related_posts</code> 字段默认值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scaffolds\draft.md  title: &#123;&#123; title &#125;&#125;</span><br><span class="line">  tags:</span><br><span class="line">  categories:</span><br><span class="line">+ related_posts: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="文章评分"><a href="#文章评分" class="headerlink" title="文章评分"></a>文章评分</h2><p><a target="_blank" rel="noopener" href="https://widgetpack.com/">widgetpack</a> 是一款轻量级的插件，提供四项具体的功能：</p>
+<ul>
+<li>Comments: 评论系统，类似于留言板</li>
+<li>Reviews: 评价系统，类似于商品评价</li>
+<li>Rating: 星级评分系统</li>
+<li>Google Reviews: 关联展示 Google Rating</li>
+</ul>
+<p>Next 主题中已经集成了 widgetpack 的星级评分系统，用户无须再安装或引入插件脚本，只需在 widgetpack 中注册账号并修改主题配置即可，应用效果如下：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/rating.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/rating.png" alt="文章评分组件"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/rating.png">文章评分组件</a></p>
+<p>在 <a target="_blank" rel="noopener" href="https://widgetpack.com/">widgetpack</a> 中注册账号，根据引导填写应用名称和域名创建应用，创建后可在页面左上角看到应用 id。</p>
+<p>在主题配置文件中开启评分功能，填写应用 id，并设置评分颜色：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">themes\next_config.yml# Star rating support to each article.</span><br><span class="line"># To get your ID visit https:&#x2F;&#x2F;widgetpack.com</span><br><span class="line">rating:</span><br><span class="line">  enable: true</span><br><span class="line">  id: #&lt;app_id&gt;</span><br><span class="line">  color: fadb14</span><br></pre></td></tr></table></figure>
+
+<p>此时刷新浏览器即可在文章末尾看到空的评分栏了。点击评分发现需要以社交账号登陆，而这些社交账号基本都是 facebook、twitter 等墙外的社交软件，限制了评分系统可用性，我们可以在 widgetpack 控制台中修改评分认证机制。</p>
+<p>在控制台中点击左上角展开菜单，在 <strong>Rating</strong> -&gt; <strong>Setting</strong> 中将 Vote via 选项改为 Device(cookie) 以开启匿名评分，该选项将基于设备认证访问者身份：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/rate-vote-via.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/rate-vote-via.png" alt="开启匿名评分"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/rate-vote-via.png">开启匿名评分</a></p>
+<p>用户还可以在该页面设定 star 数量和大小。修改后记得勾选右下角的 SAVE SETTING 才会生效。</p>
+<p>在实际使用过程中，并非每篇文章都需要开启评分。此时可在 Front-Matter 中设定变量 rating 用于控制是否开启评分。修改文章布局模板中相关代码，使得只有当主题配置文件中 <code>rating.enable</code> 字段和 <code>page.rating</code> 字段同时为 <code>true</code> 才会插入评分组件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_macro\post.swig  &#123;% if not is_index %&#125;</span><br><span class="line">-  &#123;% if theme.rating.enable or (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) or (theme.needmoreshare2.enable and theme.needmoreshare2.postbottom.enable) or (theme.baidushare and theme.baidushare.type &#x3D;&#x3D;&#x3D; &quot;button&quot; )%&#125;</span><br><span class="line">+  &#123;% if (theme.rating.enable and post.rating) or (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) or (theme.needmoreshare2.enable and theme.needmoreshare2.postbottom.enable) or (theme.baidushare and theme.baidushare.type &#x3D;&#x3D;&#x3D; &quot;button&quot; )%&#125;</span><br><span class="line">    &lt;div class&#x3D;&quot;post-widgets&quot;&gt;</span><br><span class="line">    &#123;% if theme.rating.enable %&#125;</span><br><span class="line">      &lt;div class&#x3D;&quot;wp_rating&quot;&gt;</span><br><span class="line">        &lt;div id&#x3D;&quot;wpac-rating&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>为了批量为每篇新文章设定该变量并赋默认值，可以修改草稿模板内容，这样以来每篇草稿发布后都会默认开启评分：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scaffolds\draft.md  title: &#123;&#123; title &#125;&#125;</span><br><span class="line">  tags:</span><br><span class="line">  categories:</span><br><span class="line">+ rating: true</span><br></pre></td></tr></table></figure>
+
+<p>站点上线后，可以在控制台菜单的 <strong>Site</strong> -&gt; <strong>Setting</strong> 中勾选 Private，使得组件只对应用内指定的域名上生效，这样以来即时别人错填了你的 id 也不会将评分数据误提交到你的应用中了。</p>
+<p>widgetpack 与前文提到的 hotjar 在评价反馈功能上的侧重点不一样，widgetpack 更侧重于对文章的评分，而 hotjar 侧重于对整个页面的评分，并提供了文字和截图反馈的渠道。</p>
+<h2 id="文章加密访问"><a href="#文章加密访问" class="headerlink" title="文章加密访问"></a>文章加密访问</h2><p>该功能由 <a target="_blank" rel="noopener" href="https://github.com/MikeCoder/hexo-blog-encrypt">hexo-blog-encrypt</a> 插件提供，效果如下：</p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-encrypt.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-encrypt.png" alt="文章加密"></a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-encrypt.png">文章加密</a></p>
+<p>在站点根目录中执行以下命令安装依赖：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-blog-encrypt --save</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件中添加如下字段：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">_config.ymlencrypt:</span><br><span class="line">  enable: true</span><br><span class="line">  default_abstract: 此文章已被加密，需要输入密码访问。  &#x2F;&#x2F;首页文章列表中加密文章的默认描述文案</span><br><span class="line">  default_message: 请输入密码以阅读这篇私密文章。  &#x2F;&#x2F;文章详情页的密码输入框上的默认描述文案</span><br></pre></td></tr></table></figure>
+
+<p>然后在文章 Front-Matter 中添加 <code>password</code> 字段用于设置文章访问密码。重启服务器，这个时候可能需要经历较长一段时间的加密过程，请耐心等待，加密完成后刷新页面将会显示密码输入框，输入密码后才能继续访问文章内容。</p>
+<p>该功能只会加密文章正文，其他内容如打赏、版权信息、标签等则不会被加密隐藏，这样看起来有点奇怪，所以建议加密文章隐藏掉打赏和版权信息内容。</p>
+<p>密码输入错误时将会显示浏览器默认告警弹窗，可以使用 <a target="_blank" rel="noopener" href="https://sweetalert.js.org/">sweetalert</a> 来美化错误提示：</p>
+<p>在主题自定义布局文件中添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_custom\custom.swig&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;sweetalert&#x2F;dist&#x2F;sweetalert.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果 custom.swig 文件不存在，需要手动新建并在布局页面中 body 末尾引入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout_layout.swig      ...</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;exturl.swig&#39; %&#125;</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;bookmark.swig&#39; %&#125;</span><br><span class="line">      &#123;% include &#39;_third-party&#x2F;copy-code.swig&#39; %&#125;</span><br><span class="line"></span><br><span class="line">+     &#123;% include &#39;_custom&#x2F;custom.swig&#39; %&#125;</span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">  &lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在 node_modules 依赖库中修改 hexo-blog-encrypt 源码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">node_modules\hexo-blog-encrypt\lib\blog.encrypt.js  ...</span><br><span class="line">  &#125; catch (e) &#123;</span><br><span class="line">-   alert(decryptionError);</span><br><span class="line">+   swal(&#123;</span><br><span class="line">+     text: &quot;密码错误!&quot;,</span><br><span class="line">+     icon: &quot;error&quot;,</span><br><span class="line">+     className: &quot;password-error&quot;,</span><br><span class="line">+     timer: 1000,</span><br><span class="line">+     button: false</span><br><span class="line">+   &#125;);</span><br><span class="line">    console.log(e);</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+
+<p>在自定义样式文件中添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_custom&#x2F;custom.styl&#x2F;&#x2F;密码错误sweetalert弹框样式修改</span><br><span class="line">.swal-overlay &#123;</span><br><span class="line">  background-color: transparent;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.password-error &#123;</span><br><span class="line">  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);</span><br><span class="line">  border-radius: 4px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>由于是在 node_module 中修改的依赖文件，一旦更新或者重装依赖都会覆盖修改，需要重新修改一遍。</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html">reuixiy | 打造个性超赞博客 Hexo+NexT+GitHubPages 的超深度优化</a></li>
+<li><a target="_blank" rel="noopener" href="https://notes.doublemine.me/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud">夏末 | 为 NexT 主题添加文章阅读量统计功能</a></li>
+<li><a target="_blank" rel="noopener" href="https://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">nMask | Hexo 搭建博客教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://leancloud.cn/docs/leanstorage_guide-js.html">LeanCloud | JavaScript SDK 安装指南</a></li>
+<li><a target="_blank" rel="noopener" href="https://diygod.me/2153/">DIYgod | 我藏好了哦</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/mythsman/hexo-douban">mythsman/hexo-douban README.md</a></li>
+<li><a target="_blank" rel="noopener" href="https://asdfv1929.github.io/2018/01/21/daovoice/">asdfv1929 | Hexo NexT 主题内接入网页在线联系功能</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hotjar.com/tour">Hotjar Features</a></li>
+<li>[Incoming Feedback by Hotjar</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/26/Youtube-dl/" rel="prev" title="Youtube-dl常见用法">
+      <i class="fa fa-chevron-left"></i> Youtube-dl常见用法
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.</span> <span class="nav-text">数据统计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%99%E7%82%B9%E8%AE%BF%E9%97%AE%E9%87%8F%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.1.</span> <span class="nav-text">站点访问量统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%99%E7%82%B9%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.2.</span> <span class="nav-text">站点运行时间统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E8%AE%BF%E9%97%AE%E9%87%8F%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.3.</span> <span class="nav-text">文章访问量统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%99%E7%82%B9%E5%8F%8A%E6%96%87%E7%AB%A0%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.4.</span> <span class="nav-text">站点及文章字数统计</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AB%99%E7%82%B9%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">站点个性化设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9E%E6%80%AA%E7%BD%91%E9%A1%B5%E6%A0%87%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">搞怪网页标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2"><span class="nav-number">2.2.</span> <span class="nav-text">站内搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0%E6%8E%92%E8%A1%8C%E6%A6%9C"><span class="nav-number">2.3.</span> <span class="nav-text">热门文章排行榜</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B1%86%E7%93%A3%E9%98%85%E8%AF%BB-%E7%94%B5%E5%BD%B1-%E6%B8%B8%E6%88%8F"><span class="nav-number">2.4.</span> <span class="nav-text">豆瓣阅读 &#x2F; 电影 &#x2F; 游戏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9"><span class="nav-number">2.5.</span> <span class="nav-text">在线聊天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E4%B8%BA%E7%9B%91%E6%B5%8B%E4%B8%8E%E5%8F%8D%E9%A6%88"><span class="nav-number">2.6.</span> <span class="nav-text">行为监测与反馈</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E9%A1%B5%E9%9D%A2%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">文章页面个性化设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD"><span class="nav-number">3.1.</span> <span class="nav-text">添加评论功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AB%E7%89%88%E6%9D%83%E5%A3%B0%E6%98%8E"><span class="nav-number">3.2.</span> <span class="nav-text">文末版权声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%89%93%E8%B5%8F%E5%8A%9F%E8%83%BD"><span class="nav-number">3.3.</span> <span class="nav-text">添加打赏功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E7%81%AF%E7%AE%B1"><span class="nav-number">3.4.</span> <span class="nav-text">添加图片灯箱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90"><span class="nav-number">3.5.</span> <span class="nav-text">相关文章推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E8%AF%84%E5%88%86"><span class="nav-number">3.6.</span> <span class="nav-text">文章评分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86%E8%AE%BF%E9%97%AE"><span class="nav-number">3.7.</span> <span class="nav-text">文章加密访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="nav-number">3.8.</span> <span class="nav-text">参考链接</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="曹圣洁"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">曹圣洁</p>
+  <div class="site-description" itemprop="description">尽兴</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/qpwmio" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;qpwmio" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/audient-42" title="ZhiHu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;audient-42" rel="noopener" target="_blank"><i class="fab fa-zhihu fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://music.163.com/#/playlist?id=642243392" title="网易云 → https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;playlist?id&#x3D;642243392" rel="noopener" target="_blank"><i class="fa fa-music fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.52pojie.cn/" title="https:&#x2F;&#x2F;www.52pojie.cn&#x2F;" rel="noopener" target="_blank">吾爱破解</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.cskaoyan.com/forum.php" title="http:&#x2F;&#x2F;www.cskaoyan.com&#x2F;forum.php" rel="noopener" target="_blank">王道论坛</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">曹圣洁</span>
+</div>
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
