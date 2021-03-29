@@ -81,7 +81,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
-<li>邮箱：<a href="mailto:&#104;&#117;&#x73;&#116;&#103;&#111;&#x63;&#x6b;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#104;&#117;&#x73;&#116;&#103;&#111;&#x63;&#x6b;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#x68;&#x75;&#115;&#116;&#x67;&#x6f;&#x63;&#x6b;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x68;&#x75;&#115;&#116;&#x67;&#x6f;&#x63;&#x6b;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
@@ -94,6 +94,31 @@
       <tags>
         <tag>post</tag>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>淘汰</title>
+    <url>/2021/03/15/%E6%B7%98%E6%B1%B0/</url>
+    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#好听</td></tr></table>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=65528&auto=0&height=66"></iframe>
+<span id="more"></span>
+# title1
+## title2
+### title3
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
+# categories:
+ 列表：
+ - computer
+ - computer-aided-art
+
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>音乐</category>
+      </categories>
+      <tags>
+        <tag>music</tag>
       </tags>
   </entry>
   <entry>
@@ -239,20 +264,14 @@
       </tags>
   </entry>
   <entry>
-    <title>淘汰</title>
-    <url>/2021/03/15/%E6%B7%98%E6%B1%B0/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#好听</td></tr></table>
+    <title>篝火旁</title>
+    <url>/2021/02/19/%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/</url>
+    <content><![CDATA[<p>篝火旁</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518725853&auto=0&height=66"></iframe>
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=65528&auto=0&height=66"></iframe>
-<span id="more"></span>
-# title1
-## title2
-### title3
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
-# categories:
- 列表：
- - computer
- - computer-aided-art
+
+
+
 
 ]]></content>
       <categories>
@@ -286,25 +305,6 @@
       </tags>
   </entry>
   <entry>
-    <title>篝火旁</title>
-    <url>/2021/02/19/%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/</url>
-    <content><![CDATA[<p>篝火旁</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518725853&auto=0&height=66"></iframe>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>生活</category>
-        <category>音乐</category>
-      </categories>
-      <tags>
-        <tag>music</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>高数</title>
     <url>/2021/03/22/%E9%AB%98%E6%95%B0/</url>
     <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#高等数学</td></tr></table>
@@ -320,6 +320,7 @@
 <h3 id="加减法在同阶（精确度相同）可以使用等价无穷小"><a href="#加减法在同阶（精确度相同）可以使用等价无穷小" class="headerlink" title="加减法在同阶（精确度相同）可以使用等价无穷小"></a>加减法在同阶（精确度相同）可以使用等价无穷小</h3><p><img src="/images/master/advMath13.png"></p>
 <h1 id="导数与微分"><a href="#导数与微分" class="headerlink" title="导数与微分"></a>导数与微分</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="可微-注解"><a href="#可微-注解" class="headerlink" title="可微-注解"></a>可微-注解</h3><p><img src="/images/master/advMath7.png"><br><img src="/images/master/advMath8.png"></p>
 <h2 id="反函数求导"><a href="#反函数求导" class="headerlink" title="反函数求导"></a>反函数求导</h2><h3 id="P33-反函数例题"><a href="#P33-反函数例题" class="headerlink" title="P33 反函数例题"></a>P33 反函数例题</h3><p><img src="/images/master/advMath9.png"></p>
+<h2 id="中值定理"><a href="#中值定理" class="headerlink" title="中值定理"></a>中值定理</h2><h3 id="P54-题型一-f-n-ξ-0）（罗尔型）"><a href="#P54-题型一-f-n-ξ-0）（罗尔型）" class="headerlink" title="P54 题型一 f^n ξ = 0）（罗尔型）"></a>P54 题型一 f^n ξ = 0）（罗尔型）</h3><p><img src="/images/master/advMath15.png"></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ 加油</span><br></pre></td></tr></table></figure>
 
 ]]></content>
@@ -339,7 +340,7 @@
 本篇文章介绍了如何为 Hexo 博客集成更多强大的功能。
 
 <p>第一章介绍了在站点中集成基于三方插件的数据统计服务，包括站点 PV 和 PU 统计、站点运行时间统计、文章 PV 统计、站点和文章字数统计等。</p>
-<p>第二张介绍了针对于站点的个性化设置方案，包括添加搞怪的网页标题，添加站内搜索功能，添加热门文章排行榜页面，添加豆瓣阅读 / 电影 / 游戏等资料页面，添加在线聊天和即时反馈等功能。</p>
+<p>第二章介绍了针对于站点的个性化设置方案，包括添加搞怪的网页标题，添加站内搜索功能，添加热门文章排行榜页面，添加豆瓣阅读 / 电影 / 游戏等资料页面，添加在线聊天和即时反馈等功能。</p>
 <p>第三章介绍了针对于文章页面的个性化设置方案，包括在文章末尾添加评论组件、评分组件、打赏入口、版权声明、推荐文章等，为文章中的图片添加点击灯箱效果，以及为文章设置访问密码。</p>
 <span id="more"></span>
 <h1 id="数据统计"><a href="#数据统计" class="headerlink" title="数据统计"></a>数据统计</h1><h2 id="站点访问量统计"><a href="#站点访问量统计" class="headerlink" title="站点访问量统计"></a>站点访问量统计</h2><p>该功能由 <a href="http://ibruce.info/2015/04/04/busuanzi/">不蒜子</a> 提供，效果如下图：</p>
