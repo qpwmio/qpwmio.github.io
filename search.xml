@@ -81,7 +81,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
-<li>邮箱：<a href="mailto:&#x68;&#x75;&#115;&#116;&#x67;&#x6f;&#x63;&#x6b;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x68;&#x75;&#115;&#116;&#x67;&#x6f;&#x63;&#x6b;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#104;&#117;&#115;&#116;&#x67;&#x6f;&#99;&#x6b;&#64;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;">&#104;&#117;&#115;&#116;&#x67;&#x6f;&#99;&#x6b;&#64;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
@@ -97,20 +97,13 @@
       </tags>
   </entry>
   <entry>
-    <title>淘汰</title>
-    <url>/2021/03/15/%E6%B7%98%E6%B1%B0/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#好听</td></tr></table>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=65528&auto=0&height=66"></iframe>
+    <title>Thriller</title>
+    <url>/2021/03/29/Thriller/</url>
+    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#想你了</td></tr></table>
+<iframe src="//player.bilibili.com/player.html?aid=30693992&bvid=BV1RW411Z7FL&cid=53577910&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <span id="more"></span>
-# title1
-## title2
-### title3
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
-# categories:
- 列表：
- - computer
- - computer-aided-art
+
+
 
 ]]></content>
       <categories>
@@ -264,14 +257,20 @@
       </tags>
   </entry>
   <entry>
-    <title>篝火旁</title>
-    <url>/2021/02/19/%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/</url>
-    <content><![CDATA[<p>篝火旁</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518725853&auto=0&height=66"></iframe>
+    <title>淘汰</title>
+    <url>/2021/03/15/%E6%B7%98%E6%B1%B0/</url>
+    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#好听</td></tr></table>
 
-
-
-
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=65528&auto=0&height=66"></iframe>
+<span id="more"></span>
+# title1
+## title2
+### title3
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
+# categories:
+ 列表：
+ - computer
+ - computer-aided-art
 
 ]]></content>
       <categories>
@@ -302,6 +301,25 @@
       </categories>
       <tags>
         <tag>考研</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>篝火旁</title>
+    <url>/2021/02/19/%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/</url>
+    <content><![CDATA[<p>篝火旁</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518725853&auto=0&height=66"></iframe>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>音乐</category>
+      </categories>
+      <tags>
+        <tag>music</tag>
       </tags>
   </entry>
   <entry>
