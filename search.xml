@@ -1,42 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo优化-Fancybox图片跳转问题</title>
-    <url>/2021/04/01/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-Fancybox%E5%9B%BE%E7%89%87%E8%B7%B3%E8%BD%AC%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#导语</td></tr></table>
-
-<span id="more"></span>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>  前段时间总结了博客使用图床解决了存储图片的问题，实现了博客的全面瘦身。<br>  然而在使用的过程中发现，fancybox 的图片浏览功能与图传链接产生了冲突，出现了意想不到的 BUG。<br>  主要原因是 fancybox 是使用 a 标签的 href 属性进行跳转的，之前链接图片都是本地链接，href 并没有跳转新的网页，然而用了图床的链接之后，a 标签就直接跳转到了图片地址去了。</p>
-</blockquote>
-<h2 id="解决尝试"><a href="#解决尝试" class="headerlink" title="解决尝试"></a>解决尝试</h2><blockquote>
-<p>  fancybox 的使用方法并没有研究过，我首先想到是的将 href 属性名称改变，比如改为 hrefs。不过首先得找到 a 标签的生成位置。<br>  我通过 VScode 搜索 black-blue 主题的 fancy 相关的脚本，经过筛选，找到 main.js 的压缩中有 a 标签的生成代码。</p>
-</blockquote>
-<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/1.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/1.png" alt="操作截图"></a></p>
-<hr>
-<blockquote>
-<p>  将 href 属性修改为无关的 hrefs 属性之后，虽然可以实现弹窗，但是每次弹窗之后图片就被吞了。</p>
-</blockquote>
-<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/2.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/2.png" alt="操作截图"></a><br><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/3.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/3.png" alt="操作截图"></a></p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><blockquote>
-<p>  后面上网找到了<a href="https://stackoverflow.com/questions/11618221/how-do-i-make-fancybox-href-dynamic">解决方案</a><br>  第一个解答有提到可以将 href 修改为 data-fancybox-href 进行调用，我完全按照回答的方法进行修改。</p>
-</blockquote>
-<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/4.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/4.png" alt="操作截图"></a><br><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/5.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/5.png" alt="操作截图"></a></p>
-<hr>
-<blockquote>
-<p>  经过测试之后，我发现根源是 type: ‘iframe’ 这段代码上，但是去掉之后又点击图片就没有反应了。<br>  后面我上官网查了 type 可以填写的参数，填上’image’之后，完美解决了问题。</p>
-</blockquote>
-<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/6.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/6.png" alt="操作截图"></a><br><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/7.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/7.png" alt="操作截图"></a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-        <category>博客优化</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown学习笔记</title>
     <url>/2021/02/22/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>@(网页基础设计)[马克飞象, 帮助, Markdown]</p>
@@ -117,7 +81,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
-<li>邮箱：<a href="mailto:&#x68;&#x75;&#115;&#x74;&#x67;&#111;&#99;&#x6b;&#64;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#x68;&#x75;&#115;&#x74;&#x67;&#111;&#99;&#x6b;&#64;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#x68;&#117;&#x73;&#116;&#103;&#111;&#x63;&#x6b;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x68;&#117;&#x73;&#116;&#103;&#111;&#x63;&#x6b;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
@@ -132,29 +96,184 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World/曹圣洁的第一篇博客</title>
-    <url>/2021/02/24/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+    <title>Hexo优化-Fancybox图片跳转问题</title>
+    <url>/2021/04/01/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-Fancybox%E5%9B%BE%E7%89%87%E8%B7%B3%E8%BD%AC%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#导语</td></tr></table>
+
 <span id="more"></span>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>  前段时间总结了博客使用图床解决了存储图片的问题，实现了博客的全面瘦身。<br>  然而在使用的过程中发现，fancybox 的图片浏览功能与图传链接产生了冲突，出现了意想不到的 BUG。<br>  主要原因是 fancybox 是使用 a 标签的 href 属性进行跳转的，之前链接图片都是本地链接，href 并没有跳转新的网页，然而用了图床的链接之后，a 标签就直接跳转到了图片地址去了。</p>
+</blockquote>
+<h2 id="解决尝试"><a href="#解决尝试" class="headerlink" title="解决尝试"></a>解决尝试</h2><blockquote>
+<p>  fancybox 的使用方法并没有研究过，我首先想到是的将 href 属性名称改变，比如改为 hrefs。不过首先得找到 a 标签的生成位置。<br>  我通过 VScode 搜索 black-blue 主题的 fancy 相关的脚本，经过筛选，找到 main.js 的压缩中有 a 标签的生成代码。</p>
+</blockquote>
+<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/1.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/1.png" alt="操作截图"></a></p>
+<hr>
+<blockquote>
+<p>  将 href 属性修改为无关的 hrefs 属性之后，虽然可以实现弹窗，但是每次弹窗之后图片就被吞了。</p>
+</blockquote>
+<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/2.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/2.png" alt="操作截图"></a><br><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/3.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/3.png" alt="操作截图"></a></p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><blockquote>
+<p>  后面上网找到了<a href="https://stackoverflow.com/questions/11618221/how-do-i-make-fancybox-href-dynamic">解决方案</a><br>  第一个解答有提到可以将 href 修改为 data-fancybox-href 进行调用，我完全按照回答的方法进行修改。</p>
+</blockquote>
+<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/4.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/4.png" alt="操作截图"></a><br><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/5.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/5.png" alt="操作截图"></a></p>
+<hr>
+<blockquote>
+<p>  经过测试之后，我发现根源是 type: ‘iframe’ 这段代码上，但是去掉之后又点击图片就没有反应了。<br>  后面我上官网查了 type 可以填写的参数，填上’image’之后，完美解决了问题。</p>
+</blockquote>
+<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/6.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/6.png" alt="操作截图"></a><br><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/7.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/7.png" alt="操作截图"></a></p>
 ]]></content>
       <categories>
         <category>Hexo</category>
-        <category>Configuration</category>
+        <category>博客优化</category>
       </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PicGo + Gitee实现markdown图床</title>
+    <url>/2021/04/01/PicGo%20+%20Gitee(%E7%A0%81%E4%BA%91)%E5%AE%9E%E7%8E%B0markdown%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h1 id="PicGo-Gitee-码云-实现markdown图床"><a href="#PicGo-Gitee-码云-实现markdown图床" class="headerlink" title="PicGo + Gitee(码云)实现markdown图床"></a>PicGo + Gitee(码云)实现markdown图床</h1><p><strong>前言</strong>：深感在线博客的编辑器坑太多了，文档丢失、必须联网、可移植性太差，所以开始寻找可替代的方案。</p>
+<h5 id="markdown是一门易于上手能帮助作者专心写作的文档编辑语言，它的好处太多了，建议想自己动手做笔记写博客的朋友都可以学一学，10分钟上手（我昨天晚上还不会用，今天就开始用它写博客了。。足以证明它是真的很简单）"><a href="#markdown是一门易于上手能帮助作者专心写作的文档编辑语言，它的好处太多了，建议想自己动手做笔记写博客的朋友都可以学一学，10分钟上手（我昨天晚上还不会用，今天就开始用它写博客了。。足以证明它是真的很简单）" class="headerlink" title="markdown是一门易于上手能帮助作者专心写作的文档编辑语言，它的好处太多了，建议想自己动手做笔记写博客的朋友都可以学一学，10分钟上手（我昨天晚上还不会用，今天就开始用它写博客了。。足以证明它是真的很简单）"></a><a href="https://baike.baidu.com/item/markdown/3245829?fr=aladdin">markdown</a>是一门易于上手能帮助作者专心写作的文档编辑语言，它的好处太多了，建议想自己动手做笔记写博客的朋友都可以学一学，10分钟上手（我昨天晚上还不会用，今天就开始用它写博客了。。足以证明它是真的很简单）</h5><h5 id="Tpyora是一款优雅的markdown编辑器，也推荐给大家，至于安装和配置，比安装word还简单，就不赘述了"><a href="#Tpyora是一款优雅的markdown编辑器，也推荐给大家，至于安装和配置，比安装word还简单，就不赘述了" class="headerlink" title="Tpyora是一款优雅的markdown编辑器，也推荐给大家，至于安装和配置，比安装word还简单，就不赘述了"></a><a href="https://www.typora.io/">Tpyora</a>是一款优雅的markdown编辑器，也推荐给大家，至于安装和配置，比安装word还简单，就不赘述了</h5><p>但是，这都不是重点，重点是咱们写博客的时候，总是需要<strong>插入图片</strong>的，图片存在本地的话上传到博客网站去就没法显示了，就算一个图一个图的复制粘贴上去，想移植到其他的博客网站，图就会失效，我们就需要图床</p>
+<blockquote>
+<p>图床是干什么的？  </p>
+<p>图床就是一个便于在博文中插入在线图片连接的个人图片仓库。设置图床之后，在自己博客中插入的图片链接就可以随时随地在线预览了，并且不会因为任何意外原因无法查看，除非自己亲自删除。</p>
+</blockquote>
+<h5 id="神奇的PicGo就是为了解决这个问题诞生的，它可以将图片上传到指定的图床上，然后返回markdown链接，直接粘贴到你的文档中，就搞定啦"><a href="#神奇的PicGo就是为了解决这个问题诞生的，它可以将图片上传到指定的图床上，然后返回markdown链接，直接粘贴到你的文档中，就搞定啦" class="headerlink" title="神奇的PicGo就是为了解决这个问题诞生的，它可以将图片上传到指定的图床上，然后返回markdown链接，直接粘贴到你的文档中，就搞定啦"></a>神奇的PicGo就是为了解决这个问题诞生的，它可以将图片上传到指定的图床上，然后返回markdown链接，直接粘贴到你的文档中，就搞定啦</h5><p>问题又来了，网上推荐七牛云阿里云都是要租赁服务器的，太麻烦还要钱，微博现在挂链接又很厉害。大部分人选择用github，但是github虽好却是国外的网站，速度终究比不上国内网站，研究了小半天，终于发现完美的解决方案</p>
+<h2 id="最终决定使用PicGo-国内的github-码云来实现markdown图床"><a href="#最终决定使用PicGo-国内的github-码云来实现markdown图床" class="headerlink" title="最终决定使用PicGo + 国内的github - 码云来实现markdown图床"></a>最终决定使用PicGo + 国内的github - <a href="https://gitee/com">码云</a>来实现markdown图床</h2><p>废话说到这里，开始进入正题</p>
+<hr>
+<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><ul>
+<li>  PicGo</li>
+<li>  picgo-plugin-gitee-uploader插件</li>
+</ul>
+<h4 id="首先打开picgo官网，下载安装包"><a href="#首先打开picgo官网，下载安装包" class="headerlink" title="首先打开picgo官网，下载安装包"></a>首先打开<a href="https://github.com/Molunerfinn/PicGo">picgo官网</a>，下载安装包</h4><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDExMzE1NTIyMC5wbmc?x-oss-process=image/format,png"><br>速度还挺快，没关系，PicGo2.1.2的安装包下面链接自取</p>
+<h4 id="安装之后打开主界面"><a href="#安装之后打开主界面" class="headerlink" title="安装之后打开主界面"></a>安装之后打开主界面</h4><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0d1aS1JTExML0Jsb2dJbWFnZS9tYXN0ZXIvaW1nLzIwMjAwMTEzMTY1NjE4LnBuZw?x-oss-process=image/format,png"></p>
+<h4 id="选择最底下的插件设置，搜索gitee"><a href="#选择最底下的插件设置，搜索gitee" class="headerlink" title="选择最底下的插件设置，搜索gitee"></a>选择最底下的插件设置，搜索<strong>gitee</strong></h4><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDExMzE2NTU1OC5wbmc?x-oss-process=image/format,png"></p>
+<h4 id="点击右边的gitee-uploader-1-1-2开始安装"><a href="#点击右边的gitee-uploader-1-1-2开始安装" class="headerlink" title="点击右边的gitee-uploader 1.1.2开始安装"></a>点击右边的gitee-uploader 1.1.2开始安装</h4><blockquote>
+<p>这里注意一下，必须要先安装<a href="https://nodejs.org/en/">node.js</a>才能安装插件，没装的自己装一下，然后重启就行。</p>
+</blockquote>
+<p>这个地方有两个插件，我试了一遍，两个都能用，大家看心情选择，先说一下右边这个<strong>gitee-uploader 1.1.2</strong>，用不了的同学就选左边那个，我都会讲一遍配置</p>
+<hr>
+<h2 id="2-建立gitee（码云）图床库"><a href="#2-建立gitee（码云）图床库" class="headerlink" title="2. 建立gitee（码云）图床库"></a>2. 建立gitee（码云）图床库</h2><p>注册码云的方法很简单，网站引导都是中文，不多说了，我们直接建立自己的图床库。</p>
+<h4 id="点击右上角的-号，新建仓库"><a href="#点击右上角的-号，新建仓库" class="headerlink" title="点击右上角的+号，新建仓库"></a>点击右上角的+号，新建仓库</h4><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDExMzE2NTUyNy5wbmc?x-oss-process=image/format,png"></p>
+<p>新建仓库的要点如下：</p>
+<ol>
+<li><h5 id="输入一个仓库名称"><a href="#输入一个仓库名称" class="headerlink" title="输入一个仓库名称"></a>输入一个仓库名称</h5></li>
+<li><h5 id="其次将仓库设为公开"><a href="#其次将仓库设为公开" class="headerlink" title="其次将仓库设为公开"></a>其次将仓库设为公开</h5></li>
+<li><h5 id="勾选使用Readme文件初始化这个仓库"><a href="#勾选使用Readme文件初始化这个仓库" class="headerlink" title="勾选使用Readme文件初始化这个仓库"></a>勾选使用Readme文件初始化这个仓库</h5></li>
+</ol>
+<p><strong>这个选项勾上，这样码云会自动给你的仓库建立master分支，这点很重要!!!</strong> 我因为这点折腾了很久，因为使用github做图床picgo好像会自动帮你生成master分支，而picgo里的gitee插件不会帮你自动生成分支。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy9TbmlwYXN0ZV8yMDIwLTAxLTEzXzE2LTEwLTI5LnBuZw?x-oss-process=image/format,png"></p>
+<p>点击创建进入下一步</p>
+<hr>
+<h2 id="3-配置PicGo"><a href="#3-配置PicGo" class="headerlink" title="3. 配置PicGo"></a>3. 配置PicGo</h2><p>安装了<strong>gitee-uploader 1.1.2</strong>插件之后，我们开始配置插件</p>
+<h4 id="配置插件的要点如下："><a href="#配置插件的要点如下：" class="headerlink" title="配置插件的要点如下："></a>配置插件的要点如下：</h4><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDExODIxMTMxNi5wbmc?x-oss-process=image/format,png"></p>
+<ul>
+<li>repo：用户名/仓库名称，比如我自己的仓库leonG7/blogImage，找不到的可以直接复制仓库的url<br>  <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDExODIxMTYyNC5wbmc?x-oss-process=image/format,png"></li>
+<li>  branch：分支，这里写上master</li>
+<li>  token：填入码云的私人令牌</li>
+<li>  path：路径，一般写上img</li>
+<li>  customPath：提交消息，这一项和下一项customURL都不用填。在提交到码云后，会显示提交消息，插件默认提交的是 <code>Upload 图片名 by picGo - 时间</code></li>
+</ul>
+<h4 id="这个token怎么获取，下面登录进自己的码云"><a href="#这个token怎么获取，下面登录进自己的码云" class="headerlink" title="这个token怎么获取，下面登录进自己的码云"></a>这个token怎么获取，下面登录进自己的码云</h4><ol>
+<li> 点击头像，进入设置</li>
+</ol>
+<p><img src="https://gitee.com/leonG7/blogImage/raw/master/img/20200113162632.png"></p>
+<ol start="2">
+<li> 找到右边安全设置里面的私人令牌</li>
+</ol>
+<p><img src="https://gitee.com/leonG7/blogImage/raw/master/img/20200113162837.png"></p>
+<ol start="3">
+<li>点击<code>生成新令牌</code>，把<strong>projects</strong>这一项勾上，其他的不用勾，然后提交<br> <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy9pbWFnZS0yMDIwMDExMzE2MzEwMTQxNi5wbmc?x-oss-process=image/format,png"> 这里需要验证一下密码，验证密码之后会出来一串数字，这一串数字就是你的token，将这串数字复制到刚才的配置里面去。<br> <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy9pbWFnZS0yMDIwMDExMzE2MzQwODkzMi5wbmc?x-oss-process=image/format,png"><blockquote>
+<p>注意：这个令牌只会明文显示一次，建议在配置插件的时候再来生成令牌，直接复制进去，搞丢了又要重新生成一个。</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="现在保存你刚才的配置，然后将它设置为默认图床，大功告成。"><a href="#现在保存你刚才的配置，然后将它设置为默认图床，大功告成。" class="headerlink" title="现在保存你刚才的配置，然后将它设置为默认图床，大功告成。"></a>现在保存你刚才的配置，然后将它设置为默认图床，大功告成。</h4><p>还有一个插件<strong>gitee 1.2.2-beta</strong>，功能差不多，<code>刚才那个能用的话就不需要用这个</code>，配置的内容有点差别，简单说一下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDExMzE2Mzk1Ny5wbmc?x-oss-process=image/format,png"></p>
+<ul>
+<li>url：图床网站，这里写码云的主页 <a href="https://gitee.com/">https://gitee.com</a></li>
+<li>owner：所有者，写上你的码云账号名，如果你不知道你的账号名，进入你刚才的仓库，浏览器url里面有  <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDExMzE2NDIxOC5wbmc?x-oss-process=image/format,png"></li>
+<li>repo：仓库名称，只要写上仓库名称就行，比如我自己的仓库blogImage</li>
+<li>path：写上路径，一般是img，<strong>这几个项都不用加“ / “符号</strong></li>
+<li>token：刚才你获取的个人令牌，两个插件是通用的，如果你用了另一个再来用这个，它会自动读取另一个插件的部分配置，不用重新申请</li>
+<li>message：不用填</li>
+</ul>
+<hr>
+<h2 id="4-测试"><a href="#4-测试" class="headerlink" title="4. 测试"></a>4. 测试</h2><p>随便选一张图片上传（picgo也支持剪贴板上传，截图工具推荐win10的_Snipaste_神器！），试试看</p>
+<h3 id="超级快有木有！比github快很多，0-1秒上传，而且导入到你的markdown编辑器里面也是秒识别你的图片内容，而如果是github图床上传太慢不说可能还会出现下面这样识别不出来的问题！"><a href="#超级快有木有！比github快很多，0-1秒上传，而且导入到你的markdown编辑器里面也是秒识别你的图片内容，而如果是github图床上传太慢不说可能还会出现下面这样识别不出来的问题！" class="headerlink" title="超级快有木有！比github快很多，0.1秒上传，而且导入到你的markdown编辑器里面也是秒识别你的图片内容，而如果是github图床上传太慢不说可能还会出现下面这样识别不出来的问题！"></a>超级快有木有！比github快很多，0.1秒上传，而且导入到你的markdown编辑器里面也是秒识别你的图片内容，而如果是github图床上传太慢不说可能还会出现下面这样识别不出来的问题！</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDExMzE2NDcyNi5wbmc?x-oss-process=image/format,png"></p>
+<h4 id="上传之后默认复制链接，直接粘贴到你的markdown编辑器里，就可以愉快的进行写作了！"><a href="#上传之后默认复制链接，直接粘贴到你的markdown编辑器里，就可以愉快的进行写作了！" class="headerlink" title="上传之后默认复制链接，直接粘贴到你的markdown编辑器里，就可以愉快的进行写作了！"></a>上传之后默认复制链接，直接粘贴到你的markdown编辑器里，就可以愉快的进行写作了！</h4><p>最后推荐一下我的博客写作套件<strong>Typora + PicGo + Snipaste</strong>，Typora写文档，Snipaste一键截图，PicGo一键上传图片返回链接。</p>
+<hr>
+<h2 id="5-Typora自动上传到picgo图床【教程与排坑】"><a href="#5-Typora自动上传到picgo图床【教程与排坑】" class="headerlink" title="5. Typora自动上传到picgo图床【教程与排坑】"></a>5. Typora自动上传到picgo图床【教程与排坑】</h2><h2 id="1-安装-1"><a href="#1-安装-1" class="headerlink" title="1.安装"></a>1.安装</h2><blockquote>
+<p>还是老规矩，软件下载链接文末自取。</p>
+</blockquote>
+<p>typora升级到最新版本：<code>version 0.9.86(beta)</code></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDMxODEzNTYwNi5wbmc?x-oss-process=image/format,png"></p>
+<p>picgo也升级到最新版本：<code>version2.2.2</code></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDMxODEzNTcwNC5wbmc?x-oss-process=image/format,png"></p>
+<h2 id="2-配置"><a href="#2-配置" class="headerlink" title="2.配置"></a>2.配置</h2><p>打开typora，点开左上角文件，选择<strong>偏好设置</strong></p>
+<ol>
+<li> 设置插入图片时为【上传图片】</li>
+<li> 勾选【对本地位置的图片应用上述规则】</li>
+<li> 在上传服务中选择“PicGo(app)”</li>
+<li> 在路径中选择picgo安装目录<strong>PicGo.exe</strong></li>
+</ol>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDMxODE0MDIyNy5wbmc?x-oss-process=image/format,png"></p>
+<p>点击下面的验证图片上传选项，上传成功！</p>
+<p>上传的方法也很简单，将图片复制进去typora就会自动帮你上传了，你也可以右键点击上传图片。<br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDMxOTIwNTYyMS5naWY"></p>
+<p>可以在【格式】-&gt;【图像】-&gt;【上传所有图片】<br><img src="https://img-blog.csdnimg.cn/20200319205550186.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Rpc0lMTEw=,size_16,color_FFFFFF,t_70"></p>
+<h4 id="当然，要是这么简单的话我肯定不会写成博客的，下面就带大家一起排排坑"><a href="#当然，要是这么简单的话我肯定不会写成博客的，下面就带大家一起排排坑" class="headerlink" title="当然，要是这么简单的话我肯定不会写成博客的，下面就带大家一起排排坑~"></a>当然，要是这么简单的话我肯定不会写成博客的，下面就带大家一起排排坑~</h4><h2 id="3-错误排查"><a href="#3-错误排查" class="headerlink" title="3.错误排查"></a>3.错误排查</h2><h3 id="3-1错误一：Failed-to-fetch"><a href="#3-1错误一：Failed-to-fetch" class="headerlink" title="3.1错误一：Failed to fetch"></a>3.1错误一：Failed to fetch</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDMxODE0NDc0NC5wbmc?x-oss-process=image/format,png"></p>
+<p>这个错误一般是由<strong>端口设置错误</strong>造成的，至于我为什么知道，你看看log文件就懂了。打开picgo的log文件。错误提示是端口繁忙。<br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDMxODE0NDc1Mi5wbmc?x-oss-process=image/format,png"></p>
+<p><code>解决方法</code>：打开picgo设置，点击设置Server选项，<strong>将端口改为36677端口</strong>，这是picgo推荐的默认端口号，然后保存，成功。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDMxODE0NDgxNy5wbmc?x-oss-process=image/format,png"></p>
+<p>不过有的时候，我们的老朋友Failed to fetch还是如约而至，打开端口设置一看，怎么变成了366771？？？？</p>
+<p>问题在于端口冲突，如果你打开了多个picgo程序，就会端口冲突，<strong>picgo自动帮你把36677端口改为366771端口</strong>，导致错误。log文件里也写得很清楚。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDMxODE0NDgyNS5wbmc?x-oss-process=image/format,png"></p>
+<p><code>解决方法</code>：<strong>先把picgo中的端口设置改回36677，然后退出所有picgo程序</strong>，再使用typora上传功能（会自动启动picgo程序）</p>
+<h3 id="3-2-错误二：-“success”-false"><a href="#3-2-错误二：-“success”-false" class="headerlink" title="3.2 错误二：{“success”,false}"></a>3.2 错误二：{“success”,false}</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDMxODE0MjYyMy5wbmc?x-oss-process=image/format,png"><br>这个错误相信也有很多小伙伴遇到了，原因是<strong>文件名冲突</strong>了，如果你上传过一张image1.jpg的图片，再上传名称一样的图片就会失败，康康log文件(感谢日志！)里也写到了。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDMxODE0MjUyNi5wbmc?x-oss-process=image/format,png"><br>办法也很简单，打开picgo设置，将**【时间戳重命名】打开**。如图所示：<br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDMxOTIxMDEwNy5wbmc?x-oss-process=image/format,png"></p>
+<p>再次上传文件，上传成功~</p>
+<p><strong>授人以鱼不如授人以渔</strong>，上面的三种情况解决方法教给大家了，但是错误总是千奇百怪层出不穷的，如果下次出现上传错误的提示，请大家找到picgo的log文件，自己查看问题的原因嗷</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDMxODE0MzAwNS5wbmc?x-oss-process=image/format,png"></p>
+<h2 id="6-转载于"><a href="#6-转载于" class="headerlink" title="6. 转载于"></a>6. 转载于</h2><ol>
+<li>创建</li>
+<li><a href="https://blog.csdn.net/disILLL/article/details/104944710?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-2.control&dist_request_id=1328769.1392.16172799401115595&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-2.control">填坑</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>图床</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+        <tag>hexo</tag>
+        <tag>Tpyora</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Thriller</title>
+    <url>/2021/03/29/Thriller/</url>
+    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>想你了,Michael</td></tr></table>
+<span id="more"></span>
+
+<h1 id="Thriller"><a href="#Thriller" class="headerlink" title="Thriller"></a>Thriller</h1><blockquote>
+<p>开创</p>
+</blockquote>
+<iframe src="//player.bilibili.com/player.html?aid=328634884&bvid=BV1hA411i7PW&cid=205664972&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h1 id="Man-in-the-mirror"><a href="#Man-in-the-mirror" class="headerlink" title="Man in the mirror"></a>Man in the mirror</h1><blockquote>
+<p>给自己</p>
+</blockquote>
+<iframe src="//player.bilibili.com/player.html?aid=328282943&bvid=BV1WA411q7jZ&cid=197389814&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>音乐</category>
+      </categories>
+      <tags>
+        <tag>music</tag>
       </tags>
   </entry>
   <entry>
@@ -232,28 +351,29 @@
       </tags>
   </entry>
   <entry>
-    <title>Thriller</title>
-    <url>/2021/03/29/Thriller/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>想你了,Michael</td></tr></table>
+    <title>Hello World/曹圣洁的第一篇博客</title>
+    <url>/2021/02/24/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <span id="more"></span>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="Thriller"><a href="#Thriller" class="headerlink" title="Thriller"></a>Thriller</h1><blockquote>
-<p>开创</p>
-</blockquote>
-<iframe src="//player.bilibili.com/player.html?aid=328634884&bvid=BV1hA411i7PW&cid=205664972&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<h1 id="Man-in-the-mirror"><a href="#Man-in-the-mirror" class="headerlink" title="Man in the mirror"></a>Man in the mirror</h1><blockquote>
-<p>给自己</p>
-</blockquote>
-<iframe src="//player.bilibili.com/player.html?aid=328282943&bvid=BV1WA411q7jZ&cid=197389814&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
-        <category>生活</category>
-        <category>音乐</category>
+        <category>Hexo</category>
+        <category>Configuration</category>
       </categories>
       <tags>
-        <tag>music</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -322,25 +442,6 @@
       </tags>
   </entry>
   <entry>
-    <title>篝火旁</title>
-    <url>/2021/02/19/%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/</url>
-    <content><![CDATA[<p>篝火旁</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518725853&auto=0&height=66"></iframe>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>生活</category>
-        <category>音乐</category>
-      </categories>
-      <tags>
-        <tag>music</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>考研规划</title>
     <url>/2021/02/24/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
     <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#考研计划时间线</td></tr></table>
@@ -360,6 +461,25 @@
       </categories>
       <tags>
         <tag>考研</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>篝火旁</title>
+    <url>/2021/02/19/%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/</url>
+    <content><![CDATA[<p>篝火旁</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518725853&auto=0&height=66"></iframe>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>音乐</category>
+      </categories>
+      <tags>
+        <tag>music</tag>
       </tags>
   </entry>
   <entry>
