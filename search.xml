@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo优化-Fancybox图片跳转问题</title>
+    <url>/2021/04/01/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-Fancybox%E5%9B%BE%E7%89%87%E8%B7%B3%E8%BD%AC%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#导语</td></tr></table>
+
+<span id="more"></span>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>  前段时间总结了博客使用图床解决了存储图片的问题，实现了博客的全面瘦身。<br>  然而在使用的过程中发现，fancybox 的图片浏览功能与图传链接产生了冲突，出现了意想不到的 BUG。<br>  主要原因是 fancybox 是使用 a 标签的 href 属性进行跳转的，之前链接图片都是本地链接，href 并没有跳转新的网页，然而用了图床的链接之后，a 标签就直接跳转到了图片地址去了。</p>
+</blockquote>
+<h2 id="解决尝试"><a href="#解决尝试" class="headerlink" title="解决尝试"></a>解决尝试</h2><blockquote>
+<p>  fancybox 的使用方法并没有研究过，我首先想到是的将 href 属性名称改变，比如改为 hrefs。不过首先得找到 a 标签的生成位置。<br>  我通过 VScode 搜索 black-blue 主题的 fancy 相关的脚本，经过筛选，找到 main.js 的压缩中有 a 标签的生成代码。</p>
+</blockquote>
+<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/1.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/1.png" alt="操作截图"></a></p>
+<hr>
+<blockquote>
+<p>  将 href 属性修改为无关的 hrefs 属性之后，虽然可以实现弹窗，但是每次弹窗之后图片就被吞了。</p>
+</blockquote>
+<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/2.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/2.png" alt="操作截图"></a><br><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/3.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/3.png" alt="操作截图"></a></p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><blockquote>
+<p>  后面上网找到了<a href="https://stackoverflow.com/questions/11618221/how-do-i-make-fancybox-href-dynamic">解决方案</a><br>  第一个解答有提到可以将 href 修改为 data-fancybox-href 进行调用，我完全按照回答的方法进行修改。</p>
+</blockquote>
+<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/4.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/4.png" alt="操作截图"></a><br><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/5.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/5.png" alt="操作截图"></a></p>
+<hr>
+<blockquote>
+<p>  经过测试之后，我发现根源是 type: ‘iframe’ 这段代码上，但是去掉之后又点击图片就没有反应了。<br>  后面我上官网查了 type 可以填写的参数，填上’image’之后，完美解决了问题。</p>
+</blockquote>
+<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/6.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/6.png" alt="操作截图"></a><br><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/7.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/7.png" alt="操作截图"></a></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>博客优化</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown学习笔记</title>
     <url>/2021/02/22/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>@(网页基础设计)[马克飞象, 帮助, Markdown]</p>
@@ -81,7 +117,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
-<li>邮箱：<a href="mailto:&#x68;&#117;&#x73;&#116;&#103;&#111;&#x63;&#x6b;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x68;&#117;&#x73;&#116;&#103;&#111;&#x63;&#x6b;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#104;&#117;&#115;&#116;&#103;&#x6f;&#x63;&#x6b;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#104;&#117;&#115;&#116;&#103;&#x6f;&#x63;&#x6b;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
@@ -96,45 +132,36 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo优化-Fancybox图片跳转问题</title>
-    <url>/2021/04/01/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-Fancybox%E5%9B%BE%E7%89%87%E8%B7%B3%E8%BD%AC%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#导语</td></tr></table>
-
+    <title>Thriller</title>
+    <url>/2021/03/29/Thriller/</url>
+    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>想你了,Michael</td></tr></table>
 <span id="more"></span>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>  前段时间总结了博客使用图床解决了存储图片的问题，实现了博客的全面瘦身。<br>  然而在使用的过程中发现，fancybox 的图片浏览功能与图传链接产生了冲突，出现了意想不到的 BUG。<br>  主要原因是 fancybox 是使用 a 标签的 href 属性进行跳转的，之前链接图片都是本地链接，href 并没有跳转新的网页，然而用了图床的链接之后，a 标签就直接跳转到了图片地址去了。</p>
+
+<h1 id="Thriller"><a href="#Thriller" class="headerlink" title="Thriller"></a>Thriller</h1><blockquote>
+<p>开创</p>
 </blockquote>
-<h2 id="解决尝试"><a href="#解决尝试" class="headerlink" title="解决尝试"></a>解决尝试</h2><blockquote>
-<p>  fancybox 的使用方法并没有研究过，我首先想到是的将 href 属性名称改变，比如改为 hrefs。不过首先得找到 a 标签的生成位置。<br>  我通过 VScode 搜索 black-blue 主题的 fancy 相关的脚本，经过筛选，找到 main.js 的压缩中有 a 标签的生成代码。</p>
+<iframe src="//player.bilibili.com/player.html?aid=328634884&bvid=BV1hA411i7PW&cid=205664972&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h1 id="Man-in-the-mirror"><a href="#Man-in-the-mirror" class="headerlink" title="Man in the mirror"></a>Man in the mirror</h1><blockquote>
+<p>给自己</p>
 </blockquote>
-<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/1.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/1.png" alt="操作截图"></a></p>
-<hr>
-<blockquote>
-<p>  将 href 属性修改为无关的 hrefs 属性之后，虽然可以实现弹窗，但是每次弹窗之后图片就被吞了。</p>
-</blockquote>
-<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/2.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/2.png" alt="操作截图"></a><br><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/3.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/3.png" alt="操作截图"></a></p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><blockquote>
-<p>  后面上网找到了<a href="https://stackoverflow.com/questions/11618221/how-do-i-make-fancybox-href-dynamic">解决方案</a><br>  第一个解答有提到可以将 href 修改为 data-fancybox-href 进行调用，我完全按照回答的方法进行修改。</p>
-</blockquote>
-<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/4.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/4.png" alt="操作截图"></a><br><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/5.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/5.png" alt="操作截图"></a></p>
-<hr>
-<blockquote>
-<p>  经过测试之后，我发现根源是 type: ‘iframe’ 这段代码上，但是去掉之后又点击图片就没有反应了。<br>  后面我上官网查了 type 可以填写的参数，填上’image’之后，完美解决了问题。</p>
-</blockquote>
-<p><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/6.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/6.png" alt="操作截图"></a><br><a href="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/7.png"><img src="https://cdn.jsdelivr.net/gh/FXTD-odyssey/FXTD-odyssey.github.io@master/post_img/39119/7.png" alt="操作截图"></a></p>
+<iframe src="//player.bilibili.com/player.html?aid=328282943&bvid=BV1WA411q7jZ&cid=197389814&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 ]]></content>
       <categories>
-        <category>Hexo</category>
-        <category>博客优化</category>
+        <category>生活</category>
+        <category>音乐</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>music</tag>
       </tags>
   </entry>
   <entry>
-    <title>PicGo + Gitee实现markdown图床</title>
+    <title>PicGo + Gitee实现图床</title>
     <url>/2021/04/01/PicGo%20+%20Gitee(%E7%A0%81%E4%BA%91)%E5%AE%9E%E7%8E%B0markdown%E5%9B%BE%E5%BA%8A/</url>
     <content><![CDATA[<h1 id="PicGo-Gitee-码云-实现markdown图床"><a href="#PicGo-Gitee-码云-实现markdown图床" class="headerlink" title="PicGo + Gitee(码云)实现markdown图床"></a>PicGo + Gitee(码云)实现markdown图床</h1><p><strong>前言</strong>：深感在线博客的编辑器坑太多了，文档丢失、必须联网、可移植性太差，所以开始寻找可替代的方案。</p>
+<span id="more"></span>
+
 <h5 id="markdown是一门易于上手能帮助作者专心写作的文档编辑语言，它的好处太多了，建议想自己动手做笔记写博客的朋友都可以学一学，10分钟上手（我昨天晚上还不会用，今天就开始用它写博客了。。足以证明它是真的很简单）"><a href="#markdown是一门易于上手能帮助作者专心写作的文档编辑语言，它的好处太多了，建议想自己动手做笔记写博客的朋友都可以学一学，10分钟上手（我昨天晚上还不会用，今天就开始用它写博客了。。足以证明它是真的很简单）" class="headerlink" title="markdown是一门易于上手能帮助作者专心写作的文档编辑语言，它的好处太多了，建议想自己动手做笔记写博客的朋友都可以学一学，10分钟上手（我昨天晚上还不会用，今天就开始用它写博客了。。足以证明它是真的很简单）"></a><a href="https://baike.baidu.com/item/markdown/3245829?fr=aladdin">markdown</a>是一门易于上手能帮助作者专心写作的文档编辑语言，它的好处太多了，建议想自己动手做笔记写博客的朋友都可以学一学，10分钟上手（我昨天晚上还不会用，今天就开始用它写博客了。。足以证明它是真的很简单）</h5><h5 id="Tpyora是一款优雅的markdown编辑器，也推荐给大家，至于安装和配置，比安装word还简单，就不赘述了"><a href="#Tpyora是一款优雅的markdown编辑器，也推荐给大家，至于安装和配置，比安装word还简单，就不赘述了" class="headerlink" title="Tpyora是一款优雅的markdown编辑器，也推荐给大家，至于安装和配置，比安装word还简单，就不赘述了"></a><a href="https://www.typora.io/">Tpyora</a>是一款优雅的markdown编辑器，也推荐给大家，至于安装和配置，比安装word还简单，就不赘述了</h5><p>但是，这都不是重点，重点是咱们写博客的时候，总是需要<strong>插入图片</strong>的，图片存在本地的话上传到博客网站去就没法显示了，就算一个图一个图的复制粘贴上去，想移植到其他的博客网站，图就会失效，我们就需要图床</p>
 <blockquote>
 <p>图床是干什么的？  </p>
@@ -237,7 +264,7 @@
 <p><strong>授人以鱼不如授人以渔</strong>，上面的三种情况解决方法教给大家了，但是错误总是千奇百怪层出不穷的，如果下次出现上传错误的提示，请大家找到picgo的log文件，自己查看问题的原因嗷</p>
 <p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vbGVvbkc3L2Jsb2dJbWFnZS9yYXcvbWFzdGVyL2ltZy8yMDIwMDMxODE0MzAwNS5wbmc?x-oss-process=image/format,png"></p>
 <h2 id="6-转载于"><a href="#6-转载于" class="headerlink" title="6. 转载于"></a>6. 转载于</h2><ol>
-<li>创建</li>
+<li><a href="https://blog.csdn.net/disILLL/article/details/103962241">创建</a></li>
 <li><a href="https://blog.csdn.net/disILLL/article/details/104944710?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-2.control&dist_request_id=1328769.1392.16172799401115595&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-2.control">填坑</a></li>
 </ol>
 ]]></content>
@@ -246,34 +273,9 @@
         <category>图床</category>
       </categories>
       <tags>
-        <tag>markdown</tag>
         <tag>hexo</tag>
+        <tag>markdown</tag>
         <tag>Tpyora</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Thriller</title>
-    <url>/2021/03/29/Thriller/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>想你了,Michael</td></tr></table>
-<span id="more"></span>
-
-<h1 id="Thriller"><a href="#Thriller" class="headerlink" title="Thriller"></a>Thriller</h1><blockquote>
-<p>开创</p>
-</blockquote>
-<iframe src="//player.bilibili.com/player.html?aid=328634884&bvid=BV1hA411i7PW&cid=205664972&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h1 id="Man-in-the-mirror"><a href="#Man-in-the-mirror" class="headerlink" title="Man in the mirror"></a>Man in the mirror</h1><blockquote>
-<p>给自己</p>
-</blockquote>
-<iframe src="//player.bilibili.com/player.html?aid=328282943&bvid=BV1WA411q7jZ&cid=197389814&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-]]></content>
-      <categories>
-        <category>生活</category>
-        <category>音乐</category>
-      </categories>
-      <tags>
-        <tag>music</tag>
       </tags>
   </entry>
   <entry>
@@ -351,32 +353,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World/曹圣洁的第一篇博客</title>
-    <url>/2021/02/24/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-        <category>Configuration</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>博客文章模版</title>
     <url>/2021/02/19/%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E6%A8%A1%E7%89%88/</url>
     <content><![CDATA[<p>MD基本设置</p>
@@ -414,6 +390,32 @@
       <tags>
         <tag>hexo</tag>
         <tag>post</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World/曹圣洁的第一篇博客</title>
+    <url>/2021/02/24/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>Configuration</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
