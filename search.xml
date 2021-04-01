@@ -81,7 +81,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
-<li>邮箱：<a href="mailto:&#104;&#x75;&#115;&#x74;&#x67;&#x6f;&#x63;&#x6b;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;">&#104;&#x75;&#115;&#x74;&#x67;&#x6f;&#x63;&#x6b;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#104;&#117;&#115;&#x74;&#103;&#x6f;&#x63;&#x6b;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;">&#104;&#117;&#115;&#x74;&#103;&#x6f;&#x63;&#x6b;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
@@ -264,6 +264,28 @@
       </tags>
   </entry>
   <entry>
+    <title>考研规划</title>
+    <url>/2021/02/24/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#考研计划时间线</td></tr></table>
+
+<span id="more"></span>
+
+<h1 id="title1"><a href="#title1" class="headerlink" title="title1"></a>title1</h1><h2 id="title2"><a href="#title2" class="headerlink" title="title2"></a>title2</h2><h3 id="title3"><a href="#title3" class="headerlink" title="title3"></a>title3</h3><p>More info: <a href="/source/_html/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92%E5%AF%BC%E5%9B%BE.html">Click</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
+<h1 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h1><p> 列表：</p>
+<ul>
+<li>computer</li>
+<li>computer-aided-art</li>
+</ul>
+]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>考研</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>淘汰</title>
     <url>/2021/03/15/%E6%B7%98%E6%B1%B0/</url>
     <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#好听</td></tr></table>
@@ -289,28 +311,6 @@
       </tags>
   </entry>
   <entry>
-    <title>考研规划</title>
-    <url>/2021/02/24/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#考研计划时间线</td></tr></table>
-
-<span id="more"></span>
-
-<h1 id="title1"><a href="#title1" class="headerlink" title="title1"></a>title1</h1><h2 id="title2"><a href="#title2" class="headerlink" title="title2"></a>title2</h2><h3 id="title3"><a href="#title3" class="headerlink" title="title3"></a>title3</h3><p>More info: <a href="/source/_html/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92%E5%AF%BC%E5%9B%BE.html">Click</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
-<h1 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h1><p> 列表：</p>
-<ul>
-<li>computer</li>
-<li>computer-aided-art</li>
-</ul>
-]]></content>
-      <categories>
-        <category>考研</category>
-      </categories>
-      <tags>
-        <tag>考研</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>篝火旁</title>
     <url>/2021/02/19/%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/</url>
     <content><![CDATA[<p>篝火旁</p>
@@ -332,22 +332,25 @@
   <entry>
     <title>高数</title>
     <url>/2021/03/22/%E9%AB%98%E6%95%B0/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#高等数学</td></tr></table>
+    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>高等数学</td></tr></table><span id="more"></span>
 
-<span id="more"></span>
 <h1 id="极限与连续"><a href="#极限与连续" class="headerlink" title="极限与连续"></a>极限与连续</h1><h2 id="极限定义（左右极限）"><a href="#极限定义（左右极限）" class="headerlink" title="极限定义（左右极限）"></a>极限定义（左右极限）</h2><h3 id="P4-注解5"><a href="#P4-注解5" class="headerlink" title="P4 注解5"></a>P4 注解5</h3><p><img src="/images/master/advMath1.png"></p>
 <h2 id="极限性质"><a href="#极限性质" class="headerlink" title="极限性质"></a>极限性质</h2><h3 id="夹逼定理"><a href="#夹逼定理" class="headerlink" title="夹逼定理"></a>夹逼定理</h3><p><img src="/images/master/advMath2.png"></p>
 <h2 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h2><h3 id="介值定理（闭区间上连续函数的性质）"><a href="#介值定理（闭区间上连续函数的性质）" class="headerlink" title="介值定理（闭区间上连续函数的性质）"></a>介值定理（闭区间上连续函数的性质）</h3><p><img src="/images/master/advMath3.png"></p>
-<h2 id="P14-题型不定型极限计算"><a href="#P14-题型不定型极限计算" class="headerlink" title="P14 题型不定型极限计算"></a>P14 题型不定型极限计算</h2><p>###（多阶 考虑精确度是否可以使用等价无穷小）<br><img src="/images/master/advMath4.png"></p>
+<h3 id="常用的基本极限"><a href="#常用的基本极限" class="headerlink" title="常用的基本极限"></a>常用的基本极限</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/Image.png"></p>
+<h2 id="P14-题型不定型极限计算"><a href="#P14-题型不定型极限计算" class="headerlink" title="P14 题型不定型极限计算"></a>P14 题型不定型极限计算</h2><h3 id="多阶考虑精确度是否可以使用等价无穷小）"><a href="#多阶考虑精确度是否可以使用等价无穷小）" class="headerlink" title="多阶考虑精确度是否可以使用等价无穷小）"></a>多阶考虑精确度是否可以使用等价无穷小）</h3><p><img src="/images/master/advMath4.png"></p>
 <h3 id="无穷比无穷型注意事项"><a href="#无穷比无穷型注意事项" class="headerlink" title="无穷比无穷型注意事项"></a>无穷比无穷型注意事项</h3><p><img src="/images/master/advMath5.png"><br><img src="/images/master/advMath6.png"></p>
+<h3 id="加减法在同阶（精确度相同）可以使用等价无穷小"><a href="#加减法在同阶（精确度相同）可以使用等价无穷小" class="headerlink" title="加减法在同阶（精确度相同）可以使用等价无穷小"></a>加减法在同阶（精确度相同）可以使用等价无穷小</h3><p><img src="/images/master/advMath13.png"></p>
 <h2 id="P19-题型n项和或积的极限运算"><a href="#P19-题型n项和或积的极限运算" class="headerlink" title="P19 题型n项和或积的极限运算"></a>P19 题型n项和或积的极限运算</h2><h3 id="先和极限"><a href="#先和极限" class="headerlink" title="先和极限"></a>先和极限</h3><p><img src="/images/master/advMath10.png"></p>
 <h3 id="用夹逼定理"><a href="#用夹逼定理" class="headerlink" title="用夹逼定理"></a>用夹逼定理</h3><p><img src="/images/master/advMath11.png"><br><img src="/images/master/advMath12.png"></p>
-<h3 id="加减法在同阶（精确度相同）可以使用等价无穷小"><a href="#加减法在同阶（精确度相同）可以使用等价无穷小" class="headerlink" title="加减法在同阶（精确度相同）可以使用等价无穷小"></a>加减法在同阶（精确度相同）可以使用等价无穷小</h3><p><img src="/images/master/advMath13.png"></p>
 <h1 id="导数与微分"><a href="#导数与微分" class="headerlink" title="导数与微分"></a>导数与微分</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="可微-注解"><a href="#可微-注解" class="headerlink" title="可微-注解"></a>可微-注解</h3><p><img src="/images/master/advMath7.png"><br><img src="/images/master/advMath8.png"></p>
 <h2 id="反函数求导"><a href="#反函数求导" class="headerlink" title="反函数求导"></a>反函数求导</h2><h3 id="P33-反函数例题"><a href="#P33-反函数例题" class="headerlink" title="P33 反函数例题"></a>P33 反函数例题</h3><p><img src="/images/master/advMath9.png"></p>
-<h2 id="中值定理"><a href="#中值定理" class="headerlink" title="中值定理"></a>中值定理</h2><h3 id="P54-题型一-f-n-ξ-0）（罗尔型）"><a href="#P54-题型一-f-n-ξ-0）（罗尔型）" class="headerlink" title="P54 题型一 f^n ξ = 0）（罗尔型）"></a>P54 题型一 f^n ξ = 0）（罗尔型）</h3><p><img src="/images/master/advMath15.png"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ 加油</span><br></pre></td></tr></table></figure>
-
+<h1 id="一元函数微分学的应用"><a href="#一元函数微分学的应用" class="headerlink" title="一元函数微分学的应用"></a>一元函数微分学的应用</h1><h2 id="中值定理"><a href="#中值定理" class="headerlink" title="中值定理"></a>中值定理</h2><h3 id="P54-题型一-f-n-ξ-0）（罗尔型）"><a href="#P54-题型一-f-n-ξ-0）（罗尔型）" class="headerlink" title="P54 题型一 f^n ξ = 0）（罗尔型）"></a>P54 题型一 f^n ξ = 0）（罗尔型）</h3><p><img src="/images/master/advMath15.png"></p>
+<h3 id="P65-拉格朗日中值定理的惯性思维补充"><a href="#P65-拉格朗日中值定理的惯性思维补充" class="headerlink" title="P65 拉格朗日中值定理的惯性思维补充"></a>P65 拉格朗日中值定理的惯性思维补充</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210401215758387.png"></p>
+<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/20210401220433.png"></p>
+<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/20210401220446.png"></p>
+<h3 id="P65-例4"><a href="#P65-例4" class="headerlink" title="P65 例4"></a>P65 例4</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/20210401220454.png"></p>
+<h3 id="P70-题型9-不等式的证明-补充"><a href="#P70-题型9-不等式的证明-补充" class="headerlink" title="P70 题型9 不等式的证明(补充)"></a>P70 题型9 不等式的证明(补充)</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/20210401220500.png"></p>
 ]]></content>
       <categories>
         <category>考研</category>
