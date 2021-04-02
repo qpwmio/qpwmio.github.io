@@ -117,7 +117,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
-<li>邮箱：<a href="mailto:&#x68;&#x75;&#115;&#116;&#x67;&#111;&#x63;&#107;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#x68;&#x75;&#115;&#116;&#x67;&#111;&#x63;&#107;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#104;&#x75;&#115;&#116;&#x67;&#111;&#99;&#107;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#104;&#x75;&#115;&#116;&#x67;&#111;&#99;&#107;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
@@ -307,25 +307,45 @@
       </tags>
   </entry>
   <entry>
-    <title>考研规划</title>
-    <url>/2021/02/24/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#考研计划时间线</td></tr></table>
-
+    <title>NewPageConfig</title>
+    <url>/2021/02/19/%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E6%A8%A1%E7%89%88/</url>
+    <content><![CDATA[<blockquote>
+<p>博客页面 基本设置</p>
+</blockquote>
 <span id="more"></span>
 
-<h1 id="title1"><a href="#title1" class="headerlink" title="title1"></a>title1</h1><h2 id="title2"><a href="#title2" class="headerlink" title="title2"></a>title2</h2><h3 id="title3"><a href="#title3" class="headerlink" title="title3"></a>title3</h3><p>More info: <a href="/source/_html/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92%E5%AF%BC%E5%9B%BE.html">Click</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
-<h1 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h1><p> 列表：</p>
+<h1 id="updated"><a href="#updated" class="headerlink" title="updated:"></a>updated:</h1><p> 更新日期，其它与上面的建立日期类似<br> 不过在页面每篇文章顶部，是更新于……<br> 在主题配置文件中，是 updated_at</p>
+<h1 id="permalink"><a href="#permalink" class="headerlink" title="permalink:"></a>permalink:</h1><p> 若站点配置文件下的 permalink 配置了 title<br> 则可以替换文章 URL 里面的 title（文章标题）</p>
+<h1 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h1><p> 分类，支持多级，比如：</p>
 <ul>
+<li>technology</li>
 <li>computer</li>
-<li>computer-aided-art</li>
+<li>computer-aided-art<br>则为 technology/computer/computer-aided-art<br>（不适用于 layout: page）</li>
 </ul>
+<h1 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h1><p> 标签<br> 多个可以这样写 [标签1,标签2,标签3]<br> （不适用于 layout: page）   </p>
+<h1 id="description"><a href="#description" class="headerlink" title="description:"></a>description:</h1><p> 文章的描述，在每篇文章标题下方显示<br> 并且作为网页的 description 元数据<br> 如果不写，则自动取 <!-- more --><br> 之前的文字作为网页的 description 元数据</p>
+<h1 id="keywords"><a href="#keywords" class="headerlink" title="keywords:"></a>keywords:</h1><p> 关键字，并且作为网页的 keywords 元数据<br> 如果不写，则自动取 tags 里的项<br> 作为网页的 keywords 元数据</p>
+<h1 id="comments"><a href="#comments" class="headerlink" title="comments:"></a>comments:</h1><p> 是否开启评论<br> 默认值是 true<br> 要关闭写 false</p>
+<h1 id="layout"><a href="#layout" class="headerlink" title="layout:"></a>layout:</h1><p> 页面布局，默认值是 post，默认值可以在<br> 站点配置文件中修改 default_layout<br> 另：404 页面可能用到，将其值改为 false</p>
+<h1 id="type"><a href="#type" class="headerlink" title="type:"></a>type:</h1><p> categories，目录页面<br> tags，标签页面<br> picture，用来生成 group-pictures<br> quote？<br> <a href="https://io-oi.me/tech/hello-world/">https://io-oi.me/tech/hello-world/</a></p>
+<h1 id="photos"><a href="#photos" class="headerlink" title="photos:"></a>photos:</h1><p> Gallery support，用来支持画廊╱相册，用法如下：</p>
+<ul>
+<li>photo_url_1</li>
+<li>photo_url_2</li>
+<li>photo_url_3<br><a href="https://io-oi.me/tech/hello-world/">https://io-oi.me/tech/hello-world/</a></li>
+</ul>
+<h1 id="link"><a href="#link" class="headerlink" title="link:"></a>link:</h1><p> 文章的外部链接<br> <a href="https://io-oi.me/tech/hello-world/">https://io-oi.me/tech/hello-world/</a></p>
+<h1 id="image"><a href="#image" class="headerlink" title="image:"></a>image:</h1><p> 自定义的文章摘要图片，只在页面展示，文章内消失<br> 此项只有参考本文 5.14 节配置好，否则请勿添加！</p>
+<h1 id="sticky"><a href="#sticky" class="headerlink" title="sticky:"></a>sticky:</h1><p> 文章置顶<br> 此项只有参考本文 5.15 节配置好，否则请勿添加！</p>
+<h1 id="password"><a href="#password" class="headerlink" title="password:"></a>password:</h1><p> 文章密码，此项只有参考教程：<br> <a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html">http://shenzekun.cn/hexo的next主题个性化配置教程.html</a><br> 第 24 节，配置好，否则请勿添加！<br> 发现还是有 bug 的，就是右键在新标签中打开<br> 然后无论是否输入密码，都能看到内容</p>
 ]]></content>
       <categories>
-        <category>考研</category>
+        <category>Hexo</category>
+        <category>Configuration</category>
       </categories>
       <tags>
-        <tag>考研</tag>
+        <tag>post</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -404,48 +424,6 @@
       </tags>
   </entry>
   <entry>
-    <title>NewPageConfig</title>
-    <url>/2021/02/19/%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E6%A8%A1%E7%89%88/</url>
-    <content><![CDATA[<blockquote>
-<p>博客页面 基本设置</p>
-</blockquote>
-<span id="more"></span>
-
-<h1 id="updated"><a href="#updated" class="headerlink" title="updated:"></a>updated:</h1><p> 更新日期，其它与上面的建立日期类似<br> 不过在页面每篇文章顶部，是更新于……<br> 在主题配置文件中，是 updated_at</p>
-<h1 id="permalink"><a href="#permalink" class="headerlink" title="permalink:"></a>permalink:</h1><p> 若站点配置文件下的 permalink 配置了 title<br> 则可以替换文章 URL 里面的 title（文章标题）</p>
-<h1 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h1><p> 分类，支持多级，比如：</p>
-<ul>
-<li>technology</li>
-<li>computer</li>
-<li>computer-aided-art<br>则为 technology/computer/computer-aided-art<br>（不适用于 layout: page）</li>
-</ul>
-<h1 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h1><p> 标签<br> 多个可以这样写 [标签1,标签2,标签3]<br> （不适用于 layout: page）   </p>
-<h1 id="description"><a href="#description" class="headerlink" title="description:"></a>description:</h1><p> 文章的描述，在每篇文章标题下方显示<br> 并且作为网页的 description 元数据<br> 如果不写，则自动取 <!-- more --><br> 之前的文字作为网页的 description 元数据</p>
-<h1 id="keywords"><a href="#keywords" class="headerlink" title="keywords:"></a>keywords:</h1><p> 关键字，并且作为网页的 keywords 元数据<br> 如果不写，则自动取 tags 里的项<br> 作为网页的 keywords 元数据</p>
-<h1 id="comments"><a href="#comments" class="headerlink" title="comments:"></a>comments:</h1><p> 是否开启评论<br> 默认值是 true<br> 要关闭写 false</p>
-<h1 id="layout"><a href="#layout" class="headerlink" title="layout:"></a>layout:</h1><p> 页面布局，默认值是 post，默认值可以在<br> 站点配置文件中修改 default_layout<br> 另：404 页面可能用到，将其值改为 false</p>
-<h1 id="type"><a href="#type" class="headerlink" title="type:"></a>type:</h1><p> categories，目录页面<br> tags，标签页面<br> picture，用来生成 group-pictures<br> quote？<br> <a href="https://io-oi.me/tech/hello-world/">https://io-oi.me/tech/hello-world/</a></p>
-<h1 id="photos"><a href="#photos" class="headerlink" title="photos:"></a>photos:</h1><p> Gallery support，用来支持画廊╱相册，用法如下：</p>
-<ul>
-<li>photo_url_1</li>
-<li>photo_url_2</li>
-<li>photo_url_3<br><a href="https://io-oi.me/tech/hello-world/">https://io-oi.me/tech/hello-world/</a></li>
-</ul>
-<h1 id="link"><a href="#link" class="headerlink" title="link:"></a>link:</h1><p> 文章的外部链接<br> <a href="https://io-oi.me/tech/hello-world/">https://io-oi.me/tech/hello-world/</a></p>
-<h1 id="image"><a href="#image" class="headerlink" title="image:"></a>image:</h1><p> 自定义的文章摘要图片，只在页面展示，文章内消失<br> 此项只有参考本文 5.14 节配置好，否则请勿添加！</p>
-<h1 id="sticky"><a href="#sticky" class="headerlink" title="sticky:"></a>sticky:</h1><p> 文章置顶<br> 此项只有参考本文 5.15 节配置好，否则请勿添加！</p>
-<h1 id="password"><a href="#password" class="headerlink" title="password:"></a>password:</h1><p> 文章密码，此项只有参考教程：<br> <a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html">http://shenzekun.cn/hexo的next主题个性化配置教程.html</a><br> 第 24 节，配置好，否则请勿添加！<br> 发现还是有 bug 的，就是右键在新标签中打开<br> 然后无论是否输入密码，都能看到内容</p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-        <category>Configuration</category>
-      </categories>
-      <tags>
-        <tag>post</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>淘汰</title>
     <url>/2021/03/15/%E6%B7%98%E6%B1%B0/</url>
     <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#好听</td></tr></table>
@@ -460,6 +438,47 @@
  列表：
  - computer
  - computer-aided-art
+
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>音乐</category>
+      </categories>
+      <tags>
+        <tag>music</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>考研规划</title>
+    <url>/2021/02/24/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#考研计划时间线</td></tr></table>
+
+<span id="more"></span>
+
+<h1 id="title1"><a href="#title1" class="headerlink" title="title1"></a>title1</h1><h2 id="title2"><a href="#title2" class="headerlink" title="title2"></a>title2</h2><h3 id="title3"><a href="#title3" class="headerlink" title="title3"></a>title3</h3><p>More info: <a href="/source/_html/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92%E5%AF%BC%E5%9B%BE.html">Click</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
+<h1 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h1><p> 列表：</p>
+<ul>
+<li>computer</li>
+<li>computer-aided-art</li>
+</ul>
+]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>考研</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>篝火旁</title>
+    <url>/2021/02/19/%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/</url>
+    <content><![CDATA[<p>篝火旁</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518725853&auto=0&height=66"></iframe>
+
+
+
+
 
 ]]></content>
       <categories>
@@ -493,6 +512,9 @@
 <h3 id="P65-例4"><a href="#P65-例4" class="headerlink" title="P65 例4"></a>P65 例4</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/20210401220454.png"></p>
 <h3 id="P72-题型9-不等式的证明-例9"><a href="#P72-题型9-不等式的证明-例9" class="headerlink" title="P72 题型9 不等式的证明(例9)"></a>P72 题型9 不等式的证明(例9)</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/20210401220500.png"></p>
 <p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/20210402091630.png"></p>
+<h3 id="P74-题型10-函数零点或方程根的个数问题"><a href="#P74-题型10-函数零点或方程根的个数问题" class="headerlink" title="P74 题型10 函数零点或方程根的个数问题"></a>P74 题型10 函数零点或方程根的个数问题</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210402163303978.png"></p>
+<h2 id="凹凸与拐点"><a href="#凹凸与拐点" class="headerlink" title="凹凸与拐点"></a>凹凸与拐点</h2><h3 id="凹凸性判别三步曲"><a href="#凹凸性判别三步曲" class="headerlink" title="凹凸性判别三步曲"></a>凹凸性判别三步曲</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210402164710093.png"></p>
+<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210402164617976.png" alt=" "></p>
 ]]></content>
       <categories>
         <category>考研</category>
@@ -501,25 +523,6 @@
       <tags>
         <tag>考研</tag>
         <tag>高等数学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>篝火旁</title>
-    <url>/2021/02/19/%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/</url>
-    <content><![CDATA[<p>篝火旁</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518725853&auto=0&height=66"></iframe>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>生活</category>
-        <category>音乐</category>
-      </categories>
-      <tags>
-        <tag>music</tag>
       </tags>
   </entry>
   <entry>
