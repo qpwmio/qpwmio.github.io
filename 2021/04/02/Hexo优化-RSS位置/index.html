@@ -24,17 +24,20 @@
     var CONFIG = {"hostname":"qpwmio.gitee.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="尽兴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Aurora">
-<meta property="og:url" content="https://qpwmio.gitee.io/archives/2021/index.html">
+  <meta name="description" content="Hexo安装Next主题 Rss 侧边栏 不要直接在主题配置文件上进行修改 修改RSS显示位置使其在首页显示">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo优化-移动RSS位置">
+<meta property="og:url" content="https://qpwmio.gitee.io/2021/04/02/Hexo%E4%BC%98%E5%8C%96-RSS%E4%BD%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Aurora">
-<meta property="og:description" content="尽兴">
+<meta property="og:description" content="Hexo安装Next主题 Rss 侧边栏 不要直接在主题配置文件上进行修改 修改RSS显示位置使其在首页显示">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-02T14:04:58.144Z">
+<meta property="article:modified_time" content="2021-04-02T14:11:56.877Z">
 <meta property="article:author" content="曹圣洁">
+<meta property="article:tag" content="博客优化">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://qpwmio.gitee.io/archives/2021/">
+<link rel="canonical" href="https://qpwmio.gitee.io/2021/04/02/Hexo%E4%BC%98%E5%8C%96-RSS%E4%BD%8D%E7%BD%AE/">
 
 
 <script id="page-configurations">
@@ -42,12 +45,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | Aurora</title>
+  <title>Hexo优化-移动RSS位置 | Aurora</title>
   
 
 
@@ -200,234 +203,139 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 13 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://qpwmio.gitee.io/2021/04/02/Hexo%E4%BC%98%E5%8C%96-RSS%E4%BD%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/avatar_189x189.png">
+      <meta itemprop="name" content="曹圣洁">
+      <meta itemprop="description" content="尽兴">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aurora">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo优化-移动RSS位置
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-02 22:04:58 / 修改时间：22:11:56" itemprop="dateCreated datePublished" datetime="2021-04-02T22:04:58+08:00">2021-04-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                </span>
+                  >
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/Configuration/" itemprop="url" rel="index"><span itemprop="name">Configuration</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
+        <h1 id="Hexo安装Next主题-Rss-侧边栏"><a href="#Hexo安装Next主题-Rss-侧边栏" class="headerlink" title="Hexo安装Next主题 Rss 侧边栏"></a>Hexo安装Next主题 Rss 侧边栏</h1><ul>
+<li>不要直接在主题配置文件上进行修改</li>
+<li>修改RSS显示位置使其在首页显示</li>
+</ul>
+<span id="more"></span>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-04-02T22:04:58+08:00"
-              content="2021-04-02">
-          04-02
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/02/Hexo%E4%BC%98%E5%8C%96-RSS%E4%BD%8D%E7%BD%AE/" itemprop="url">
-            <span itemprop="name">Hexo优化-移动RSS位置</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-04-01T22:56:46+08:00"
-              content="2021-04-01">
-          04-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/01/PicGo%20+%20Gitee(%E7%A0%81%E4%BA%91)%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A/" itemprop="url">
-            <span itemprop="name">PicGo + Gitee实现图床</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-04-01T22:28:05+08:00"
-              content="2021-04-01">
-          04-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/01/Hexo%E4%BC%98%E5%8C%96-Fancybox%E5%9B%BE%E7%89%87%E8%B7%B3%E8%BD%AC%E9%97%AE%E9%A2%98/" itemprop="url">
-            <span itemprop="name">Hexo优化-Fancybox图片跳转问题</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-29T21:03:05+08:00"
-              content="2021-03-29">
-          03-29
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/29/Thriller/" itemprop="url">
-            <span itemprop="name">Thriller</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-27T09:38:03+08:00"
-              content="2021-03-27">
-          03-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/27/Hexo%E4%BC%98%E5%8C%96-%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD/" itemprop="url">
-            <span itemprop="name">Hexo进阶配置</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-26T12:56:05+08:00"
-              content="2021-03-26">
-          03-26
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/26/Youtube-dl/" itemprop="url">
-            <span itemprop="name">Youtube-dl常见用法</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-22T11:12:56+08:00"
-              content="2021-03-22">
-          03-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/22/%E9%AB%98%E6%95%B0/" itemprop="url">
-            <span itemprop="name">高数</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-15T11:01:31+08:00"
-              content="2021-03-15">
-          03-15
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/15/%E6%B7%98%E6%B1%B0/" itemprop="url">
-            <span itemprop="name">淘汰</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-02-24T10:00:53+08:00"
-              content="2021-02-24">
-          02-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/02/24/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/" itemprop="url">
-            <span itemprop="name">考研规划</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-02-24T08:48:47+08:00"
-              content="2021-02-24">
-          02-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/02/24/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url">
-            <span itemprop="name">Markdown学习笔记</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+<h3 id="配置主题文件"><a href="#配置主题文件" class="headerlink" title="配置主题文件"></a>配置主题文件</h3><p>根据 Hexo 官方的推荐，不要直接修改主题的配置文件</p>
+<blockquote>
+<p>The file should be placed in your site folder, both <code>yml</code> and <code>json</code> are supported. <code>theme</code> inside <code>_config.yml</code> must be configured for Hexo to read <code>_config.[theme].yml</code></p>
+</blockquote>
+<p>根据推荐执行以下操作:</p>
+<ol>
+<li><p>配置主题为 Next 主题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># _config.yml</span><br><span class="line">theme: &quot;next&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在 site 根目录新建 <code>_config.next.yml</code>文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch _config.next.yml</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打开 <code>theme/next/_config.yml</code>把需要修改的选项 copy 到 <code>_config.next.yml</code>中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># _config.next.yml</span><br><span class="line"># 设置网站图标</span><br><span class="line">favicon:</span><br><span class="line">  small: &#x2F;favicon.ico</span><br><span class="line">  medium: &#x2F;favicon.ico</span><br><span class="line">  apple_touch_icon: &#x2F;apple-touch-icon.png</span><br><span class="line">  safari_pinned_tab: &#x2F;apple-touch-icon.png</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>hexo启动时，会自动合并 <code>_config.next.yml</code> 与<code>theme/next/_config.yml</code> 的设置内容，从而达到配置主题的作用。</p>
+</li>
+</ol>
+<p>不直接修改<code>theme/next/_config.yml</code>的好处是，当拉取新的更新时，不会因修改了<code>_config.yml</code>而发生冲突。（每个主题都是一个独立的 <code>git</code>项目）</p>
+<h3 id="修改RSS显示位置"><a href="#修改RSS显示位置" class="headerlink" title="修改RSS显示位置"></a>修改RSS显示位置</h3><p>看到网上说Rss的显示位置由首页侧边栏的位置移动到了每篇文章的最底部，这显然是不适合的，因为订阅不是按文章订阅，而是直接在首页中订阅。</p>
+<p>自定义RSS到侧边栏：请先确认已经安装 <code>hexo-generator-feed</code>插件</p>
+<ol>
+<li><p>删除文章底部的Rss(整个 follow me 设置都删除)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># theme&#x2F;next&#x2F;layout&#x2F;_macro&#x2F;post.njk</span><br><span class="line"></span><br><span class="line"># 删除以下代码</span><br><span class="line">&#123;%- if theme.follow_me %&#125;</span><br><span class="line">       &#123;&#123; partial(&#39;_partials&#x2F;post&#x2F;post-followme.swig&#39;, &#123;&#125;, &#123;cache: theme.cache.enable&#125;) &#125;&#125;</span><br><span class="line">     &#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改 Rss 样式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># theme&#x2F;next&#x2F;layout&#x2F;_partials&#x2F;post&#x2F;post-followme.njk</span><br><span class="line"></span><br><span class="line">&lt;div class&#x3D;&quot;followme&quot;&gt; # 修改为 &lt;div class&#x3D;&quot;&quot;&gt;</span><br><span class="line">  &lt;p&gt;&#123;&#123; __(&#39;follow_me.welcome&#39;) &#125;&#125;&lt;&#x2F;p&gt; # 删除这一行</span><br><span class="line">  &lt;div class&#x3D;&quot;social-list&quot;&gt; # #修改为 &lt;div class&#x3D;&quot;&quot;&gt;</span><br><span class="line">  # 省略部分源码</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加 Rss 到侧边栏(其实就是整个的 follwe me)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># theme&#x2F;next&#x2F;layout&#x2F;_partials&#x2F;sidebar&#x2F;site-overview.njk</span><br><span class="line">&#123;%- if theme.follow_me %&#125;</span><br><span class="line">       &#123;&#123; partial(&#39;_partials&#x2F;post&#x2F;post-followme.swig&#39;, &#123;&#125;, &#123;cache: theme.cache.enable&#125;) &#125;&#125;</span><br><span class="line">     &#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在站点配置文件中打开 Rss 设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># _config.yml</span><br><span class="line">follow_me:</span><br><span class="line">  RSS: &#x2F;rss2.xml || fa fa-rss</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启站点即可，就可以看到 Rss 显示在侧边栏了</p>
+</li>
+</ol>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/" rel="tag"><i class="fa fa-tag"></i> 博客优化</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/04/01/PicGo%20+%20Gitee(%E7%A0%81%E4%BA%91)%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A/" rel="prev" title="PicGo + Gitee实现图床">
+      <i class="fa fa-chevron-left"></i> PicGo + Gitee实现图床
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2021/page/2/">2</a><a class="extend next" rel="next" href="/archives/2021/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
+  
+  
 
 
 
@@ -479,6 +387,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo%E5%AE%89%E8%A3%85Next%E4%B8%BB%E9%A2%98-Rss-%E4%BE%A7%E8%BE%B9%E6%A0%8F"><span class="nav-number">1.</span> <span class="nav-text">Hexo安装Next主题 Rss 侧边栏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%E6%96%87%E4%BB%B6"><span class="nav-number">1.0.1.</span> <span class="nav-text">配置主题文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9RSS%E6%98%BE%E7%A4%BA%E4%BD%8D%E7%BD%AE"><span class="nav-number">1.0.2.</span> <span class="nav-text">修改RSS显示位置</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
