@@ -238,7 +238,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-06 22:30:17" itemprop="dateModified" datetime="2021-04-06T22:30:17+08:00">2021-04-06</time>
+                <time title="修改时间：2021-04-08 13:17:38" itemprop="dateModified" datetime="2021-04-08T13:17:38+08:00">2021-04-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -398,10 +398,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-04-02 22:04:58 / 修改时间：22:11:56" itemprop="dateCreated datePublished" datetime="2021-04-02T22:04:58+08:00">2021-04-02</time>
+              <time title="创建时间：2021-04-02 22:04:58" itemprop="dateCreated datePublished" datetime="2021-04-02T22:04:58+08:00">2021-04-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-07 13:18:23" itemprop="dateModified" datetime="2021-04-07T13:18:23+08:00">2021-04-07</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -427,7 +433,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Hexo安装Next主题-Rss-侧边栏"><a href="#Hexo安装Next主题-Rss-侧边栏" class="headerlink" title="Hexo安装Next主题 Rss 侧边栏"></a>Hexo安装Next主题 Rss 侧边栏</h1><ul>
+          <p><em>Hexo安装Next主题 Rss 侧边栏</em></p>
+<ul>
 <li>不要直接在主题配置文件上进行修改</li>
 <li>修改RSS显示位置使其在首页显示</li>
 </ul>
@@ -1221,36 +1228,24 @@
 </div>
 
 <!--添加网站的运行时间-->
-<span id="sitetime"> <br></span>
-<script language="javascript">
-	function siteTime(){
-		window.setTimeout("siteTime()", 1000);
-		var seconds = 1000
-		var minutes = seconds * 60
-		var hours = minutes * 60
-		var days = hours * 24
-		var years = days * 365
-
-		var today = new Date()
-		var todayYear = today.getFullYear()
-		var todayMonth = today.getMonth()
-		var todayDate = today.getDate()
-		var todayHour = today.getHours()
-		var todayMinute = today.getMinutes()
-		var todaySecond = today.getSeconds()
-		var t1 = Date.UTC(2021,1,1,00,00,00)
-		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
-		var diff = t2-t1
-
-		var diffYears = Math.floor(diff/years)
-		var diffDays = Math.floor((diff/days)-diffYears*365)
-		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours)
-		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes)
-		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds)
-		document.getElementById("sitetime").innerHTML=" 本站已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒<br>"
-	}
-	siteTime()
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("01/01/2021 0:0:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
 </script>
+
 
         
 
