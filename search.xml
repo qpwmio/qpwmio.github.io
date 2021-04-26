@@ -9,7 +9,7 @@
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
       <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Enter the password to read.</span>
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">🔑</span>
       </label>
     </div>
   </div>
@@ -86,7 +86,7 @@
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
       <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Enter the password to read.</span>
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">🔑</span>
       </label>
     </div>
   </div>
@@ -104,7 +104,7 @@
   <entry>
     <title>Hexo优化-移动RSS位置</title>
     <url>/2021/04/02/Hexo%E4%BC%98%E5%8C%96-RSS%E4%BD%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p><em>Hexo安装Next主题 Rss 侧边栏</em></p>
+    <content><![CDATA[<p><em>Hexo安装Next主题Rss侧边栏</em></p>
 <ul>
 <li>不要直接在主题配置文件上进行修改</li>
 <li>修改RSS显示位置使其在首页显示</li>
@@ -160,7 +160,7 @@
   <entry>
     <title>PicGo + Gitee实现图床</title>
     <url>/2021/04/01/PicGo%20+%20Gitee(%E7%A0%81%E4%BA%91)%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<p><strong>前言</strong>：深感在线博客的编辑器坑太多了，文档丢失、必须联网、可移植性太差，所以开始寻找可替代的方案。</p>
+    <content><![CDATA[<p><em>深感在线博客的编辑器坑太多了，文档丢失、必须联网、可移植性太差，所以开始寻找可替代的方案。</em></p>
 <span id="more"></span>
 
 <h5 id="markdown是一门易于上手能帮助作者专心写作的文档编辑语言，它的好处太多了，建议想自己动手做笔记写博客的朋友都可以学一学，10分钟上手（我昨天晚上还不会用，今天就开始用它写博客了。。足以证明它是真的很简单）"><a href="#markdown是一门易于上手能帮助作者专心写作的文档编辑语言，它的好处太多了，建议想自己动手做笔记写博客的朋友都可以学一学，10分钟上手（我昨天晚上还不会用，今天就开始用它写博客了。。足以证明它是真的很简单）" class="headerlink" title="markdown是一门易于上手能帮助作者专心写作的文档编辑语言，它的好处太多了，建议想自己动手做笔记写博客的朋友都可以学一学，10分钟上手（我昨天晚上还不会用，今天就开始用它写博客了。。足以证明它是真的很简单）"></a><a href="https://baike.baidu.com/item/markdown/3245829?fr=aladdin">markdown</a>是一门易于上手能帮助作者专心写作的文档编辑语言，它的好处太多了，建议想自己动手做笔记写博客的朋友都可以学一学，10分钟上手（我昨天晚上还不会用，今天就开始用它写博客了。。足以证明它是真的很简单）</h5><h5 id="Tpyora是一款优雅的markdown编辑器，也推荐给大家，至于安装和配置，比安装word还简单，就不赘述了"><a href="#Tpyora是一款优雅的markdown编辑器，也推荐给大家，至于安装和配置，比安装word还简单，就不赘述了" class="headerlink" title="Tpyora是一款优雅的markdown编辑器，也推荐给大家，至于安装和配置，比安装word还简单，就不赘述了"></a><a href="https://www.typora.io/">Tpyora</a>是一款优雅的markdown编辑器，也推荐给大家，至于安装和配置，比安装word还简单，就不赘述了</h5><p>但是，这都不是重点，重点是咱们写博客的时候，总是需要<strong>插入图片</strong>的，图片存在本地的话上传到博客网站去就没法显示了，就算一个图一个图的复制粘贴上去，想移植到其他的博客网站，图就会失效，我们就需要图床</p>
@@ -282,8 +282,7 @@
   <entry>
     <title>Hexo优化-Fancybox图片跳转问题</title>
     <url>/2021/04/01/Hexo%E4%BC%98%E5%8C%96-Fancybox%E5%9B%BE%E7%89%87%E8%B7%B3%E8%BD%AC%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#导语</td></tr></table>
-
+    <content><![CDATA[<p><em>Fancybox插件与外链图片跳转问题</em></p>
 <span id="more"></span>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p>  前段时间总结了博客使用图床解决了存储图片的问题，实现了博客的全面瘦身。<br>  然而在使用的过程中发现，fancybox 的图片浏览功能与图传链接产生了冲突，出现了意想不到的 BUG。<br>  主要原因是 fancybox 是使用 a 标签的 href 属性进行跳转的，之前链接图片都是本地链接，href 并没有跳转新的网页，然而用了图床的链接之后，a 标签就直接跳转到了图片地址去了。</p>
@@ -318,7 +317,7 @@
   <entry>
     <title>Thriller</title>
     <url>/2021/03/29/Thriller/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>想你了,Michael</td></tr></table>
+    <content><![CDATA[<p><em>想你了,Michael</em></p>
 <span id="more"></span>
 
 <h1 id="Thriller"><a href="#Thriller" class="headerlink" title="Thriller"></a>Thriller</h1><blockquote>
@@ -344,13 +343,13 @@
   <entry>
     <title>Hexo进阶配置</title>
     <url>/2021/03/27/Hexo%E4%BC%98%E5%8C%96-%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#Hexo 搭建个人博客系列：进阶设置篇</td></tr></table>
-本篇文章介绍了如何为 Hexo 博客集成更多强大的功能。
+    <content><![CDATA[<p><em>搭建个人博客系列：进阶设置篇</em></p>
+<span id="more"></span>
 
+<p>本篇文章介绍了如何为 Hexo 博客集成更多强大的功能。</p>
 <p>第一章介绍了在站点中集成基于三方插件的数据统计服务，包括站点 PV 和 PU 统计、站点运行时间统计、文章 PV 统计、站点和文章字数统计等。</p>
 <p>第二章介绍了针对于站点的个性化设置方案，包括添加搞怪的网页标题，添加站内搜索功能，添加热门文章排行榜页面，添加豆瓣阅读 / 电影 / 游戏等资料页面，添加在线聊天和即时反馈等功能。</p>
 <p>第三章介绍了针对于文章页面的个性化设置方案，包括在文章末尾添加评论组件、评分组件、打赏入口、版权声明、推荐文章等，为文章中的图片添加点击灯箱效果，以及为文章设置访问密码。</p>
-<span id="more"></span>
 <h1 id="数据统计"><a href="#数据统计" class="headerlink" title="数据统计"></a>数据统计</h1><h2 id="站点访问量统计"><a href="#站点访问量统计" class="headerlink" title="站点访问量统计"></a>站点访问量统计</h2><p>该功能由 <a href="http://ibruce.info/2015/04/04/busuanzi/">不蒜子</a> 提供，效果如下图：</p>
 <p><a href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/busuanzi-site-footer.png"><img src="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/busuanzi-site-footer.png" alt="站点访问统计"></a></p>
 <p><a href="http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/busuanzi-site-footer.png">站点访问统计</a></p>
@@ -751,8 +750,7 @@
   <entry>
     <title>Youtube-dl常见用法</title>
     <url>/2021/03/26/Youtube-dl/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#导语</td></tr></table>
-
+    <content><![CDATA[<p><em>开源的网页视频下载工具</em></p>
 <span id="more"></span>
 
 <p><a href="https://github.com/ytdl-org/youtube-dl/">youtube-dl</a> 是一款命令行下的视频下载工具，看着名称像是 YouTube 下载工具，其实这款工具不仅支持 YouTube ，还支持非常多的视频网站，比如优酷、爱奇艺、 bilibili 等，在写这篇日志的时候，暂时不支持腾讯视频。</p>
@@ -826,8 +824,7 @@
   <entry>
     <title>淘汰</title>
     <url>/2021/03/15/%E6%B7%98%E6%B1%B0/</url>
-    <content><![CDATA[<table><tr><td bgcolor=#D1EEEE>#好听</td></tr></table>
-
+    <content><![CDATA[<p><em>淘汰</em></p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=65528&auto=0&height=66"></iframe>
 <span id="more"></span>
 # title1
@@ -852,12 +849,12 @@
     <title>考研规划</title>
     <url>/2021/02/24/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="3dc4879837cd6736ad5a60ae4cd840164e0a33370a8d49ec94000407e913c6c4">7c607a38cb844365d3b1e05ea81c0c5fbc23f21916369dff06ca11406f5d77f12d1da3227c7fb63e61a720bad32b664ed50d380cae89cb0866d2cec2818b2ef9935aaaa34e1d9ba37afc8613fb6ec277236dc2562705fea3d9611f6021f3a8e35ace0fa64893e31e22921d5fcb696d1e3db79cdbae5f29a8db5c78632783ccdbc082b68f275e90c4864494cbe5544641cdbd29bb932719e6816f0031990efe0b46d35878a56d358a79819f0baa7f66ae535ecee6f147ef79c9f5ca5d0adb8d5114d4a9cfee36f11b445f8db21464db7bebedefae7440f915a748b7b1d9bddfea150109f42c47f78051bc19dbf984b02b3c815103985488d89362caf72cd796cf35c82dc8a1c71e4b9387c383d8b928c07dd280a05e19cb74feaff8a5ee6a8be01df24a4eae92d219e8e79bcd630d52ba145e4fb643e41a4792b3690520dc53f9b2e33b992de50726f8a7a3c6e01803777c55199e675aad358212853fd06702942c2c5f887d78cf3bea3473d6b1e3809758dfd4825b89d8c4b40f87c507cc71b5a09fe8ba677cf491aa6e2b82853de4ebb40072a0aeb87516db42fe9e51265ca8cf95ffed23f96f927060bb76c75a39510160f5324d7c3ba542833803270935a5016392cd91e6cf9195a40f416571aede21cd608cfdc716bc81d1c47686114d6c4df44872611fc36042ff013dccda2c3dbb384f1abc900b99fdd13d507e0dfd7fd76a6d464ddacd7e9b2178e4841d68a96b7c7fe3969d45bbcec537fd2978c304a44c8442fe083f467ee19b071a75da47ab37526624f71c033312d49c6c2b5a001a5130d346e9dcf4dfe29116957f5244b239fe018a6a834beaa647801c92d45e1c710dfb37c416edca7129f4752c1c674a3c3b22caeca50fe184fe00e01d644ec2d8b37ddd059ee3dacdd332e6c3d2aca21d2c1894190092549959ec4817754946f9c6fd9c472f035712eafe533274ef6a64fc7b987196210fee16dc8b2afb1a4d3acb5f59ebadb7b897847b78652eb6a4ba5b531010176c3fd156168a90979533d27441391069b45ab14e973aeb80461c9a6b956a3cdfda7a91665be39f8cd4d58a396f37426c8aaca139351d06073217e25c3a58af08f050595e7db2865b040299e88cdf5c91d60cf1eeb8253daa643a1daffba49964c63d50ef233d433858</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="dd442b29ca3a23fd6486139ca7d5607735a869b77f5066abf66320d8079cb7ee">7c607a38cb844365d3b1e05ea81c0c5fbe251423b8ce152421b02ae13517e1fc2e15ccae87424d4aac3db2ce4b92b6e870403aed43c12d5a646b92607b62c2d45bb77ad16f35b92e42f617197ba75ab56b9522240c88105ef37926cd30dfcc06d3d1168c061852d95d6948b2d26ebca49c29d42665df57d8591861d638349fbe4e2529afc2f4f33d14b18798c3342ce825c9179334f5a8e47de3f90d16031894bad40816f10f50ec2df72519506ef07f0d826ee050847f0d477afc2f1f6907fb7fc11e71661a0928e3fffc88075df2229c17ad138cf3ac8dfceedb13e765708c9946b801a10bcfe284d2f7bdcbec5c1adc071966a2d050fb4b23944206dda568e2e8e55899012869c39fa27abd5f9abf2747268cbad227fac75a99ef2ac1582a5c6da666003fd62440f7855928224a6b7c482f1559e7080f920b22a377a348e6c11dce2edfbfd7d0b77cd0b005e5d3fecb88b1f3f7d30735a6c8988a934298ceecb1a1cd5a3d9713bf7c6ee4ebcff2e9baa2b8942afd18a19eec46197aaf8e75842c4f4e56784b254b281578dfebe00ff71a35a39343826b5b4976316d3c76c59ddec68f191a896db4bb51b6c56875a9c725fabe042e70cc9511cc0e7a45dc0b94dc4323739406b699c514cd78b0a1c8cd9299f871649dbf5d09eb6add952b353a4387521347ceb1827d8b02595b1014c99fe8da703340976d9f18f328e4b8ab1784129c4807122b9be164d3238e3eee8df14f9a035c20d289f5f11037db97364754e47eef8bc878855b8745784b29d57e01b95528f8cedf6a6a8cdca675860291c1b6e0975efc5c0bb2b7893e2e0d212e9a8a20e08f880392a0bca5e9cc3f8ef16f6edfda193b49986012f77248e0d0a2781af9a5a3c44211e4f96eaf1383f0e361941ccce11b7168d26495e24539d7c85dc7beedfe99f14e3ebb5f65d0dbf3652c957d8feae2617ba3ae5044dcef438a98fe58aebe0dd640ef99733ca55841fe5e4576d8c1b59325e0c3d9d431d707e286830854dc60b6cc34439a3e190ee6be83d7739c343ae9291b2c83b0b173526bf0288f2834078cdf1c8c6af5e18af4b14ef2c892be350999a82f6cd2da8350b8ec9deda6f924f59af1cdf9fca4b92b</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
       <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Enter the password to read.</span>
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">🔑</span>
       </label>
     </div>
   </div>
@@ -873,7 +870,7 @@
   <entry>
     <title>Markdown学习笔记</title>
     <url>/2021/02/24/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>@(网页基础设计)[马克飞象, 帮助, Markdown]</p>
+    <content><![CDATA[<p><em>Markdown文本介绍</em></p>
 <span id="more"></span>
 <h1 id="欢迎使用MarkDown"><a href="#欢迎使用MarkDown" class="headerlink" title="欢迎使用MarkDown"></a>欢迎使用MarkDown</h1><p><strong>马克飞象</strong>是一款专为印象笔记（Evernote）打造的Markdown编辑器，通过精心的设计与技术实现，配合印象笔记强大的存储和同步功能，带来前所未有的书写体验。特点概述：</p>
 <ul>
@@ -951,7 +948,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
-<li>邮箱：<a href="mailto:&#104;&#117;&#115;&#116;&#x67;&#111;&#x63;&#107;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#104;&#117;&#115;&#116;&#x67;&#111;&#x63;&#107;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#x68;&#117;&#x73;&#116;&#103;&#111;&#99;&#107;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x68;&#117;&#x73;&#116;&#103;&#111;&#99;&#107;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
@@ -995,7 +992,7 @@
   <entry>
     <title>音乐外链</title>
     <url>/2021/02/19/%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/</url>
-    <content><![CDATA[<p>篝火旁</p>
+    <content><![CDATA[<p><em>篝火旁&amp;list</em></p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518725853&auto=0&height=66"></iframe>
 
 
@@ -1016,9 +1013,7 @@
   <entry>
     <title>NewPageConfig</title>
     <url>/2021/02/19/%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E6%A8%A1%E7%89%88/</url>
-    <content><![CDATA[<blockquote>
-<p>博客页面 基本设置</p>
-</blockquote>
+    <content><![CDATA[<p><em>博客页面 基本设置</em></p>
 <table>
 <thead>
 <tr>
