@@ -25,23 +25,9 @@
       </tags>
   </entry>
   <entry>
-    <title>live-听</title>
-    <url>/2021/05/20/live-%E5%90%AC/</url>
-    <content><![CDATA[<p><em>导语</em></p>
-<span id="more"></span>
-<h1 id="title1"><a href="#title1" class="headerlink" title="title1"></a>title1</h1><h2 id="title2"><a href="#title2" class="headerlink" title="title2"></a>title2</h2><h3 id="title3"><a href="#title3" class="headerlink" title="title3"></a>title3</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>Git-学习</title>
     <url>/2021/05/13/Git-%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<p><em>导语</em></p>
-<span id="more"></span>
-<h1 id="title1"><a href="#title1" class="headerlink" title="title1"></a>title1</h1><h2 id="title2"><a href="#title2" class="headerlink" title="title2"></a>title2</h2><h3 id="title3"><a href="#title3" class="headerlink" title="title3"></a>title3</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210513230318902.png"></p>
+    <content><![CDATA[<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210513230318902.png"></p>
 ]]></content>
       <tags>
         <tag>git</tag>
@@ -50,7 +36,7 @@
   <entry>
     <title>学习总结</title>
     <url>/2021/05/08/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p><em>我建议大家不要盲目听信他人的方法，我此前看到很多什么“数据结构源代码和演示的重要性”，“7天记忆10000多单词”这样的信息。我首先对此表示质疑，但我不否认这种方法存在的可能性！</em></p>
+    <content><![CDATA[<p><em>我建议大家不要盲目听信他人的方法，我此前看到很多什么“数据结构源代码和演示的重要性”，“7天记忆10000多单词”这样的信息。我首先对此表示质疑，但我不否认这种方法存在的可能性！</em>——-整理于2021-5-18</p>
 <span id="more"></span>
 <h1 id="关于数据结构以及学习的一点建议"><a href="#关于数据结构以及学习的一点建议" class="headerlink" title="关于数据结构以及学习的一点建议"></a>关于数据结构以及学习的一点建议</h1><h2 id="背景分析"><a href="#背景分析" class="headerlink" title="背景分析"></a>背景分析</h2><p>对方法的迷信可能是你失败的因素之一，因为世界上根本没有最好的方法，只有最适合你的方法，最适合往往因人而异。我也在生活中看到这样一类人，他们觉得某种方法非常有效，也非常可靠，自信能比别人在更少的时间内，比别人更出色的做成一件事，然而，结果是，一些主客观方面的偶然因素使他在方法执行过程中出现了必然的偏差，时间的急迫感和他对方法的迷信让他反复妥协和折中，最后，他做出的作品不伦不类，远远赶不上最初使用简单方法的人。当然生活中也有一类无作为的人—即便珍食美馐摆于面前，也不愿着筷箸，最后被饿死。此刻，我想到了马克思的一句话“批判的武器不能代替武器的批判”，借此，送给诸位。</p>
 <h2 id="考试与算法"><a href="#考试与算法" class="headerlink" title="考试与算法"></a>考试与算法</h2><p>考试和算法设计精髓一样：<br>          时间消耗越少，一般空间消耗越大，存储越冗余<br>          空间消耗越少，一般时间消耗越大，计算越冗余<br>          空间和时间的消耗如果都降低的话，人的智力和脑力消耗越大，包括人思考所用的时间和记忆力。</p>
@@ -79,8 +65,8 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Next主题配置</title>
-    <url>/2021/04/26/Next_config/</url>
+    <title>Hexo配置-Next主题配置</title>
+    <url>/2021/04/26/Hexo%E9%85%8D%E7%BD%AE-Next_config/</url>
     <content><![CDATA[<p><em>Next/config.yml备份于2021年4月26日</em></p>
 <span id="more"></span>
 
@@ -366,32 +352,6 @@
       </categories>
       <tags>
         <tag>博客优化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Thriller</title>
-    <url>/2021/03/29/Thriller/</url>
-    <content><![CDATA[<p><em>想你了,Michael</em></p>
-<span id="more"></span>
-
-<h1 id="Thriller"><a href="#Thriller" class="headerlink" title="Thriller"></a>Thriller</h1><blockquote>
-<p>开创</p>
-</blockquote>
-<iframe src="//player.bilibili.com/player.html?aid=328634884&bvid=BV1hA411i7PW&cid=205664972&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h1 id="Man-in-the-mirror"><a href="#Man-in-the-mirror" class="headerlink" title="Man in the mirror"></a>Man in the mirror</h1><blockquote>
-<p>给自己</p>
-</blockquote>
-<iframe src="//player.bilibili.com/player.html?aid=328282943&bvid=BV1WA411q7jZ&cid=197389814&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-]]></content>
-      <categories>
-        <category>生活</category>
-        <category>音乐</category>
-      </categories>
-      <tags>
-        <tag>music</tag>
-        <tag>MichaelJackson</tag>
       </tags>
   </entry>
   <entry>
@@ -883,30 +843,6 @@
       </tags>
   </entry>
   <entry>
-    <title>淘汰</title>
-    <url>/2021/03/15/%E6%B7%98%E6%B1%B0/</url>
-    <content><![CDATA[<p><em>淘汰</em></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=65528&auto=0&height=66"></iframe>
-<span id="more"></span>
-# title1
-## title2
-### title3
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ code</span><br></pre></td></tr></table></figure>
-# categories:
- 列表：
- - computer
- - computer-aided-art
-
-]]></content>
-      <categories>
-        <category>生活</category>
-        <category>音乐</category>
-      </categories>
-      <tags>
-        <tag>music</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>考研规划</title>
     <url>/2021/02/24/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -1009,7 +945,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
-<li>邮箱：<a href="mailto:&#x68;&#x75;&#x73;&#x74;&#x67;&#111;&#x63;&#x6b;&#64;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;">&#x68;&#x75;&#x73;&#x74;&#x67;&#111;&#x63;&#x6b;&#64;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#104;&#117;&#x73;&#116;&#103;&#111;&#x63;&#x6b;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;">&#104;&#117;&#x73;&#116;&#103;&#111;&#x63;&#x6b;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
@@ -1020,8 +956,8 @@
         <category>MarkdownConfig</category>
       </categories>
       <tags>
-        <tag>markdown</tag>
         <tag>post</tag>
+        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -1051,29 +987,8 @@
       </tags>
   </entry>
   <entry>
-    <title>音乐外链</title>
-    <url>/2021/02/19/%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/</url>
-    <content><![CDATA[<p><em>篝火旁&amp;list</em></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=518725853&auto=0&height=66"></iframe>
-
-
-
-
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=6696257980&auto=0&height=430"></iframe>
-
-]]></content>
-      <categories>
-        <category>生活</category>
-        <category>音乐</category>
-      </categories>
-      <tags>
-        <tag>music</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NewPageConfig</title>
-    <url>/2021/02/19/%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E6%A8%A1%E7%89%88/</url>
+    <title>Hexo配置-NewPageConfig</title>
+    <url>/2021/02/19/Hexo%E9%85%8D%E7%BD%AE-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E6%A8%A1%E7%89%88/</url>
     <content><![CDATA[<p><em>博客页面 基本设置</em></p>
 <table>
 <thead>
@@ -1156,8 +1071,8 @@
         <category>Configuration</category>
       </categories>
       <tags>
-        <tag>post</tag>
         <tag>hexo</tag>
+        <tag>post</tag>
       </tags>
   </entry>
 </search>
