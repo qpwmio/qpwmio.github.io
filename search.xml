@@ -3,7 +3,9 @@
   <entry>
     <title>高数</title>
     <url>/2021/03/22/%E9%AB%98%E6%95%B0/</url>
-    <content><![CDATA[<h1 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a><em>高等数学</em></h1><h1 id="极限与连续"><a href="#极限与连续" class="headerlink" title="极限与连续"></a>极限与连续</h1><h2 id="极限定义（左右极限）"><a href="#极限定义（左右极限）" class="headerlink" title="极限定义（左右极限）"></a>极限定义（左右极限）</h2><h3 id="P4-注解5"><a href="#P4-注解5" class="headerlink" title="P4 注解5"></a>P4 注解5</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521194825454.png"></p>
+    <content><![CDATA[<p> <em>高等数学</em></p>
+<span id="more"></span>
+<h1 id="极限与连续"><a href="#极限与连续" class="headerlink" title="极限与连续"></a>极限与连续</h1><h2 id="极限定义（左右极限）"><a href="#极限定义（左右极限）" class="headerlink" title="极限定义（左右极限）"></a>极限定义（左右极限）</h2><h3 id="P4-注解5"><a href="#P4-注解5" class="headerlink" title="P4 注解5"></a>P4 注解5</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521194825454.png"></p>
 <p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210511085541558.png" alt="x趋向于*"></p>
 <h2 id="极限性质"><a href="#极限性质" class="headerlink" title="极限性质"></a>极限性质</h2><h3 id="夹逼定理"><a href="#夹逼定理" class="headerlink" title="夹逼定理"></a>夹逼定理</h3><p>!<img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521194900564.png" alt="夹逼定理"></p>
 <h2 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h2><h3 id="介值定理（闭区间上连续函数的性质）"><a href="#介值定理（闭区间上连续函数的性质）" class="headerlink" title="介值定理（闭区间上连续函数的性质）"></a>介值定理（闭区间上连续函数的性质）</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521194932478.png"></p>
@@ -68,12 +70,17 @@
 <p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521212435822.png" alt="判别法－２"></p>
 <p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210524194252877.png"></p>
 <p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210526172329757.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210526172423946.png"></p>
+<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210604083940686.png" alt="image-20210604083940686"></p>
 <p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210526204252184.png"></p>
-<h1 id="多元函数微分学"><a href="#多元函数微分学" class="headerlink" title="多元函数微分学"></a>多元函数微分学</h1><h2 id="可微"><a href="#可微" class="headerlink" title="可微"></a>可微</h2><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210602084003468.png" alt="引入可微"></p>
+<h1 id="多元函数微分学"><a href="#多元函数微分学" class="headerlink" title="多元函数微分学"></a>多元函数微分学</h1><h2 id="可微"><a href="#可微" class="headerlink" title="可微"></a>可微</h2><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210604083848384.png" alt="引入可微"></p>
+<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210604084346693.png" alt="可微的判定步骤"></p>
+<h2 id="偏导"><a href="#偏导" class="headerlink" title="偏导"></a>偏导</h2><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210603190225033.png" alt="偏导数连续性的证明"></p>
+<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210603203843285.png" alt="有分支为偏导"></p>
+<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210603204041656.png" alt="image-20210603204041656"></p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">文章加密</span><br><span class="line">password: 1217</span><br><span class="line">abstract: 🔒</span><br><span class="line">message: 🔑</span><br></pre></td></tr></table></figure>
+
 <blockquote>
-<p>末<br>password: 1217<br> abstract: 🔒<br> message: 🔑</p>
-</blockquote>
+<h1 id="末"><a href="#末" class="headerlink" title="末"></a>末</h1></blockquote>
 ]]></content>
       <categories>
         <category>考研</category>
@@ -108,6 +115,8 @@
 <p>给自己</p>
 </blockquote>
 <iframe src="//player.bilibili.com/player.html?aid=328282943&bvid=BV1WA411q7jZ&cid=197389814&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p><video src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/%E5%A4%9C%E6%99%9A%20%E9%A3%8E.mp4"></video></p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -1039,7 +1048,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
-<li>邮箱：<a href="mailto:&#104;&#x75;&#115;&#116;&#x67;&#x6f;&#x63;&#107;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#104;&#x75;&#115;&#116;&#x67;&#x6f;&#x63;&#107;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#104;&#x75;&#x73;&#x74;&#103;&#x6f;&#x63;&#x6b;&#x40;&#103;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#104;&#x75;&#x73;&#x74;&#103;&#x6f;&#x63;&#x6b;&#x40;&#103;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
