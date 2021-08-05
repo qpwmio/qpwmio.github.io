@@ -5,9 +5,10 @@
     <url>/2021/03/22/%E9%AB%98%E6%95%B0/</url>
     <content><![CDATA[<p> <em>高等数学</em></p>
 <span id="more"></span>
+
 <h1 id="极限与连续"><a href="#极限与连续" class="headerlink" title="极限与连续"></a>极限与连续</h1><h2 id="极限定义（左右极限）"><a href="#极限定义（左右极限）" class="headerlink" title="极限定义（左右极限）"></a>极限定义（左右极限）</h2><h3 id="P4-注解5"><a href="#P4-注解5" class="headerlink" title="P4 注解5"></a>P4 注解5</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521194825454.png"></p>
 <p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210511085541558.png" alt="x趋向于*"></p>
-<h2 id="极限性质"><a href="#极限性质" class="headerlink" title="极限性质"></a>极限性质</h2><h3 id="夹逼定理"><a href="#夹逼定理" class="headerlink" title="夹逼定理"></a>夹逼定理</h3><p>!<img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521194900564.png" alt="夹逼定理"></p>
+<h2 id="极限性质"><a href="#极限性质" class="headerlink" title="极限性质"></a>极限性质</h2><h3 id="夹逼定理"><a href="#夹逼定理" class="headerlink" title="夹逼定理"></a>夹逼定理</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521194900564.png" alt="夹逼定理"></p>
 <h2 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h2><h3 id="介值定理（闭区间上连续函数的性质）"><a href="#介值定理（闭区间上连续函数的性质）" class="headerlink" title="介值定理（闭区间上连续函数的性质）"></a>介值定理（闭区间上连续函数的性质）</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521194932478.png"></p>
 <h3 id="常用的基本极限"><a href="#常用的基本极限" class="headerlink" title="常用的基本极限"></a>常用的基本极限</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/Image.png"></p>
 <h2 id="P14-题型不定型极限计算"><a href="#P14-题型不定型极限计算" class="headerlink" title="P14 题型不定型极限计算"></a>P14 题型不定型极限计算</h2><h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210404164359393.png"></p>
@@ -108,7 +109,7 @@
   <entry>
     <title>班费</title>
     <url>/2021/07/03/%E7%8F%AD%E8%B4%B9/</url>
-    <content><![CDATA[<p><em>导语</em></p>
+    <content><![CDATA[<p><em>班费记录</em></p>
 <span id="more"></span>
 <h1 id="title1"><a href="#title1" class="headerlink" title="title1"></a>title1</h1><h2 id="title2"><a href="#title2" class="headerlink" title="title2"></a>title2</h2><h3 id="2019年5月15日班费余726-4元"><a href="#2019年5月15日班费余726-4元" class="headerlink" title="2019年5月15日班费余726.4元"></a>2019年5月15日班费余<strong>726.4元</strong></h3><table>
 <thead>
@@ -199,7 +200,7 @@
   <entry>
     <title>npm install安装依赖项时报错。</title>
     <url>/2021/06/24/%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E9%A1%B9%E6%97%B6%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<p>npm install 报错：gyp verb <code>which</code> failed Error: not found: python<br><em>npm install 报错：gyp verb <code>which</code> failed Error: not found: python</em></p>
+    <content><![CDATA[<p><em>npm install 报错：gyp verb <code>which</code> failed Error: not found: python</em></p>
 <span id="more"></span>
 
 <h1 id="npm-install-报错"><a href="#npm-install-报错" class="headerlink" title="npm install 报错"></a>npm install 报错</h1><p>今天从github上下载了一个项目学习，在 npm install 安装依赖项时出现报错。</p>
@@ -217,7 +218,7 @@
   <entry>
     <title>音乐-听</title>
     <url>/2021/05/20/%E9%9F%B3%E4%B9%90-%E5%90%AC/</url>
-    <content><![CDATA[<p><em>导语</em></p>
+    <content><![CDATA[<p><em>Music</em></p>
 <span id="more"></span>
 <p><em>淘汰</em></p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=65528&auto=0&height=66"></iframe>
@@ -1189,7 +1190,7 @@
   <entry>
     <title>Hello World/曹圣洁的第一篇博客</title>
     <url>/2021/02/24/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+    <content><![CDATA[<p><em>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</em></p>
 <span id="more"></span>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
