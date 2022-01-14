@@ -15,98 +15,6 @@
       </tags>
   </entry>
   <entry>
-    <title>班费</title>
-    <url>/2021/07/03/%E7%8F%AD%E8%B4%B9/</url>
-    <content><![CDATA[<p><em>班费记录</em></p>
-<span id="more"></span>
-
-<h3 id="2019年5月15日班费余726-4元"><a href="#2019年5月15日班费余726-4元" class="headerlink" title="2019年5月15日班费余726.4元"></a>2019年5月15日班费余<strong>726.4元</strong></h3><table>
-<thead>
-<tr>
-<th align="center">支出</th>
-<th align="center">价格</th>
-<th align="center">支出时间</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">矿泉水两箱</td>
-<td align="center">30</td>
-<td align="center">9.1（2019）</td>
-</tr>
-<tr>
-<td align="center">打印加油稿</td>
-<td align="center">3</td>
-<td align="center">10.22</td>
-</tr>
-<tr>
-<td align="center">打印鉴定表</td>
-<td align="center">15</td>
-<td align="center">10.23</td>
-</tr>
-<tr>
-<td align="center">打印会议记录</td>
-<td align="center">13.8</td>
-<td align="center">10.23</td>
-</tr>
-<tr>
-<td align="center">打印数据结构作业</td>
-<td align="center">15</td>
-<td align="center">10.24</td>
-</tr>
-<tr>
-<td align="center">打印策划书和会议记录</td>
-<td align="center">3</td>
-<td align="center">10.24</td>
-</tr>
-<tr>
-<td align="center">打印推优表</td>
-<td align="center">1</td>
-<td align="center">10.25</td>
-</tr>
-<tr>
-<td align="center">班会彩照</td>
-<td align="center">1</td>
-<td align="center">12.12</td>
-</tr>
-<tr>
-<td align="center">四六级签名书</td>
-<td align="center">1</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">四六级保证书和班会记录</td>
-<td align="center">4</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">交团费（39*2.4）</td>
-<td align="center">93.6</td>
-<td align="center">10.12（2020）</td>
-</tr>
-<tr>
-<td align="center">打印综合测评表</td>
-<td align="center">0.5</td>
-<td align="center">10.27</td>
-</tr>
-<tr>
-<td align="center">打印推优统计表</td>
-<td align="center">2.5</td>
-<td align="center">4.20（2021）</td>
-</tr>
-<tr>
-<td align="center">打印推优表</td>
-<td align="center">1.5</td>
-<td align="center">4.20</td>
-</tr>
-<tr>
-<td align="center">打印积极分子表（yjq）</td>
-<td align="center">5</td>
-<td align="center">6.30</td>
-</tr>
-</tbody></table>
-]]></content>
-  </entry>
-  <entry>
     <title>npm install安装依赖项时报错。</title>
     <url>/2021/06/24/%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E9%A1%B9%E6%97%B6%E6%8A%A5%E9%94%99/</url>
     <content><![CDATA[<p><em>npm install 报错：gyp verb <code>which</code> failed Error: not found: python</em></p>
@@ -1141,7 +1049,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
-<li>邮箱：<a href="mailto:&#x68;&#x75;&#115;&#x74;&#103;&#x6f;&#x63;&#x6b;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x68;&#x75;&#115;&#x74;&#103;&#x6f;&#x63;&#x6b;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a></li>
+<li>邮箱：<a href="mailto:&#104;&#117;&#115;&#x74;&#103;&#111;&#99;&#x6b;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#104;&#117;&#115;&#x74;&#103;&#111;&#99;&#x6b;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
@@ -1153,8 +1061,8 @@
         <category>Markdown</category>
       </categories>
       <tags>
-        <tag>markdown</tag>
         <tag>post</tag>
+        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -1268,8 +1176,8 @@
         <category>Configuration</category>
       </categories>
       <tags>
-        <tag>post</tag>
         <tag>hexo</tag>
+        <tag>post</tag>
       </tags>
   </entry>
 </search>
