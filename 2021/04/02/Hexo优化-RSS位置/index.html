@@ -203,7 +203,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/avatar_189x189.jpg">
       <meta itemprop="name" content="qpwmio">
-      <meta itemprop="description" content="尽兴">
+      <meta itemprop="description" content="曹圣洁">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -271,13 +271,13 @@
 <p>根据推荐执行以下操作:</p>
 <ol>
 <li><p>配置主题为 Next 主题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># _config.yml</span><br><span class="line">theme: &quot;next&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># _config.yml</span><br><span class="line">theme: &quot;next&quot;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在 site 根目录新建 <code>_config.next.yml</code>文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch _config.next.yml</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch _config.next.yml</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>打开 <code>theme/next/_config.yml</code>把需要修改的选项 copy 到 <code>_config.next.yml</code>中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># _config.next.yml</span><br><span class="line"># 设置网站图标</span><br><span class="line">favicon:</span><br><span class="line">  small: &#x2F;favicon.ico</span><br><span class="line">  medium: &#x2F;favicon.ico</span><br><span class="line">  apple_touch_icon: &#x2F;apple-touch-icon.png</span><br><span class="line">  safari_pinned_tab: &#x2F;apple-touch-icon.png</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># _config.next.yml</span><br><span class="line"># 设置网站图标</span><br><span class="line">favicon:</span><br><span class="line">  small: /favicon.ico</span><br><span class="line">  medium: /favicon.ico</span><br><span class="line">  apple_touch_icon: /apple-touch-icon.png</span><br><span class="line">  safari_pinned_tab: /apple-touch-icon.png</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>hexo启动时，会自动合并 <code>_config.next.yml</code> 与<code>theme/next/_config.yml</code> 的设置内容，从而达到配置主题的作用。</p>
 </li>
@@ -287,16 +287,16 @@
 <p>自定义RSS到侧边栏：请先确认已经安装 <code>hexo-generator-feed</code>插件</p>
 <ol>
 <li><p>删除文章底部的Rss(整个 follow me 设置都删除)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># theme&#x2F;next&#x2F;layout&#x2F;_macro&#x2F;post.njk</span><br><span class="line"></span><br><span class="line"># 删除以下代码</span><br><span class="line">&#123;%- if theme.follow_me %&#125;</span><br><span class="line">       &#123;&#123; partial(&#39;_partials&#x2F;post&#x2F;post-followme.swig&#39;, &#123;&#125;, &#123;cache: theme.cache.enable&#125;) &#125;&#125;</span><br><span class="line">     &#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># theme/next/layout/_macro/post.njk</span><br><span class="line"></span><br><span class="line"># 删除以下代码</span><br><span class="line">&#123;%- if theme.follow_me %&#125;</span><br><span class="line">       &#123;&#123; partial(&#x27;_partials/post/post-followme.swig&#x27;, &#123;&#125;, &#123;cache: theme.cache.enable&#125;) &#125;&#125;</span><br><span class="line">     &#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改 Rss 样式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># theme&#x2F;next&#x2F;layout&#x2F;_partials&#x2F;post&#x2F;post-followme.njk</span><br><span class="line"></span><br><span class="line">&lt;div class&#x3D;&quot;followme&quot;&gt; # 修改为 &lt;div class&#x3D;&quot;&quot;&gt;</span><br><span class="line">  &lt;p&gt;&#123;&#123; __(&#39;follow_me.welcome&#39;) &#125;&#125;&lt;&#x2F;p&gt; # 删除这一行</span><br><span class="line">  &lt;div class&#x3D;&quot;social-list&quot;&gt; # #修改为 &lt;div class&#x3D;&quot;&quot;&gt;</span><br><span class="line">  # 省略部分源码</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># theme/next/layout/_partials/post/post-followme.njk</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;followme&quot;&gt; # 修改为 &lt;div class=&quot;&quot;&gt;</span><br><span class="line">  &lt;p&gt;&#123;&#123; __(&#x27;follow_me.welcome&#x27;) &#125;&#125;&lt;/p&gt; # 删除这一行</span><br><span class="line">  &lt;div class=&quot;social-list&quot;&gt; # #修改为 &lt;div class=&quot;&quot;&gt;</span><br><span class="line">  # 省略部分源码</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>添加 Rss 到侧边栏(其实就是整个的 follwe me)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># theme&#x2F;next&#x2F;layout&#x2F;_partials&#x2F;sidebar&#x2F;site-overview.njk</span><br><span class="line">&#123;%- if theme.follow_me %&#125;</span><br><span class="line">       &#123;&#123; partial(&#39;_partials&#x2F;post&#x2F;post-followme.swig&#39;, &#123;&#125;, &#123;cache: theme.cache.enable&#125;) &#125;&#125;</span><br><span class="line">     &#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># theme/next/layout/_partials/sidebar/site-overview.njk</span><br><span class="line">&#123;%- if theme.follow_me %&#125;</span><br><span class="line">       &#123;&#123; partial(&#x27;_partials/post/post-followme.swig&#x27;, &#123;&#125;, &#123;cache: theme.cache.enable&#125;) &#125;&#125;</span><br><span class="line">     &#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在站点配置文件中打开 Rss 设置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># _config.yml</span><br><span class="line">follow_me:</span><br><span class="line">  RSS: &#x2F;rss2.xml || fa fa-rss</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># _config.yml</span><br><span class="line">follow_me:</span><br><span class="line">  RSS: /rss2.xml || fa fa-rss</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>重启站点即可，就可以看到 Rss 显示在侧边栏了</p>
 </li>
@@ -396,14 +396,14 @@
     <img class="site-author-image" itemprop="image" alt="qpwmio"
       src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/avatar_189x189.jpg">
   <p class="site-author-name" itemprop="name">qpwmio</p>
-  <div class="site-description" itemprop="description">尽兴</div>
+  <div class="site-description" itemprop="description">曹圣洁</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
