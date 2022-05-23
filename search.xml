@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>/2022/05/17/%E5%89%8D%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%8E%A5%E5%8F%A3/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Git-学习</title>
+    <url>/2021/05/13/Git-%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p><em>仓库的SSH Key和账户SSH Key的区别?</em></p>
+<span id="more"></span>
+
+<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210513230318902.png"></p>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Excel文本格式数字格式</title>
     <url>/2021/04/16/Excel%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/</url>
     <content><![CDATA[<p><em>Excel对表求平均值时遇到的问题</em></p>
@@ -35,18 +52,6 @@
       </categories>
       <tags>
         <tag>Excel</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git-学习</title>
-    <url>/2021/05/13/Git-%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<p><em>仓库的SSH Key和账户SSH Key的区别?</em></p>
-<span id="more"></span>
-
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210513230318902.png"></p>
-]]></content>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -138,6 +143,192 @@
       </categories>
       <tags>
         <tag>博客优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo配置-NewPageConfig</title>
+    <url>/2021/02/19/Hexo%E9%85%8D%E7%BD%AE-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E6%A8%A1%E7%89%88/</url>
+    <content><![CDATA[<p><em>博客页面 基本设置</em></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>layout</td>
+<td>布局</td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td></td>
+</tr>
+<tr>
+<td>date</td>
+<td>建立日期</td>
+<td>文件建立日期</td>
+</tr>
+<tr>
+<td>updated</td>
+<td>更新日期</td>
+<td>文件更新日期</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>开启文章的评论功能</td>
+<td>true</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>标签（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td>categories</td>
+<td>分类（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td>permalink</td>
+<td>覆盖文章网址</td>
+<td></td>
+</tr>
+</tbody></table>
+<span id="more"></span>
+
+<h1 id="updated"><a href="#updated" class="headerlink" title="updated:"></a>updated:</h1><p> 更新日期，其它与上面的建立日期类似<br> 不过在页面每篇文章顶部，是更新于……<br> 在主题配置文件中，是 updated_at</p>
+<h1 id="permalink"><a href="#permalink" class="headerlink" title="permalink:"></a>permalink:</h1><p> 若站点配置文件下的 permalink 配置了 title<br> 则可以替换文章 URL 里面的 title（文章标题）</p>
+<h1 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h1><p> 分类，支持多级，比如：</p>
+<ul>
+<li>technology</li>
+<li>computer</li>
+<li>computer-aided-art<br>则为 technology/computer/computer-aided-art<br> （不适用于 layout: page）</li>
+</ul>
+<h1 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h1><p> 标签<br> 多个可以这样写 [标签1,标签2,标签3]<br> （不适用于 layout: page）   </p>
+<h1 id="description"><a href="#description" class="headerlink" title="description:"></a>description:</h1><p> 文章的描述，在每篇文章标题下方显示<br> 并且作为网页的 description 元数据<br> 如果不写，则自动取 <!-- more --><br> 之前的文字作为网页的 description 元数据</p>
+<h1 id="keywords"><a href="#keywords" class="headerlink" title="keywords:"></a>keywords:</h1><p> 关键字，并且作为网页的 keywords 元数据<br> 如果不写，则自动取 tags 里的项<br> 作为网页的 keywords 元数据</p>
+<h1 id="comments"><a href="#comments" class="headerlink" title="comments:"></a>comments:</h1><p> 是否开启评论<br> 默认值是 true<br> 要关闭写 false</p>
+<h1 id="layout"><a href="#layout" class="headerlink" title="layout:"></a>layout:</h1><p> 页面布局，默认值是 post，默认值可以在<br> 站点配置文件中修改 default_layout<br> 另：404 页面可能用到，将其值改为 false</p>
+<h1 id="type"><a href="#type" class="headerlink" title="type:"></a>type:</h1><p> categories，目录页面<br> tags，标签页面<br> picture，用来生成 group-pictures<br> quote？<br> <a href="https://io-oi.me/tech/hello-world/">https://io-oi.me/tech/hello-world/</a></p>
+<h1 id="photos"><a href="#photos" class="headerlink" title="photos:"></a>photos:</h1><p> Gallery support，用来支持画廊╱相册，用法如下：</p>
+<ul>
+<li>photo_url_1</li>
+<li>photo_url_2</li>
+<li>photo_url_3<br><a href="https://io-oi.me/tech/hello-world/">https://io-oi.me/tech/hello-world/</a></li>
+</ul>
+<h1 id="link"><a href="#link" class="headerlink" title="link:"></a>link:</h1><p> 文章的外部链接<br> <a href="https://io-oi.me/tech/hello-world/">https://io-oi.me/tech/hello-world/</a></p>
+<h1 id="image"><a href="#image" class="headerlink" title="image:"></a>image:</h1><p> 自定义的文章摘要图片，只在页面展示，文章内消失<br> 此项只有参考本文 5.14 节配置好，否则请勿添加！</p>
+<h1 id="sticky"><a href="#sticky" class="headerlink" title="sticky:"></a>sticky:</h1><p> 文章置顶<br> 此项只有参考本文 5.15 节配置好，否则请勿添加！</p>
+<h1 id="password"><a href="#password" class="headerlink" title="password:"></a>password:</h1><p> 文章密码，此项只有参考教程：<br> <a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html">http://shenzekun.cn/hexo的next主题个性化配置教程.html</a><br> 第 24 节，配置好，否则请勿添加！<br> 发现还是有 bug 的，就是右键在新标签中打开<br> 然后无论是否输入密码，都能看到内容</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>Configuration</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>post</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown笔记</title>
+    <url>/2021/02/24/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><em>马克飞象Markdown文本介绍</em></p>
+<span id="more"></span>
+<h1 id="欢迎使用MarkDown"><a href="#欢迎使用MarkDown" class="headerlink" title="欢迎使用MarkDown"></a>欢迎使用MarkDown</h1><p><strong>马克飞象</strong>是一款专为印象笔记（Evernote）打造的Markdown编辑器，通过精心的设计与技术实现，配合印象笔记强大的存储和同步功能，带来前所未有的书写体验。特点概述：</p>
+<ul>
+<li><strong>功能丰富</strong> ：支持高亮代码块、<em>LaTeX</em> 公式、流程图，本地图片以及附件上传，甚至截图粘贴，工作学习好帮手；</li>
+<li><strong>得心应手</strong> ：简洁高效的编辑器，提供<a href="http://maxiang.info/client_zh">桌面客户端</a>以及<a href="https://chrome.google.com/webstore/detail/kidnkfckhbdkfgbicccmdggmpgogehop">离线Chrome App</a>，支持移动端 Web；</li>
+<li><strong>深度整合</strong> ：支持选择笔记本和添加标签，支持从印象笔记跳转编辑，轻松管理。</li>
+</ul>
+<hr>
+<p>[TOC]</p>
+<h2 id="Markdown简介"><a href="#Markdown简介" class="headerlink" title="Markdown简介"></a>Markdown简介</h2><blockquote>
+<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— <a href="https://zh.wikipedia.org/wiki/Markdown">维基百科</a></p>
+</blockquote>
+<p>正如您在阅读的这份文档，它使用简单的符号标识不同的标题，将某些文字标记为<strong>粗体</strong>或者<em>斜体</em>，创建一个<a href="http://www.example.com/">链接</a>或一个脚注[^demo]。下面列举了几个高级功能，更多语法请按<code>Ctrl + /</code>查看帮助。 </p>
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">somefunc</span>(<span class="params">param1=<span class="string">&#x27;&#x27;</span>, param2=<span class="number">0</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;A docstring&#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">if</span> param1 &gt; param2: <span class="comment"># interesting</span></span><br><span class="line">        <span class="built_in">print</span> <span class="string">&#x27;Greater&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> (param2 - param1 + <span class="number">1</span>) <span class="keyword">or</span> <span class="literal">None</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>message = <span class="string">&#x27;&#x27;&#x27;interpreter</span></span><br><span class="line"><span class="string"><span class="meta">... </span>prompt&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="LaTeX-公式"><a href="#LaTeX-公式" class="headerlink" title="LaTeX 公式"></a>LaTeX 公式</h3><p>可以创建行内公式，例如 $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$。或者块级公式：</p>
+<p>$$    x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><table>
+<thead>
+<tr>
+<th align="left">Item</th>
+<th align="right">Value</th>
+<th align="center">Qty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Computer</td>
+<td align="right">1600 USD</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="left">Phone</td>
+<td align="right">12 USD</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td align="left">Pipe</td>
+<td align="right">1 USD</td>
+<td align="center">234</td>
+</tr>
+</tbody></table>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">st=&gt;start: Start</span><br><span class="line">e=&gt;end</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line"></span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
+
+<p>以及时序图:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Alice-&gt;Bob: Hello Bob, how are you?</span><br><span class="line">Note right of Bob: Bob thinks</span><br><span class="line">Bob--&gt;Alice: I am good than**![enter image description here](!%5BAlt%20text%5D%28./1612961876931.png%29)**ks!</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示：</strong>想了解更多，请查看<strong>流程图</strong><a href="http://adrai.github.io/flowchart.js/">语法</a>以及<strong>时序图</strong><a href="http://bramp.github.io/js-sequence-diagrams/">语法</a>。</p>
+</blockquote>
+<h3 id="复选框"><a href="#复选框" class="headerlink" title="复选框"></a>复选框</h3><p>使用 <code>- [ ]</code> 和 <code>- [x]</code> 语法可以创建复选框，实现 todo-list 等功能。例如：</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 已完成事项</li>
+<li><input disabled="" type="checkbox"> 待办事项1</li>
+<li><input disabled="" type="checkbox"> 待办事项2</li>
+</ul>
+<blockquote>
+<p><strong>注意：</strong>目前支持尚不完全，在印象笔记中勾选复选框是无效、不能同步的，所以必须在<strong>马克飞象</strong>中修改 Markdown 原文才可生效。下个版本将会全面支持。</p>
+</blockquote>
+<h2 id="印象笔记相关"><a href="#印象笔记相关" class="headerlink" title="印象笔记相关"></a>印象笔记相关</h2><h3 id="笔记本和标签"><a href="#笔记本和标签" class="headerlink" title="笔记本和标签"></a>笔记本和标签</h3><p><strong>马克飞象</strong>增加了<code>@(笔记本)[标签A|标签B]</code>语法, 以选择笔记本和添加标签。 <strong>绑定账号后</strong>， 输入<code>(</code>自动会出现笔记本列表，请从中选择。</p>
+<h3 id="笔记标题"><a href="#笔记标题" class="headerlink" title="笔记标题"></a>笔记标题</h3><p><strong>马克飞象</strong>会自动使用文档内出现的第一个标题作为笔记标题。例如本文，就是第一行的 <code>欢迎使用马克飞象</code>。</p>
+<h3 id="快捷编辑"><a href="#快捷编辑" class="headerlink" title="快捷编辑"></a>快捷编辑</h3><p>保存在印象笔记中的笔记，右上角会有一个红色的编辑按钮，点击后会回到<strong>马克飞象</strong>中打开并编辑该笔记。</p>
+<blockquote>
+<p><strong>注意：</strong>目前用户在印象笔记中单方面做的任何修改，马克飞象是无法自动感知和更新的。所以请务必回到马克飞象编辑。</p>
+</blockquote>
+<h3 id="数据同步"><a href="#数据同步" class="headerlink" title="数据同步"></a>数据同步</h3><p><strong>马克飞象</strong>通过<strong>将Markdown原文以隐藏内容保存在笔记中</strong>的精妙设计，实现了对Markdown的存储和再次编辑。既解决了其他产品只是单向导出HTML的单薄，又规避了服务端存储Markdown带来的隐私安全问题。这样，服务端仅作为对印象笔记 API调用和数据转换之用。</p>
+<blockquote>
+<p><strong>隐私声明：用户所有的笔记数据，均保存在印象笔记中。马克飞象不存储用户的任何笔记数据。</strong></p>
+</blockquote>
+<h3 id="离线存储"><a href="#离线存储" class="headerlink" title="离线存储"></a>离线存储</h3><p><strong>马克飞象</strong>使用浏览器离线存储将内容实时保存在本地，不必担心网络断掉或浏览器崩溃。为了节省空间和避免冲突，已同步至印象笔记并且不再修改的笔记将删除部分本地缓存，不过依然可以随时通过<code>文档管理</code>打开。</p>
+<blockquote>
+<p><strong>注意：</strong>虽然浏览器存储大部分时候都比较可靠，但印象笔记作为专业云存储，更值得信赖。以防万一，<strong>请务必经常及时同步到印象笔记</strong>。</p>
+</blockquote>
+<h2 id="编辑器相关"><a href="#编辑器相关" class="headerlink" title="编辑器相关"></a>编辑器相关</h2><h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><p>右侧系统菜单（快捷键<code>Ctrl + M</code>）的<code>设置</code>中，提供了界面字体、字号、自定义CSS、vim/emacs 键盘模式等高级选项。</p>
+<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p>帮助    <code>Ctrl + /</code><br>同步文档    <code>Ctrl + S</code><br>创建文档    <code>Ctrl + Alt + N</code><br>最大化编辑器    <code>Ctrl + Enter</code><br>预览文档 <code>Ctrl + Alt + Enter</code><br>文档管理    <code>Ctrl + O</code><br>系统菜单    <code>Ctrl + M</code> </p>
+<p>加粗    <code>Ctrl + B</code><br>插入图片    <code>Ctrl + G</code><br>插入链接    <code>Ctrl + L</code><br>提升标题    <code>Ctrl + H</code></p>
+<h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
+<h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
+<li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
+<li>邮箱：<a href="mailto:&#104;&#x75;&#115;&#x74;&#x67;&#x6f;&#99;&#x6b;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">&#104;&#x75;&#115;&#x74;&#x67;&#x6f;&#99;&#x6b;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;</a></li>
+</ul>
+<hr>
+<p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
+<p>[^demo]: 这是一个示例脚注。请查阅 <a href="https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#footnotes">MultiMarkdown 文档</a> 关于脚注的说明。 <strong>限制：</strong> 印象笔记的笔记内容使用 <a href="https://dev.yinxiang.com/doc/articles/enml.php">ENML</a> 格式，基于 HTML，但是不支持某些标签和属性，例如id，这就导致<code>脚注</code>和<code>TOC</code>无法正常点击。</p>
+<p>​    </p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>Markdown</category>
+      </categories>
+      <tags>
+        <tag>post</tag>
+        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -347,213 +538,30 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo配置-NewPageConfig</title>
-    <url>/2021/02/19/Hexo%E9%85%8D%E7%BD%AE-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E6%A8%A1%E7%89%88/</url>
-    <content><![CDATA[<p><em>博客页面 基本设置</em></p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>layout</td>
-<td>布局</td>
-<td></td>
-</tr>
-<tr>
-<td>title</td>
-<td>标题</td>
-<td></td>
-</tr>
-<tr>
-<td>date</td>
-<td>建立日期</td>
-<td>文件建立日期</td>
-</tr>
-<tr>
-<td>updated</td>
-<td>更新日期</td>
-<td>文件更新日期</td>
-</tr>
-<tr>
-<td>comments</td>
-<td>开启文章的评论功能</td>
-<td>true</td>
-</tr>
-<tr>
-<td>tags</td>
-<td>标签（不适用于分页）</td>
-<td></td>
-</tr>
-<tr>
-<td>categories</td>
-<td>分类（不适用于分页）</td>
-<td></td>
-</tr>
-<tr>
-<td>permalink</td>
-<td>覆盖文章网址</td>
-<td></td>
-</tr>
-</tbody></table>
+    <title>git使用</title>
+    <url>/2022/05/16/git%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p><em>git的常用命令</em></p>
 <span id="more"></span>
 
-<h1 id="updated"><a href="#updated" class="headerlink" title="updated:"></a>updated:</h1><p> 更新日期，其它与上面的建立日期类似<br> 不过在页面每篇文章顶部，是更新于……<br> 在主题配置文件中，是 updated_at</p>
-<h1 id="permalink"><a href="#permalink" class="headerlink" title="permalink:"></a>permalink:</h1><p> 若站点配置文件下的 permalink 配置了 title<br> 则可以替换文章 URL 里面的 title（文章标题）</p>
-<h1 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h1><p> 分类，支持多级，比如：</p>
-<ul>
-<li>technology</li>
-<li>computer</li>
-<li>computer-aided-art<br>则为 technology/computer/computer-aided-art<br> （不适用于 layout: page）</li>
-</ul>
-<h1 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h1><p> 标签<br> 多个可以这样写 [标签1,标签2,标签3]<br> （不适用于 layout: page）   </p>
-<h1 id="description"><a href="#description" class="headerlink" title="description:"></a>description:</h1><p> 文章的描述，在每篇文章标题下方显示<br> 并且作为网页的 description 元数据<br> 如果不写，则自动取 <!-- more --><br> 之前的文字作为网页的 description 元数据</p>
-<h1 id="keywords"><a href="#keywords" class="headerlink" title="keywords:"></a>keywords:</h1><p> 关键字，并且作为网页的 keywords 元数据<br> 如果不写，则自动取 tags 里的项<br> 作为网页的 keywords 元数据</p>
-<h1 id="comments"><a href="#comments" class="headerlink" title="comments:"></a>comments:</h1><p> 是否开启评论<br> 默认值是 true<br> 要关闭写 false</p>
-<h1 id="layout"><a href="#layout" class="headerlink" title="layout:"></a>layout:</h1><p> 页面布局，默认值是 post，默认值可以在<br> 站点配置文件中修改 default_layout<br> 另：404 页面可能用到，将其值改为 false</p>
-<h1 id="type"><a href="#type" class="headerlink" title="type:"></a>type:</h1><p> categories，目录页面<br> tags，标签页面<br> picture，用来生成 group-pictures<br> quote？<br> <a href="https://io-oi.me/tech/hello-world/">https://io-oi.me/tech/hello-world/</a></p>
-<h1 id="photos"><a href="#photos" class="headerlink" title="photos:"></a>photos:</h1><p> Gallery support，用来支持画廊╱相册，用法如下：</p>
-<ul>
-<li>photo_url_1</li>
-<li>photo_url_2</li>
-<li>photo_url_3<br><a href="https://io-oi.me/tech/hello-world/">https://io-oi.me/tech/hello-world/</a></li>
-</ul>
-<h1 id="link"><a href="#link" class="headerlink" title="link:"></a>link:</h1><p> 文章的外部链接<br> <a href="https://io-oi.me/tech/hello-world/">https://io-oi.me/tech/hello-world/</a></p>
-<h1 id="image"><a href="#image" class="headerlink" title="image:"></a>image:</h1><p> 自定义的文章摘要图片，只在页面展示，文章内消失<br> 此项只有参考本文 5.14 节配置好，否则请勿添加！</p>
-<h1 id="sticky"><a href="#sticky" class="headerlink" title="sticky:"></a>sticky:</h1><p> 文章置顶<br> 此项只有参考本文 5.15 节配置好，否则请勿添加！</p>
-<h1 id="password"><a href="#password" class="headerlink" title="password:"></a>password:</h1><p> 文章密码，此项只有参考教程：<br> <a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html">http://shenzekun.cn/hexo的next主题个性化配置教程.html</a><br> 第 24 节，配置好，否则请勿添加！<br> 发现还是有 bug 的，就是右键在新标签中打开<br> 然后无论是否输入密码，都能看到内容</p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-        <category>Configuration</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>post</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown笔记</title>
-    <url>/2021/02/24/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p><em>马克飞象Markdown文本介绍</em></p>
-<span id="more"></span>
-<h1 id="欢迎使用MarkDown"><a href="#欢迎使用MarkDown" class="headerlink" title="欢迎使用MarkDown"></a>欢迎使用MarkDown</h1><p><strong>马克飞象</strong>是一款专为印象笔记（Evernote）打造的Markdown编辑器，通过精心的设计与技术实现，配合印象笔记强大的存储和同步功能，带来前所未有的书写体验。特点概述：</p>
-<ul>
-<li><strong>功能丰富</strong> ：支持高亮代码块、<em>LaTeX</em> 公式、流程图，本地图片以及附件上传，甚至截图粘贴，工作学习好帮手；</li>
-<li><strong>得心应手</strong> ：简洁高效的编辑器，提供<a href="http://maxiang.info/client_zh">桌面客户端</a>以及<a href="https://chrome.google.com/webstore/detail/kidnkfckhbdkfgbicccmdggmpgogehop">离线Chrome App</a>，支持移动端 Web；</li>
-<li><strong>深度整合</strong> ：支持选择笔记本和添加标签，支持从印象笔记跳转编辑，轻松管理。</li>
-</ul>
-<hr>
-<p>[TOC]</p>
-<h2 id="Markdown简介"><a href="#Markdown简介" class="headerlink" title="Markdown简介"></a>Markdown简介</h2><blockquote>
-<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— <a href="https://zh.wikipedia.org/wiki/Markdown">维基百科</a></p>
-</blockquote>
-<p>正如您在阅读的这份文档，它使用简单的符号标识不同的标题，将某些文字标记为<strong>粗体</strong>或者<em>斜体</em>，创建一个<a href="http://www.example.com/">链接</a>或一个脚注[^demo]。下面列举了几个高级功能，更多语法请按<code>Ctrl + /</code>查看帮助。 </p>
-<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">somefunc</span>(<span class="params">param1=<span class="string">&#x27;&#x27;</span>, param2=<span class="number">0</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;A docstring&#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">if</span> param1 &gt; param2: <span class="comment"># interesting</span></span><br><span class="line">        <span class="built_in">print</span> <span class="string">&#x27;Greater&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> (param2 - param1 + <span class="number">1</span>) <span class="keyword">or</span> <span class="literal">None</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>message = <span class="string">&#x27;&#x27;&#x27;interpreter</span></span><br><span class="line"><span class="string"><span class="meta">... </span>prompt&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-<h3 id="LaTeX-公式"><a href="#LaTeX-公式" class="headerlink" title="LaTeX 公式"></a>LaTeX 公式</h3><p>可以创建行内公式，例如 $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$。或者块级公式：</p>
-<p>$$    x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
-<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><table>
-<thead>
-<tr>
-<th align="left">Item</th>
-<th align="right">Value</th>
-<th align="center">Qty</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Computer</td>
-<td align="right">1600 USD</td>
-<td align="center">5</td>
-</tr>
-<tr>
-<td align="left">Phone</td>
-<td align="right">12 USD</td>
-<td align="center">12</td>
-</tr>
-<tr>
-<td align="left">Pipe</td>
-<td align="right">1 USD</td>
-<td align="center">234</td>
-</tr>
-</tbody></table>
-<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">st=&gt;start: Start</span><br><span class="line">e=&gt;end</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line"></span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
 
-<p>以及时序图:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Alice-&gt;Bob: Hello Bob, how are you?</span><br><span class="line">Note right of Bob: Bob thinks</span><br><span class="line">Bob--&gt;Alice: I am good than**![enter image description here](!%5BAlt%20text%5D%28./1612961876931.png%29)**ks!</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>提示：</strong>想了解更多，请查看<strong>流程图</strong><a href="http://adrai.github.io/flowchart.js/">语法</a>以及<strong>时序图</strong><a href="http://bramp.github.io/js-sequence-diagrams/">语法</a>。</p>
-</blockquote>
-<h3 id="复选框"><a href="#复选框" class="headerlink" title="复选框"></a>复选框</h3><p>使用 <code>- [ ]</code> 和 <code>- [x]</code> 语法可以创建复选框，实现 todo-list 等功能。例如：</p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 已完成事项</li>
-<li><input disabled="" type="checkbox"> 待办事项1</li>
-<li><input disabled="" type="checkbox"> 待办事项2</li>
-</ul>
-<blockquote>
-<p><strong>注意：</strong>目前支持尚不完全，在印象笔记中勾选复选框是无效、不能同步的，所以必须在<strong>马克飞象</strong>中修改 Markdown 原文才可生效。下个版本将会全面支持。</p>
-</blockquote>
-<h2 id="印象笔记相关"><a href="#印象笔记相关" class="headerlink" title="印象笔记相关"></a>印象笔记相关</h2><h3 id="笔记本和标签"><a href="#笔记本和标签" class="headerlink" title="笔记本和标签"></a>笔记本和标签</h3><p><strong>马克飞象</strong>增加了<code>@(笔记本)[标签A|标签B]</code>语法, 以选择笔记本和添加标签。 <strong>绑定账号后</strong>， 输入<code>(</code>自动会出现笔记本列表，请从中选择。</p>
-<h3 id="笔记标题"><a href="#笔记标题" class="headerlink" title="笔记标题"></a>笔记标题</h3><p><strong>马克飞象</strong>会自动使用文档内出现的第一个标题作为笔记标题。例如本文，就是第一行的 <code>欢迎使用马克飞象</code>。</p>
-<h3 id="快捷编辑"><a href="#快捷编辑" class="headerlink" title="快捷编辑"></a>快捷编辑</h3><p>保存在印象笔记中的笔记，右上角会有一个红色的编辑按钮，点击后会回到<strong>马克飞象</strong>中打开并编辑该笔记。</p>
-<blockquote>
-<p><strong>注意：</strong>目前用户在印象笔记中单方面做的任何修改，马克飞象是无法自动感知和更新的。所以请务必回到马克飞象编辑。</p>
-</blockquote>
-<h3 id="数据同步"><a href="#数据同步" class="headerlink" title="数据同步"></a>数据同步</h3><p><strong>马克飞象</strong>通过<strong>将Markdown原文以隐藏内容保存在笔记中</strong>的精妙设计，实现了对Markdown的存储和再次编辑。既解决了其他产品只是单向导出HTML的单薄，又规避了服务端存储Markdown带来的隐私安全问题。这样，服务端仅作为对印象笔记 API调用和数据转换之用。</p>
-<blockquote>
-<p><strong>隐私声明：用户所有的笔记数据，均保存在印象笔记中。马克飞象不存储用户的任何笔记数据。</strong></p>
-</blockquote>
-<h3 id="离线存储"><a href="#离线存储" class="headerlink" title="离线存储"></a>离线存储</h3><p><strong>马克飞象</strong>使用浏览器离线存储将内容实时保存在本地，不必担心网络断掉或浏览器崩溃。为了节省空间和避免冲突，已同步至印象笔记并且不再修改的笔记将删除部分本地缓存，不过依然可以随时通过<code>文档管理</code>打开。</p>
-<blockquote>
-<p><strong>注意：</strong>虽然浏览器存储大部分时候都比较可靠，但印象笔记作为专业云存储，更值得信赖。以防万一，<strong>请务必经常及时同步到印象笔记</strong>。</p>
-</blockquote>
-<h2 id="编辑器相关"><a href="#编辑器相关" class="headerlink" title="编辑器相关"></a>编辑器相关</h2><h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><p>右侧系统菜单（快捷键<code>Ctrl + M</code>）的<code>设置</code>中，提供了界面字体、字号、自定义CSS、vim/emacs 键盘模式等高级选项。</p>
-<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p>帮助    <code>Ctrl + /</code><br>同步文档    <code>Ctrl + S</code><br>创建文档    <code>Ctrl + Alt + N</code><br>最大化编辑器    <code>Ctrl + Enter</code><br>预览文档 <code>Ctrl + Alt + Enter</code><br>文档管理    <code>Ctrl + O</code><br>系统菜单    <code>Ctrl + M</code> </p>
-<p>加粗    <code>Ctrl + B</code><br>插入图片    <code>Ctrl + G</code><br>插入链接    <code>Ctrl + L</code><br>提升标题    <code>Ctrl + H</code></p>
-<h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
-<h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
-<li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
-<li>邮箱：<a href="mailto:&#104;&#117;&#x73;&#x74;&#103;&#111;&#99;&#107;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;">&#104;&#117;&#x73;&#x74;&#103;&#111;&#99;&#107;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
-</ul>
-<hr>
-<p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
-<p>[^demo]: 这是一个示例脚注。请查阅 <a href="https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#footnotes">MultiMarkdown 文档</a> 关于脚注的说明。 <strong>限制：</strong> 印象笔记的笔记内容使用 <a href="https://dev.yinxiang.com/doc/articles/enml.php">ENML</a> 格式，基于 HTML，但是不支持某些标签和属性，例如id，这就导致<code>脚注</code>和<code>TOC</code>无法正常点击。</p>
-<p>​    </p>
+<p>git上有修改要先更新本地代码</p>
+<ol>
+<li><p>git add . (先把自己写的代码添加到本地缓存)</p>
+</li>
+<li><p>git status (查看是否已经成功添加)<br>如果两个人修改了同一段或同一份代码文件的话需要 git stash (先隐藏自己的修改)</p>
+</li>
+<li><p>git pull origin 分支名；<br>如果执行了 git stash 的话 需要在执行git stash pop(触发代码冲突)<br>修改好之后 确定项目能跑起来在提交代码；</p>
+</li>
+<li><p> git add .</p>
+</li>
+<li><p> git commit -m “版本”（添加版本号）</p>
+</li>
+<li><p> git push origin 分支名</p>
+</li>
+</ol>
 ]]></content>
-      <categories>
-        <category>Hexo</category>
-        <category>Markdown</category>
-      </categories>
       <tags>
-        <tag>post</tag>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第二阶段</title>
-    <url>/2022/01/19/%E5%AD%A6%E7%94%9F%E6%97%B6%E6%9C%9F%E7%9A%84%E5%B0%BE%E5%A3%B0/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="fc8ecc38b846e814404a3547606ea9538f743cddf07fa2120b667072bd1ac40f">7c607a38cb844365d3b1e05ea81c0c5fbe251423b8ce152421b02ae13517e1fc3fbe0b82a8ec3d28e861492e90549c78a415ab51cc8c2d08ac0d211c992f4b2b8878476888aa11dca38f648e87e2d448b0134d0174cd302db0561a7649ba99fa995145a41c8f12798ca43e79b6d6c2a91afbd3509ef0124f1ee33b81c661c4cf8569f526462747969ac6b8da9015e8f67ad66419b01a7aaeb8aa2daf96eb44dc3faf984ac42141026f7ad19cd5cc8a191f4928e32f95e0999077737e1423b26808daa774fccc38aa47abf3f76aab120880732b837de910c1e172d16450d0663f0162298b86f0642628a8c25a6c9c0dc4a20d7fe10643f55ee50f4e9bf92eb729</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">🔑</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>阶段总结</category>
-      </categories>
-      <tags>
-        <tag>思考</tag>
-        <tag>工作</tag>
-        <tag>生活</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -583,24 +591,6 @@
       </tags>
   </entry>
   <entry>
-    <title>npm install安装依赖项时报错。</title>
-    <url>/2021/06/24/%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E9%A1%B9%E6%97%B6%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<p><em>npm install 报错：gyp verb <code>which</code> failed Error: not found: python</em></p>
-<span id="more"></span>
-
-<h1 id="npm-install-报错"><a href="#npm-install-报错" class="headerlink" title="npm install 报错"></a>npm install 报错</h1><p>今天从github上下载了一个项目学习，在 npm install 安装依赖项时出现报错。</p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210624201918730.png" alt="问题日志"><strong>最终解决办法</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g mirror-config-china --registry=http://registry.npm.taobao.org</span><br><span class="line">npm install node-sass</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>小问题</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>学习总结</title>
     <url>/2021/05/08/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<p><em>我建议大家不要盲目听信他人的方法，我此前看到很多什么“数据结构源代码和演示的重要性”，“7天记忆10000多单词”这样的信息。我首先对此表示质疑，但我不否认这种方法存在的可能性！</em>——-整理于2021-5-18</p>
@@ -622,10 +612,10 @@
       </tags>
   </entry>
   <entry>
-    <title>班费</title>
-    <url>/2021/07/03/%E7%8F%AD%E8%B4%B9/</url>
+    <title>第二阶段</title>
+    <url>/2022/01/19/%E5%AD%A6%E7%94%9F%E6%97%B6%E6%9C%9F%E7%9A%84%E5%B0%BE%E5%A3%B0/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="d8b56f2fbd9c4b51984c4b754932782385ab05ccb6b0d13c64a11048768fd282">47a0713c4f2f7911259e441e8bdc61dfbc28ccaf109cf98b96aa0aac41645968061bf6d74b8d553acfff286977118158aab1ff4e9176057a50aaa689cfa271292c6e197cb590e90bc1b1a011107b63ec7a0516fe6cf9aa49bf9e52d00126b8af703c35567b9dcca62ee5887558d0e8327a55d3f62ba73f960bc82b2ccfb44e6f9e6bbfdd108843e870c0c6b13ef7e3cdddf1683d8b06859af4f7f211683bbec7e9b359b9f816eaab6b21d29c9d07a86bcb6147185f0197220abc479c3b952c55d6eef3d0ae2a613b5a85f4a7401f91a3e0cc44546aba12ac03b53bf30628c43d78b23a38a7bcadd05dfe462b9514b4f7c9077c0ce7a82a229242a39d67e2321ad5ff2c3c2e9c6d78ff03868ae55dced0353f89fdf2e1949763be768b24560dc4dda23d9be15b8c6215a049382b9b558a8eddd63515b32dccd5548457daa099d1f58209e11265fd35a72b8018dc8336a6f942e6cf03ac77936141f6dbe4a579fd3fb107fe7c68db74c8437f948dd9588a91595aa291c050c9b168f36ba7b677f02ee4baf6370e51eac24d8251b9a751397e0e5a0ba8682facdc7da2da0aaac3ba49d3e698c0ac2818a32e4682466a09888785037ced7c8a3c38cc5c125aaa22ad5204dc2a65c09347376a3718c9f8836873e40da2cd9b9a050241b73bedb9cb99db4028d119daaa70d83fe7aa187296d9f38f14dfacd97a85f3becf9e99d83821f7c4c0547c75f3608e077944dea1cf4d1f3109624478fea9959dc776d8ec0ab1528b4b269c19fe2c7a29abe903d86539dc94258812ca3df7d521226f8aeb42c2a5fe13f38d8f9fbab46ad40d14267e8c20d2264540052478b30f307cfcab77efaefbd7aa33f654f86944dc2fa06134557e3280d2351bf4bf2e7192cdee8466636c3a4303b30146eaede7afa50b3abcc121417244e9db05dcecc51697392d907303b74dcc56aaba301aeff1e4d28458208bba2e4150dfe6a92ea27fb9bc0c54af995be3b9ea2f39d5f62f2867305f592f04fec0d9385b0b7fa46e4a960f698a20d7778df1bc1ae89c369da98a924ce21fe370dc666ef9b88b20f309f8a99fb5e4c514dec5ff8a4bfb02b62531d0ccad00e5f0e7f1e10075f4b37bbde0fac1f0f8d966222d7867db6a385adcc74d2fce50225a8079f1a5c414357a5a919ebb312a31bd0d21d90bf37d6d23425e459cfda6f6e804fb0defc168f2c3328695ea2263e47cded04569e089ca4c2b9e59495e9b4f9b7ff57988216666b9c4335a8c4d7aa0415e0d339f52243924d2c2209a307009aa65ce37a4c4b4c023e2d8568862fb476a23a36166420cf2948445ec7251b36edcc49652b109ec7000fcb67e46cf515698f4bad9e72136e56f614ead42c8207a669fef84b2b9ef26340c9df158a67851b5a174d68d5978183e0e7716a980fbf5433ff900449f88bde5a3ba7426cd976f282ea1ad607eee88a00e914f8da8e2e6f24d38b4d90497dcc7612501dd2a5641e759c596b8e1d65ed45eff3f092d377bf34a756c49b9baeba7e7cb96ace65fd19576f1e789b7e4a96ac15a5d2d91cb61fa37390dcaf9dbd5ed377a025fb03b4352f29d75d61453c06c31decbf5371932f951b84360d5782740df2f17cd2ab435403339e01c41f7fd7d131f62b788d13d5da756378c16bb84476e50664c62d885ac22c7039e1e52710576e99f8b8dfa03c717010c38af3ca973dc9b0abd9ceb60f5913d2ccfcc734ea90369f624c950086fc8abb5adfe68d7ec62421d315a5a7f28685f4534b3a15fd6714312404c04b7e960498fc1b04ecfbe016d4c8d5f9e336206a9d74bbc015bd0dc8469477aa9b2f3e8f645ecf58689c736b092a960d76f37f2c942b0cdac22b3c008f0526ffb34c018d1bb9f7d50bc25f71ce12372b805dcd45bf1aab2f8dcb2717fda92e09834bb30bee47aa624f6f2cd6dc0c3bcdf52a88040d168688ff1587e11b904cf2fb50697e23f8b05c57808456faaaf19cd7f58829f6c85e8f8164c0cdbec4c69d75e7bfb2be9f63f599741b71037f5137f754dc2ec13d63c68e98df6ec1937fd951151e707b0d49359271dd147b40de579a8bfb26ce9311bd1fa11b509050b95f955b440424cbf8d362c309026f69b4e2d52f89c1bf327a6760e7df8b38c9bab00569a05c68c983e3b41d2af6f040e190d38a38ec5dba920d9524267364e2765179030d4b34bfd7dbbc69c4dc39c086d2f7e496d014670fc65d86d4d1f7f79f66ac622d194dc04d4fa41ac4f1c19b96948e98d9787e52d6414eb54efec78ad3bfc82f32c9c902ce9bde1cc3a85ad3ffcc5ef2c5cf5eaf8b9107eaf8a19ed747436ba8bfd7c73b0d36ce5b1e560367cb2e2c4404355342055d1d41c3f5dcd7b4465ae44df426fabbd94d98f893301a65205496d75a1e7d141e80ba19626dc986507a31d32fbe335d31631d0436cfa8422fe6c83ba6240ce903d579a9c864cf126051b9d8bfd2df7bcb4e82a5d081e11cb5526306d9611529c7812c735624a66abf7dd175846aa25983d0b053aa82f7a21b5fadaf03d383a42c03b6aede61d59ac4665b306dbf5939f4438b101fe742dacaad4e050432ff7d0d1b6f6e223d6a3bc97ca53411d289b50ba19cb95578ed98739eb18a1ab418a5a81cdc6987ecea40f3a7bd8dc7ad5f8be4071b02921a346f42403844e9677247798218e9766d779a54aa61642a4dbc419d7bbcf69b80246dfaf8455215bb9d6120186e25c569bd43d9a5fe8109cebb4c4365a57d05f67a84f069f0bc9295bea4b6b11b5d9bfdb7a9d5eb51e9497102351466185494221ce1f0b29fba686bd8a56ef4d0ae0644b4971c5582de846192071e9967181a724f9e953c07abd888e145ec5e49f9d7eed681e5c4b2b966259558d6cc1a717950b5ba00245e79e0be287a4f46ee84a2b9e2148c60285fb8bd8362854ab04bbadcc8f4739335c16bb55c57829c3ab317438108a6c5ccee63441f8684ee4b2dc4ce7aaf78bc6727264f716388ad5c1378ac9e4154e2d632f9ff80f831f466d58b0173ab0c30474be7a3c1651a951b23742122fa4c0da145304190eda276b5dc19b7f84bfec758640a6d397d7e9ebea8fee4eaceca4c7cfccea57a2baa76b6ab7d9680a317a4007d7e78694b1dc8e6ca595fbbc1462dea77a7e2e0d72c4226e88f805ee23b67168e15c6407d5d8ba32414e8a75ff698eb0e9bb2c76780b31ded07c516017caf108e23e26e4c922da58756e18c9fb48ee1ed6cbda4eab710916d85dbdeeff80fde29c8d3868a6724af0449aedb160ede9145155e5ba37845d0e60587e0dc0539ca86ed82dff3ec38462b7edfc08ce80d11d4980450309ab3e8ab75bc876da10392d0fb6ec07a54a3d8562dac108a3e7296ee24e77bd840c06d5c824c24d9bd9118c8cd2707c4b819dcfac4237f8334ced3797f26a4b89311576509e05e2c05bee8d6ac6efe0e7ceb5784341ccd52844b3d16bce220d675dd344113e4ad33ba262f57b12ee9db259afc7ac60830c0ded5fbc505c8df3f15678df80c4af784fc414b7767f803b489ed93753e408d9c79eb92397ed14714b2e8d64aca940b16d2cb39c1470d35b3d8d1e046c1e13dd322e4d4cfffa1021ee7913aa0747b383a81da898e5de954d59444bae96154b5934b0fac42af91644c94ddeb966e28fc5685a59f6e89644782a58b4cc7f43de75efd450e09a2571eba10aad7d4a71729493a9115d5a3f54759349fef7236598c64527857bdf55040a7314ad3b7adce5f3c3ba7e35f361c34c83249a4dff46179c5fd494406fdfdee80ef8a3bb9b95c60809f559fa0e41ac1f8743ad7fa07445d7a9ce580864e22515aaeb60aabd05cdd1f46263ebee13c5e12924af82590956c434049497a6d5e9e3599a9ba4e38ea8abffd46b1a6f97651a5c29b2bc5275af0a77ff062d37f1d6d8d07e949986efc0ba859d4f7fe29c4fc377d71a763d60fea30ab87fa09b1d8353e512a5f26af9d7e20c760d68f8de128583baef6ba27146b40961402d803b3633de276a61b5e41a9296ad3ad761009d20d3dcf401ecf43dd4e796f12312e1ad46e63b74d684a3bc4d23025177f9645496be464634169bd524c12c2b6b6cbdabffa1e92c96f9e889d40d4364e3c88acba5cb2ef080d34f645e4f9e3e91d7ce0798d32326a30ed1af30312c984c47609cbfba8184bb31b40875e1bc127b7d9d002696a739d2dbdd13aeda5c53c45db7544de9209143387e13af7b50a75ccf66f8f0be1e98e3275ca1511963d2d9fb036feec85eecc32479aea7271d50b78c6b56a36e4776e8bc8605a3162d7b5290436be9c09a0458b96c8bd7ef620f5d1b8dbccd692b1ea61b977f2b09c92d8ba31f71fa38a2b80163188203058bbcf9685530d8a96fa4816c1bfd2e312d24c8f221ab74db6471ab849dcae5540079ac19ac1f5f25888918ae75e15a4fcfab38201e736f48d426ecaab0dce8e676aba3b5e7490af5fecdb4fd7e1e369a4bb72e33497feb6de9c177dddd24f0c045e077e143f6052e4ad86addd49ffee84c876b04a180be23bdd8156ec52ea9ffbb646bb4d27b074e89c955030c7c28c8974a4beea568875b787efd075988a06812a739f1fb7c4d7f092f0d3d70e77b216e4f48a99d1513ce8f9481d3c18817849d10b67bf0c3c3f5270f2d22eb594e2b15</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="fc8ecc38b846e814404a3547606ea9538f743cddf07fa2120b667072bd1ac40f">7c607a38cb844365d3b1e05ea81c0c5fbe251423b8ce152421b02ae13517e1fc3fbe0b82a8ec3d28e861492e90549c78a415ab51cc8c2d08ac0d211c992f4b2b8878476888aa11dca38f648e87e2d448b0134d0174cd302db0561a7649ba99fa995145a41c8f12798ca43e79b6d6c2a91afbd3509ef0124f1ee33b81c661c4cf8569f526462747969ac6b8da9015e8f67ad66419b01a7aaeb8aa2daf96eb44dc3faf984ac42141026f7ad19cd5cc8a191f4928e32f95e0999077737e1423b26808daa774fccc38aa47abf3f76aab120880732b837de910c1e172d16450d0663f0162298b86f0642628a8c25a6c9c0dc4a20d7fe10643f55ee50f4e9bf92eb729</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -637,8 +627,13 @@
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-        <category>生活</category>
+        <category>阶段总结</category>
       </categories>
+      <tags>
+        <tag>思考</tag>
+        <tag>工作</tag>
+        <tag>生活</tag>
+      </tags>
   </entry>
   <entry>
     <title>当兵</title>
@@ -661,6 +656,55 @@
       <tags>
         <tag>军人</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>npm install安装依赖项时报错。</title>
+    <url>/2021/06/24/%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E9%A1%B9%E6%97%B6%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<p><em>npm install 报错：gyp verb <code>which</code> failed Error: not found: python</em></p>
+<span id="more"></span>
+
+<h1 id="npm-install-报错"><a href="#npm-install-报错" class="headerlink" title="npm install 报错"></a>npm install 报错</h1><p>今天从github上下载了一个项目学习，在 npm install 安装依赖项时出现报错。</p>
+<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210624201918730.png" alt="问题日志"><strong>最终解决办法</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g mirror-config-china --registry=http://registry.npm.taobao.org</span><br><span class="line">npm install node-sass</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>小问题</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>班费</title>
+    <url>/2021/07/03/%E7%8F%AD%E8%B4%B9/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="d8b56f2fbd9c4b51984c4b754932782385ab05ccb6b0d13c64a11048768fd282">47a0713c4f2f7911259e441e8bdc61dfbc28ccaf109cf98b96aa0aac41645968061bf6d74b8d553acfff286977118158aab1ff4e9176057a50aaa689cfa271292c6e197cb590e90bc1b1a011107b63ec7a0516fe6cf9aa49bf9e52d00126b8af703c35567b9dcca62ee5887558d0e8327a55d3f62ba73f960bc82b2ccfb44e6f9e6bbfdd108843e870c0c6b13ef7e3cdddf1683d8b06859af4f7f211683bbec7e9b359b9f816eaab6b21d29c9d07a86bcb6147185f0197220abc479c3b952c55d6eef3d0ae2a613b5a85f4a7401f91a3e0cc44546aba12ac03b53bf30628c43d78b23a38a7bcadd05dfe462b9514b4f7c9077c0ce7a82a229242a39d67e2321ad5ff2c3c2e9c6d78ff03868ae55dced0353f89fdf2e1949763be768b24560dc4dda23d9be15b8c6215a049382b9b558a8eddd63515b32dccd5548457daa099d1f58209e11265fd35a72b8018dc8336a6f942e6cf03ac77936141f6dbe4a579fd3fb107fe7c68db74c8437f948dd9588a91595aa291c050c9b168f36ba7b677f02ee4baf6370e51eac24d8251b9a751397e0e5a0ba8682facdc7da2da0aaac3ba49d3e698c0ac2818a32e4682466a09888785037ced7c8a3c38cc5c125aaa22ad5204dc2a65c09347376a3718c9f8836873e40da2cd9b9a050241b73bedb9cb99db4028d119daaa70d83fe7aa187296d9f38f14dfacd97a85f3becf9e99d83821f7c4c0547c75f3608e077944dea1cf4d1f3109624478fea9959dc776d8ec0ab1528b4b269c19fe2c7a29abe903d86539dc94258812ca3df7d521226f8aeb42c2a5fe13f38d8f9fbab46ad40d14267e8c20d2264540052478b30f307cfcab77efaefbd7aa33f654f86944dc2fa06134557e3280d2351bf4bf2e7192cdee8466636c3a4303b30146eaede7afa50b3abcc121417244e9db05dcecc51697392d907303b74dcc56aaba301aeff1e4d28458208bba2e4150dfe6a92ea27fb9bc0c54af995be3b9ea2f39d5f62f2867305f592f04fec0d9385b0b7fa46e4a960f698a20d7778df1bc1ae89c369da98a924ce21fe370dc666ef9b88b20f309f8a99fb5e4c514dec5ff8a4bfb02b62531d0ccad00e5f0e7f1e10075f4b37bbde0fac1f0f8d966222d7867db6a385adcc74d2fce50225a8079f1a5c414357a5a919ebb312a31bd0d21d90bf37d6d23425e459cfda6f6e804fb0defc168f2c3328695ea2263e47cded04569e089ca4c2b9e59495e9b4f9b7ff57988216666b9c4335a8c4d7aa0415e0d339f52243924d2c2209a307009aa65ce37a4c4b4c023e2d8568862fb476a23a36166420cf2948445ec7251b36edcc49652b109ec7000fcb67e46cf515698f4bad9e72136e56f614ead42c8207a669fef84b2b9ef26340c9df158a67851b5a174d68d5978183e0e7716a980fbf5433ff900449f88bde5a3ba7426cd976f282ea1ad607eee88a00e914f8da8e2e6f24d38b4d90497dcc7612501dd2a5641e759c596b8e1d65ed45eff3f092d377bf34a756c49b9baeba7e7cb96ace65fd19576f1e789b7e4a96ac15a5d2d91cb61fa37390dcaf9dbd5ed377a025fb03b4352f29d75d61453c06c31decbf5371932f951b84360d5782740df2f17cd2ab435403339e01c41f7fd7d131f62b788d13d5da756378c16bb84476e50664c62d885ac22c7039e1e52710576e99f8b8dfa03c717010c38af3ca973dc9b0abd9ceb60f5913d2ccfcc734ea90369f624c950086fc8abb5adfe68d7ec62421d315a5a7f28685f4534b3a15fd6714312404c04b7e960498fc1b04ecfbe016d4c8d5f9e336206a9d74bbc015bd0dc8469477aa9b2f3e8f645ecf58689c736b092a960d76f37f2c942b0cdac22b3c008f0526ffb34c018d1bb9f7d50bc25f71ce12372b805dcd45bf1aab2f8dcb2717fda92e09834bb30bee47aa624f6f2cd6dc0c3bcdf52a88040d168688ff1587e11b904cf2fb50697e23f8b05c57808456faaaf19cd7f58829f6c85e8f8164c0cdbec4c69d75e7bfb2be9f63f599741b71037f5137f754dc2ec13d63c68e98df6ec1937fd951151e707b0d49359271dd147b40de579a8bfb26ce9311bd1fa11b509050b95f955b440424cbf8d362c309026f69b4e2d52f89c1bf327a6760e7df8b38c9bab00569a05c68c983e3b41d2af6f040e190d38a38ec5dba920d9524267364e2765179030d4b34bfd7dbbc69c4dc39c086d2f7e496d014670fc65d86d4d1f7f79f66ac622d194dc04d4fa41ac4f1c19b96948e98d9787e52d6414eb54efec78ad3bfc82f32c9c902ce9bde1cc3a85ad3ffcc5ef2c5cf5eaf8b9107eaf8a19ed747436ba8bfd7c73b0d36ce5b1e560367cb2e2c4404355342055d1d41c3f5dcd7b4465ae44df426fabbd94d98f893301a65205496d75a1e7d141e80ba19626dc986507a31d32fbe335d31631d0436cfa8422fe6c83ba6240ce903d579a9c864cf126051b9d8bfd2df7bcb4e82a5d081e11cb5526306d9611529c7812c735624a66abf7dd175846aa25983d0b053aa82f7a21b5fadaf03d383a42c03b6aede61d59ac4665b306dbf5939f4438b101fe742dacaad4e050432ff7d0d1b6f6e223d6a3bc97ca53411d289b50ba19cb95578ed98739eb18a1ab418a5a81cdc6987ecea40f3a7bd8dc7ad5f8be4071b02921a346f42403844e9677247798218e9766d779a54aa61642a4dbc419d7bbcf69b80246dfaf8455215bb9d6120186e25c569bd43d9a5fe8109cebb4c4365a57d05f67a84f069f0bc9295bea4b6b11b5d9bfdb7a9d5eb51e9497102351466185494221ce1f0b29fba686bd8a56ef4d0ae0644b4971c5582de846192071e9967181a724f9e953c07abd888e145ec5e49f9d7eed681e5c4b2b966259558d6cc1a717950b5ba00245e79e0be287a4f46ee84a2b9e2148c60285fb8bd8362854ab04bbadcc8f4739335c16bb55c57829c3ab317438108a6c5ccee63441f8684ee4b2dc4ce7aaf78bc6727264f716388ad5c1378ac9e4154e2d632f9ff80f831f466d58b0173ab0c30474be7a3c1651a951b23742122fa4c0da145304190eda276b5dc19b7f84bfec758640a6d397d7e9ebea8fee4eaceca4c7cfccea57a2baa76b6ab7d9680a317a4007d7e78694b1dc8e6ca595fbbc1462dea77a7e2e0d72c4226e88f805ee23b67168e15c6407d5d8ba32414e8a75ff698eb0e9bb2c76780b31ded07c516017caf108e23e26e4c922da58756e18c9fb48ee1ed6cbda4eab710916d85dbdeeff80fde29c8d3868a6724af0449aedb160ede9145155e5ba37845d0e60587e0dc0539ca86ed82dff3ec38462b7edfc08ce80d11d4980450309ab3e8ab75bc876da10392d0fb6ec07a54a3d8562dac108a3e7296ee24e77bd840c06d5c824c24d9bd9118c8cd2707c4b819dcfac4237f8334ced3797f26a4b89311576509e05e2c05bee8d6ac6efe0e7ceb5784341ccd52844b3d16bce220d675dd344113e4ad33ba262f57b12ee9db259afc7ac60830c0ded5fbc505c8df3f15678df80c4af784fc414b7767f803b489ed93753e408d9c79eb92397ed14714b2e8d64aca940b16d2cb39c1470d35b3d8d1e046c1e13dd322e4d4cfffa1021ee7913aa0747b383a81da898e5de954d59444bae96154b5934b0fac42af91644c94ddeb966e28fc5685a59f6e89644782a58b4cc7f43de75efd450e09a2571eba10aad7d4a71729493a9115d5a3f54759349fef7236598c64527857bdf55040a7314ad3b7adce5f3c3ba7e35f361c34c83249a4dff46179c5fd494406fdfdee80ef8a3bb9b95c60809f559fa0e41ac1f8743ad7fa07445d7a9ce580864e22515aaeb60aabd05cdd1f46263ebee13c5e12924af82590956c434049497a6d5e9e3599a9ba4e38ea8abffd46b1a6f97651a5c29b2bc5275af0a77ff062d37f1d6d8d07e949986efc0ba859d4f7fe29c4fc377d71a763d60fea30ab87fa09b1d8353e512a5f26af9d7e20c760d68f8de128583baef6ba27146b40961402d803b3633de276a61b5e41a9296ad3ad761009d20d3dcf401ecf43dd4e796f12312e1ad46e63b74d684a3bc4d23025177f9645496be464634169bd524c12c2b6b6cbdabffa1e92c96f9e889d40d4364e3c88acba5cb2ef080d34f645e4f9e3e91d7ce0798d32326a30ed1af30312c984c47609cbfba8184bb31b40875e1bc127b7d9d002696a739d2dbdd13aeda5c53c45db7544de9209143387e13af7b50a75ccf66f8f0be1e98e3275ca1511963d2d9fb036feec85eecc32479aea7271d50b78c6b56a36e4776e8bc8605a3162d7b5290436be9c09a0458b96c8bd7ef620f5d1b8dbccd692b1ea61b977f2b09c92d8ba31f71fa38a2b80163188203058bbcf9685530d8a96fa4816c1bfd2e312d24c8f221ab74db6471ab849dcae5540079ac19ac1f5f25888918ae75e15a4fcfab38201e736f48d426ecaab0dce8e676aba3b5e7490af5fecdb4fd7e1e369a4bb72e33497feb6de9c177dddd24f0c045e077e143f6052e4ad86addd49ffee84c876b04a180be23bdd8156ec52ea9ffbb646bb4d27b074e89c955030c7c28c8974a4beea568875b787efd075988a06812a739f1fb7c4d7f092f0d3d70e77b216e4f48a99d1513ce8f9481d3c18817849d10b67bf0c3c3f5270f2d22eb594e2b15</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">🔑</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>舅舅结婚-囍</title>
+    <url>/2022/02/11/%E8%88%85%E8%88%85%E7%BB%93%E5%A9%9A/</url>
+    <content><![CDATA[<p><em>恭喜舅舅</em></p>
+<iframe src="//player.bilibili.com/player.html?aid=508955324&bvid=BV11u41197sW&cid=505497821&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>记录</category>
+      </categories>
   </entry>
   <entry>
     <title>线代</title>
@@ -686,24 +730,10 @@
       </tags>
   </entry>
   <entry>
-    <title>快速删除Bilibili动态</title>
-    <url>/2021/07/21/%E5%BF%AB%E9%80%9F%E5%88%A0%E9%99%A4Bilibili%E5%8A%A8%E6%80%81/</url>
-    <content><![CDATA[<p><em>快速删除多个动态</em></p>
-<span id="more"></span>
-<h1 id="1-在登录状态下打开我的动态页面"><a href="#1-在登录状态下打开我的动态页面" class="headerlink" title="1.在登录状态下打开我的动态页面"></a>1.在登录状态下打开我的动态页面</h1><h2 id="B站-我的动态页面-https-space-bilibili-com"><a href="#B站-我的动态页面-https-space-bilibili-com" class="headerlink" title="B站 我的动态页面 https://space.bilibili.com/"></a>B站 我的动态页面 <a href="https://space.bilibili.com/">https://space.bilibili.com/</a></h2><h2 id="B站-个人空间-我的动态"><a href="#B站-个人空间-我的动态" class="headerlink" title="B站-个人空间-我的动态"></a>B站-个人空间-我的动态</h2><h1 id="2-复制下面这段脚本代码"><a href="#2-复制下面这段脚本代码" class="headerlink" title="2.复制下面这段脚本代码"></a>2.复制下面这段脚本代码</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var needDelDeled = <span class="literal">true</span>,</span><br><span class="line">    delay = 1000,</span><br><span class="line">    scrolls = 800;</span><br><span class="line">var w = <span class="string">&#x27;&#x27;</span>, d = <span class="string">&#x27;&#x27;</span>, r = 0;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">getLuckyDraw</span></span>() &#123;</span><br><span class="line">    w.css(<span class="string">&quot;background-color&quot;</span>, <span class="string">&quot;#f1c40f&quot;</span>);</span><br><span class="line">    w = w.parents(<span class="string">&quot;.card&quot;</span>);</span><br><span class="line">    w.css(<span class="string">&quot;background-color&quot;</span>, <span class="string">&quot;#2ecc71&quot;</span>);</span><br><span class="line">    w[w.length - 1].querySelectorAll(<span class="string">&quot;.child-button&quot;</span>)[1].click();</span><br><span class="line">    setTimeout(clickDel, delay);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">getDel</span></span>() &#123;</span><br><span class="line">    d.css(<span class="string">&quot;background-color&quot;</span>, <span class="string">&quot;#8e44ad&quot;</span>);</span><br><span class="line">    d = d.parents(<span class="string">&quot;.card&quot;</span>);</span><br><span class="line">    d.css(<span class="string">&quot;background-color&quot;</span>, <span class="string">&quot;#2ecc71&quot;</span>);</span><br><span class="line">    d[d.length - 1].querySelectorAll(<span class="string">&quot;.child-button&quot;</span>)[1].click();</span><br><span class="line">    setTimeout(clickDel, delay);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">clickDel</span></span>() &#123;</span><br><span class="line">    //点删除</span><br><span class="line">    $(<span class="string">&quot;.popup-content-ctnr&quot;</span>)[$(<span class="string">&quot;.popup-content-ctnr&quot;</span>).length - 2].querySelector(<span class="string">&quot;.bl-button&quot;</span>).click(); // 点确定</span><br><span class="line">    r += scrolls;</span><br><span class="line">    $(<span class="string">&#x27;html, body&#x27;</span>).animate(&#123; scrollTop: r &#125;, 30);</span><br><span class="line">    $(<span class="string">&quot;.fold-text&quot;</span>).click()</span><br><span class="line">    $(<span class="string">&quot;.expand-btn&quot;</span>).click();</span><br><span class="line">    w = $(<span class="string">&quot;.main-content&quot;</span>).find(<span class="string">&#x27;span[click-title=&quot;抽奖详情&quot;]&#x27;</span>);</span><br><span class="line">    d = $(<span class="string">&quot;.main-content&quot;</span>).find(<span class="string">&#x27;.deleted-text&#x27;</span>);</span><br><span class="line">    <span class="keyword">if</span> (d.length &amp;&amp; needDelDeled) setTimeout(getDel, delay);</span><br><span class="line">    <span class="keyword">else</span> setTimeout(getLuckyDraw, delay);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (/dynamic/.<span class="built_in">test</span>(window.location.href) &amp;&amp; confirm(<span class="string">&quot;是不是要删除抽奖动态&quot;</span>)) &#123;</span><br><span class="line">    r += scrolls;</span><br><span class="line">    $(<span class="string">&#x27;html, body&#x27;</span>).animate(&#123; scrollTop: r &#125;, 30);</span><br><span class="line">    $(<span class="string">&quot;.fold-text&quot;</span>).click()</span><br><span class="line">    $(<span class="string">&quot;.expand-btn&quot;</span>).click();</span><br><span class="line">    w = $(<span class="string">&quot;.main-content&quot;</span>).find(<span class="string">&#x27;span[click-title=&quot;抽奖详情&quot;]&#x27;</span>);//*互动抽奖内容定位</span><br><span class="line">    d = $(<span class="string">&quot;.main-content&quot;</span>).find(<span class="string">&#x27;.deleted-text&#x27;</span>);   //*已删除内容定位</span><br><span class="line">    <span class="keyword">if</span> (d.length &amp;&amp; needDelDeled) setTimeout(getDel, delay);</span><br><span class="line">    <span class="keyword">else</span> setTimeout(getLuckyDraw, delay);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="3-在键盘上按下F12，呼出控制台-console"><a href="#3-在键盘上按下F12，呼出控制台-console" class="headerlink" title="3.在键盘上按下F12，呼出控制台(console)"></a>3.在键盘上按下F12，呼出控制台(console)</h1><h1 id="4-滑到最下方，一直到最下面可输入光标的位置粘贴刚才那段代码到这位置，并按下回车键"><a href="#4-滑到最下方，一直到最下面可输入光标的位置粘贴刚才那段代码到这位置，并按下回车键" class="headerlink" title="4.滑到最下方，一直到最下面可输入光标的位置粘贴刚才那段代码到这位置，并按下回车键"></a>4.滑到最下方，一直到最下面可输入光标的位置粘贴刚才那段代码到这位置，并按下回车键</h1><h2 id="接下来脚本自动执行，第一次会提示框提示你是否删除抽奖动态-，点击是。耐心等待，删除完毕后关闭网页即可"><a href="#接下来脚本自动执行，第一次会提示框提示你是否删除抽奖动态-，点击是。耐心等待，删除完毕后关闭网页即可" class="headerlink" title="接下来脚本自动执行，第一次会提示框提示你是否删除抽奖动态 ，点击是。耐心等待，删除完毕后关闭网页即可"></a>接下来脚本自动执行，第一次会提示框提示你是否删除抽奖动态 ，点击是。耐心等待，删除完毕后关闭网页即可</h2>]]></content>
-      <categories>
-        <category>小问题</category>
-      </categories>
-      <tags>
-        <tag>B站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>角膜损伤</title>
-    <url>/2022/04/09/%E8%BF%91%E8%A7%86%E6%89%8B%E6%9C%AF/</url>
+    <title>word设置（论文）</title>
+    <url>/2022/05/21/%E8%AE%BA%E6%96%87word%E5%9F%8B%E5%9D%91/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="09038d22621797d5d417f0ebef3a05b6f54bf5937bd27e6bf33d76a5999afa29">47a0713c4f2f7911259e441e8bdc61df8e9aff7332cccdfb3935c951014b92422a507b97436e0e20c5a2a90ac1bfa23a4ce2ab9917e0e4d1cf0fc98ebf30846dd83dc562c25b2f1d5d46d44faf6a1546862a4f396e135c7ed06b4d8bdfbce46cf70d59049da99f4c6b922a231501b903403c70afe0c0cd8d0486ea3c637c2c84632ba799badfb72e77863d9540eec1b989e814ce3961d8a121da0949e9214b5e60140551f7b2b719859153059542fef44639f51764e42a1edeb117644b182901</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="3a4af102f0bd1953b570f6c6061583b5c72bad5cb16dcf3fc31813ecbca28f91">47a0713c4f2f7911259e441e8bdc61df4bd6db68f3037e3e2f1d09f3c60a208cba38e184b36f2b92a8147ddce0c72504394d469492ab8cefba1526cfb51df7351cd7d2787e93d292b1f7dee29d32a524b739f207766206e555962676320d2185db46dfef57fae790e74e77f9c4345174b72b5237422c9cffbcc776fce798f8fd3051ae8f3579f5454cdbc99dafd2fecf7e72f0d8529c003d2768d6153abb4a9b</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -714,22 +744,6 @@
   </div>
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>生活</category>
-        <category>近视手术</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>舅舅结婚-囍</title>
-    <url>/2022/02/11/%E8%88%85%E8%88%85%E7%BB%93%E5%A9%9A/</url>
-    <content><![CDATA[<p><em>恭喜舅舅</em></p>
-<iframe src="//player.bilibili.com/player.html?aid=508955324&bvid=BV11u41197sW&cid=505497821&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-]]></content>
-      <categories>
-        <category>生活</category>
-        <category>记录</category>
-      </categories>
   </entry>
   <entry>
     <title>高数</title>
@@ -822,6 +836,40 @@
         <tag>考研</tag>
         <tag>高等数学</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>快速删除Bilibili动态</title>
+    <url>/2021/07/21/%E5%BF%AB%E9%80%9F%E5%88%A0%E9%99%A4Bilibili%E5%8A%A8%E6%80%81/</url>
+    <content><![CDATA[<p><em>快速删除多个动态</em></p>
+<span id="more"></span>
+<h1 id="1-在登录状态下打开我的动态页面"><a href="#1-在登录状态下打开我的动态页面" class="headerlink" title="1.在登录状态下打开我的动态页面"></a>1.在登录状态下打开我的动态页面</h1><h2 id="B站-我的动态页面-https-space-bilibili-com"><a href="#B站-我的动态页面-https-space-bilibili-com" class="headerlink" title="B站 我的动态页面 https://space.bilibili.com/"></a>B站 我的动态页面 <a href="https://space.bilibili.com/">https://space.bilibili.com/</a></h2><h2 id="B站-个人空间-我的动态"><a href="#B站-个人空间-我的动态" class="headerlink" title="B站-个人空间-我的动态"></a>B站-个人空间-我的动态</h2><h1 id="2-复制下面这段脚本代码"><a href="#2-复制下面这段脚本代码" class="headerlink" title="2.复制下面这段脚本代码"></a>2.复制下面这段脚本代码</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var needDelDeled = <span class="literal">true</span>,</span><br><span class="line">    delay = 1000,</span><br><span class="line">    scrolls = 800;</span><br><span class="line">var w = <span class="string">&#x27;&#x27;</span>, d = <span class="string">&#x27;&#x27;</span>, r = 0;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">getLuckyDraw</span></span>() &#123;</span><br><span class="line">    w.css(<span class="string">&quot;background-color&quot;</span>, <span class="string">&quot;#f1c40f&quot;</span>);</span><br><span class="line">    w = w.parents(<span class="string">&quot;.card&quot;</span>);</span><br><span class="line">    w.css(<span class="string">&quot;background-color&quot;</span>, <span class="string">&quot;#2ecc71&quot;</span>);</span><br><span class="line">    w[w.length - 1].querySelectorAll(<span class="string">&quot;.child-button&quot;</span>)[1].click();</span><br><span class="line">    setTimeout(clickDel, delay);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">getDel</span></span>() &#123;</span><br><span class="line">    d.css(<span class="string">&quot;background-color&quot;</span>, <span class="string">&quot;#8e44ad&quot;</span>);</span><br><span class="line">    d = d.parents(<span class="string">&quot;.card&quot;</span>);</span><br><span class="line">    d.css(<span class="string">&quot;background-color&quot;</span>, <span class="string">&quot;#2ecc71&quot;</span>);</span><br><span class="line">    d[d.length - 1].querySelectorAll(<span class="string">&quot;.child-button&quot;</span>)[1].click();</span><br><span class="line">    setTimeout(clickDel, delay);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">clickDel</span></span>() &#123;</span><br><span class="line">    //点删除</span><br><span class="line">    $(<span class="string">&quot;.popup-content-ctnr&quot;</span>)[$(<span class="string">&quot;.popup-content-ctnr&quot;</span>).length - 2].querySelector(<span class="string">&quot;.bl-button&quot;</span>).click(); // 点确定</span><br><span class="line">    r += scrolls;</span><br><span class="line">    $(<span class="string">&#x27;html, body&#x27;</span>).animate(&#123; scrollTop: r &#125;, 30);</span><br><span class="line">    $(<span class="string">&quot;.fold-text&quot;</span>).click()</span><br><span class="line">    $(<span class="string">&quot;.expand-btn&quot;</span>).click();</span><br><span class="line">    w = $(<span class="string">&quot;.main-content&quot;</span>).find(<span class="string">&#x27;span[click-title=&quot;抽奖详情&quot;]&#x27;</span>);</span><br><span class="line">    d = $(<span class="string">&quot;.main-content&quot;</span>).find(<span class="string">&#x27;.deleted-text&#x27;</span>);</span><br><span class="line">    <span class="keyword">if</span> (d.length &amp;&amp; needDelDeled) setTimeout(getDel, delay);</span><br><span class="line">    <span class="keyword">else</span> setTimeout(getLuckyDraw, delay);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (/dynamic/.<span class="built_in">test</span>(window.location.href) &amp;&amp; confirm(<span class="string">&quot;是不是要删除抽奖动态&quot;</span>)) &#123;</span><br><span class="line">    r += scrolls;</span><br><span class="line">    $(<span class="string">&#x27;html, body&#x27;</span>).animate(&#123; scrollTop: r &#125;, 30);</span><br><span class="line">    $(<span class="string">&quot;.fold-text&quot;</span>).click()</span><br><span class="line">    $(<span class="string">&quot;.expand-btn&quot;</span>).click();</span><br><span class="line">    w = $(<span class="string">&quot;.main-content&quot;</span>).find(<span class="string">&#x27;span[click-title=&quot;抽奖详情&quot;]&#x27;</span>);//*互动抽奖内容定位</span><br><span class="line">    d = $(<span class="string">&quot;.main-content&quot;</span>).find(<span class="string">&#x27;.deleted-text&#x27;</span>);   //*已删除内容定位</span><br><span class="line">    <span class="keyword">if</span> (d.length &amp;&amp; needDelDeled) setTimeout(getDel, delay);</span><br><span class="line">    <span class="keyword">else</span> setTimeout(getLuckyDraw, delay);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="3-在键盘上按下F12，呼出控制台-console"><a href="#3-在键盘上按下F12，呼出控制台-console" class="headerlink" title="3.在键盘上按下F12，呼出控制台(console)"></a>3.在键盘上按下F12，呼出控制台(console)</h1><h1 id="4-滑到最下方，一直到最下面可输入光标的位置粘贴刚才那段代码到这位置，并按下回车键"><a href="#4-滑到最下方，一直到最下面可输入光标的位置粘贴刚才那段代码到这位置，并按下回车键" class="headerlink" title="4.滑到最下方，一直到最下面可输入光标的位置粘贴刚才那段代码到这位置，并按下回车键"></a>4.滑到最下方，一直到最下面可输入光标的位置粘贴刚才那段代码到这位置，并按下回车键</h1><h2 id="接下来脚本自动执行，第一次会提示框提示你是否删除抽奖动态-，点击是。耐心等待，删除完毕后关闭网页即可"><a href="#接下来脚本自动执行，第一次会提示框提示你是否删除抽奖动态-，点击是。耐心等待，删除完毕后关闭网页即可" class="headerlink" title="接下来脚本自动执行，第一次会提示框提示你是否删除抽奖动态 ，点击是。耐心等待，删除完毕后关闭网页即可"></a>接下来脚本自动执行，第一次会提示框提示你是否删除抽奖动态 ，点击是。耐心等待，删除完毕后关闭网页即可</h2>]]></content>
+      <categories>
+        <category>小问题</category>
+      </categories>
+      <tags>
+        <tag>B站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>角膜损伤</title>
+    <url>/2022/04/09/%E8%A7%92%E8%86%9C%E6%89%8B%E6%9C%AF/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="09038d22621797d5d417f0ebef3a05b6f54bf5937bd27e6bf33d76a5999afa29">47a0713c4f2f7911259e441e8bdc61df8e9aff7332cccdfb3935c951014b92422a507b97436e0e20c5a2a90ac1bfa23a4ce2ab9917e0e4d1cf0fc98ebf30846dd83dc562c25b2f1d5d46d44faf6a1546862a4f396e135c7ed06b4d8bdfbce46cf70d59049da99f4c6b922a231501b903403c70afe0c0cd8d0486ea3c637c2c84632ba799badfb72e77863d9540eec1b989e814ce3961d8a121da0949e9214b5e60140551f7b2b719859153059542fef44639f51764e42a1edeb117644b182901</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">🔑</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>生活</category>
+        <category>近视手术</category>
+      </categories>
   </entry>
   <entry>
     <title>音乐-听</title>
