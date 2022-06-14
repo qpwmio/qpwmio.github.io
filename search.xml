@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>VSCode使用</title>
+    <title>VSCode📌</title>
     <url>/2022/06/06/Vscode%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<p>1、右键单击vscode，以管理员身份运行<br>2、在vscode终端执行 </p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">get-ExecutionPolicy</span><br></pre></td></tr></table></figure>
@@ -33,12 +33,7 @@
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/05/17/%E5%89%8D%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%8E%A5%E5%8F%A3/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>git使用</title>
+    <title>git📌</title>
     <url>/2022/05/16/git%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<p><em>git的常用命令</em></p>
 <span id="more"></span>
@@ -270,12 +265,6 @@
 <span id="more"></span>
 
 <p><em>呼市新城区</em></p>
-<p> <img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20220214153308537.png" alt="呼市新城征兵联系方式"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20220214153348232.png" alt="军装"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20220214153517269.png" alt="自主择业"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20220214153402819.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/f8b5afc917b0d722433c96f7a9453e2.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/1bbf73918e25a844fc9a3b3171177ef.png"></p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -409,12 +398,12 @@
       </tags>
   </entry>
   <entry>
-    <title>Git-学习</title>
+    <title>Gitee-学习</title>
     <url>/2021/05/13/Git-%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<p><em>仓库的SSH Key和账户SSH Key的区别?</em></p>
 <span id="more"></span>
 
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210513230318902.png"></p>
+<p><img src="https://s2.loli.net/2022/06/09/o4qgKk897vZnrE2.png" alt="image.png"></p>
 ]]></content>
       <tags>
         <tag>git</tag>
@@ -458,7 +447,7 @@
       </tags>
   </entry>
   <entry>
-    <title>office-.-Tip</title>
+    <title>office📌</title>
     <url>/2021/04/16/office%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<p><em>Excel对表求平均值时遇到的问题</em></p>
 <span id="more"></span>
@@ -499,29 +488,6 @@
       <tags>
         <tag>Excel</tag>
         <tag>word</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>线代</title>
-    <url>/2021/04/04/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="2563b86d47c29f0089f53013e8cbbf1450ecd4f09f88bab0f09e702fd36cf759">7c607a38cb844365d3b1e05ea81c0c5f966afceec0e77be9b91e338dcca248024c91ee176d6a76fed43697340d9c9b0fba9c2dad49f527b87712311900228d2bde75266e45fa5e9730fa65fce3e5b47b27e923e2a6b6118548fdb8eb4512bd9c5e0122a075ffb1591cbcc683e30d575c9e2d5b4307d9d487212b8882db6df2b954a2b8fd25d018324bbf7bed5effdb6691b2167d2de555eecebc1e328f7f84349eeb49bc2f1518c214a46db9f300b3824c3ca5075ed2ff0999c7f87b0ab5f3069bdc2176cbf1f83979f56b3d726f8e4cf6ba856b4f53ff5460ab5238cbee8f004b8bf16c33c688f17670cc28e70988324fc43657f5f4139dfd93f89e2e4882371476659a98c184562fcd0e87ad282dc89ef338b4ce6cefe383ff708f1a0dbcc7ba519ee55adbfaf6936cc7bb7f3a11b6b0ab280a9cc71f6f58c27b6bdd3a012976abe835b31b4b612cdef490a0c3bd90bdb7bf74138c11b82f3a76bed8b43221f2856d580213e7d791a8b16fee7c72a78d0496f007276a6e936a9344082591fc20a344e7d12a79b848bb2b9deb72524d4561c49509f2961507bb8f665b9a5cad83c3ddee1bad675ab00ac97d9e52cb19ea5592662a700d347c079fd2da4008e81ea46f1d48689f347df4430c2f9044b1128597007c0eebadc314a627cad2dbf7041c9f6cfa000c8627030b7cbf6857d08cc68f1ac2982e83250643ee8a3c918c4c54471658f63ddf13d07236c740d719298a0738198ed6271065a0a54570ac42110ece8ac741d159c64c5dd12b69560a376f3460152400ff5c0262dee653d02f8f1d29e214852ece11c01b5dca78b1d88e501f83e9d348fdeb1804ae31a17802020aa7d56812b926a91de6dd76b5b311d8d3cf70335cf61cf57cda0fc45ee43c05ec925093c804414913114cd72a4ecc48262a7cf8dbde935757a376a1de04df457f638dc8834c847d347b19282fbcea0c05299ed7d41623e17125aa604bef0bdb4be3cce84e21d73e582bf7dff0f30d628563a8037eb842666991b0d85c7a200c1bb4289551e68ec50c49506eefee027d8058c2a02b359f5a63fdeca51cfc7f12fb922d3a34931a4dafdf0fd908a103</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">🔑</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>考研</category>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>线性代数</tag>
       </tags>
   </entry>
   <entry>
@@ -1228,98 +1194,6 @@
       </tags>
   </entry>
   <entry>
-    <title>高数</title>
-    <url>/2021/03/22/%E9%AB%98%E6%95%B0/</url>
-    <content><![CDATA[<p> <em>高等数学</em></p>
-<span id="more"></span>
-
-<h1 id="极限与连续"><a href="#极限与连续" class="headerlink" title="极限与连续"></a>极限与连续</h1><h2 id="极限定义（左右极限）"><a href="#极限定义（左右极限）" class="headerlink" title="极限定义（左右极限）"></a>极限定义（左右极限）</h2><h3 id="P4-注解5"><a href="#P4-注解5" class="headerlink" title="P4 注解5"></a>P4 注解5</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521194825454.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210511085541558.png" alt="x趋向于*"></p>
-<h2 id="极限性质"><a href="#极限性质" class="headerlink" title="极限性质"></a>极限性质</h2><h3 id="夹逼定理"><a href="#夹逼定理" class="headerlink" title="夹逼定理"></a>夹逼定理</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521194900564.png" alt="夹逼定理"></p>
-<h2 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h2><h3 id="介值定理（闭区间上连续函数的性质）"><a href="#介值定理（闭区间上连续函数的性质）" class="headerlink" title="介值定理（闭区间上连续函数的性质）"></a>介值定理（闭区间上连续函数的性质）</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521194932478.png"></p>
-<h3 id="常用的基本极限"><a href="#常用的基本极限" class="headerlink" title="常用的基本极限"></a>常用的基本极限</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/Image.png"></p>
-<h2 id="P14-题型不定型极限计算"><a href="#P14-题型不定型极限计算" class="headerlink" title="P14 题型不定型极限计算"></a>P14 题型不定型极限计算</h2><h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210404164359393.png"></p>
-<h3 id="x趋向于负无穷时注意根号"><a href="#x趋向于负无穷时注意根号" class="headerlink" title="x趋向于负无穷时注意根号"></a>x趋向于负无穷时注意根号</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210404170524671.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210404170903543.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210404173958590.png" alt="注意"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210404180046790.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210404181735772.png"></p>
-<h3 id="利用无穷小的比较和极限的四则运算"><a href="#利用无穷小的比较和极限的四则运算" class="headerlink" title="利用无穷小的比较和极限的四则运算"></a>利用无穷小的比较和极限的四则运算</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210404213502126.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210404213843607.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210404224123000.png"></p>
-<h3 id="多阶考虑精确度是否可以使用等价无穷小）"><a href="#多阶考虑精确度是否可以使用等价无穷小）" class="headerlink" title="多阶考虑精确度是否可以使用等价无穷小）"></a>多阶考虑精确度是否可以使用等价无穷小）</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521195057721.png" alt="分子分母"></p>
-<h3 id="无穷比无穷型注意事项"><a href="#无穷比无穷型注意事项" class="headerlink" title="无穷比无穷型注意事项"></a>无穷比无穷型注意事项</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521195159991.png"><br><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521195223147.png"></p>
-<h3 id="加减法在同阶（精确度相同）可以使用等价无穷小"><a href="#加减法在同阶（精确度相同）可以使用等价无穷小" class="headerlink" title="加减法在同阶（精确度相同）可以使用等价无穷小"></a>加减法在同阶（精确度相同）可以使用等价无穷小</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521200209768.png"></p>
-<h2 id="P19-题型n项和或积的极限运算"><a href="#P19-题型n项和或积的极限运算" class="headerlink" title="P19 题型n项和或积的极限运算"></a>P19 题型n项和或积的极限运算</h2><h3 id="先和极限"><a href="#先和极限" class="headerlink" title="先和极限"></a>先和极限</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521200234600.png"></p>
-<h3 id="用夹逼定理"><a href="#用夹逼定理" class="headerlink" title="用夹逼定理"></a>用夹逼定理</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521200144205.png"><br><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521195929376.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210406100708182.png" alt="P4 16.方法一"></p>
-<h1 id="导数与微分"><a href="#导数与微分" class="headerlink" title="导数与微分"></a>导数与微分</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="可微-注解"><a href="#可微-注解" class="headerlink" title="可微-注解"></a>可微-注解</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521195707607.png"><br><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521195801251.png"></p>
-<h2 id="反函数求导"><a href="#反函数求导" class="headerlink" title="反函数求导"></a>反函数求导</h2><h3 id="P33-反函数例题"><a href="#P33-反函数例题" class="headerlink" title="P33 反函数例题"></a>P33 反函数例题</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521195824935.png"></p>
-<h1 id="一元函数微分学的应用"><a href="#一元函数微分学的应用" class="headerlink" title="一元函数微分学的应用"></a>一元函数微分学的应用</h1><h2 id="中值定理"><a href="#中值定理" class="headerlink" title="中值定理"></a>中值定理</h2><h3 id="P54-题型一-f-n-ξ-0）（罗尔型）"><a href="#P54-题型一-f-n-ξ-0）（罗尔型）" class="headerlink" title="P54 题型一 f^n ξ = 0）（罗尔型）"></a>P54 题型一 f^n ξ = 0）（罗尔型）</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521195846093.png"></p>
-<h3 id="P65-拉格朗日中值定理的惯性思维补充"><a href="#P65-拉格朗日中值定理的惯性思维补充" class="headerlink" title="P65 拉格朗日中值定理的惯性思维补充"></a>P65 拉格朗日中值定理的惯性思维补充</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210401215758387.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/20210401220433.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/20210401220446.png"></p>
-<h3 id="P65-例4"><a href="#P65-例4" class="headerlink" title="P65 例4"></a>P65 例4</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/20210401220454.png"></p>
-<h3 id="P72-题型9-不等式的证明-例9"><a href="#P72-题型9-不等式的证明-例9" class="headerlink" title="P72 题型9 不等式的证明(例9)"></a>P72 题型9 不等式的证明(例9)</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/20210401220500.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/20210402091630.png"></p>
-<h3 id="P74-题型10-函数零点或方程根的个数问题"><a href="#P74-题型10-函数零点或方程根的个数问题" class="headerlink" title="P74 题型10 函数零点或方程根的个数问题"></a>P74 题型10 函数零点或方程根的个数问题</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210402163303978.png"></p>
-<h2 id="凹凸与拐点"><a href="#凹凸与拐点" class="headerlink" title="凹凸与拐点"></a>凹凸与拐点</h2><h3 id="凹凸性判别三步曲"><a href="#凹凸性判别三步曲" class="headerlink" title="凹凸性判别三步曲"></a>凹凸性判别三步曲</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210402164710093.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210402164617976.png" alt=" "></p>
-<h1 id="不定积分"><a href="#不定积分" class="headerlink" title="不定积分"></a>不定积分</h1><h2 id="原函数与不定积分"><a href="#原函数与不定积分" class="headerlink" title="原函数与不定积分"></a>原函数与不定积分</h2><h3 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210408103620940.png" alt="基本性质"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210408101157178.png" alt="奇偶性的证明"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210408101828047.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210408103533809.png" alt="周期证明"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210416192130164.png" alt="三角代换"></p>
-<h3 id="凑微分法"><a href="#凑微分法" class="headerlink" title="凑微分法"></a>凑微分法</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210421151654723.png" alt="过渡例题"></p>
-<h3 id="换元积分"><a href="#换元积分" class="headerlink" title="换元积分"></a>换元积分</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210416200314940.png" alt="三角代换-积分推导"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210416201422665.png"></p>
-<h3 id="分部积分法"><a href="#分部积分法" class="headerlink" title="分部积分法"></a>分部积分法</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210416203742686.png" alt="分部积分证明"></p>
-<h3 id="有理数的不定积分"><a href="#有理数的不定积分" class="headerlink" title="有理数的不定积分"></a>有理数的不定积分</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210427093347537.png" alt="题型比较"></p>
-<h1 id="定积分及其应用"><a href="#定积分及其应用" class="headerlink" title="定积分及其应用"></a>定积分及其应用</h1><h2 id="性质7（积分中值定理）"><a href="#性质7（积分中值定理）" class="headerlink" title="性质7（积分中值定理）"></a>性质7（积分中值定理）</h2><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210512104346892.png" alt="证明"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210512104256425.png" alt="利用介值定理证明"></p>
-<h2 id="基本定理"><a href="#基本定理" class="headerlink" title="基本定理"></a>基本定理</h2><h2 id="定理一"><a href="#定理一" class="headerlink" title="定理一"></a>定理一</h2><h3 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210513091944238.png" alt="导数的定义＋积分中值定理＋函数的连续"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210513092248567.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210513202558378.png" alt="例题1"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210513202722623.png" alt="例题2"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210513202808949.png" alt="例题3"></p>
-<h2 id="定理二（牛顿-莱布尼兹公式）"><a href="#定理二（牛顿-莱布尼兹公式）" class="headerlink" title="定理二（牛顿-莱布尼兹公式）"></a>定理二（牛顿-莱布尼兹公式）</h2><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210514095204485.png" alt="齐次求极限与积分的联系"></p>
-<h3 id="证明-1"><a href="#证明-1" class="headerlink" title="证明"></a>证明</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210514102559936.png"></p>
-<h2 id="定积分上的特殊性质"><a href="#定积分上的特殊性质" class="headerlink" title="定积分上的特殊性质"></a>定积分上的特殊性质</h2><h3 id="对称区间上函数的定积分性质P99"><a href="#对称区间上函数的定积分性质P99" class="headerlink" title="对称区间上函数的定积分性质P99"></a>对称区间上函数的定积分性质P99</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210519110039577.png" alt="综合-区间对称"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210519110540304.png" alt="综合-三角函数"></p>
-<h3 id="三角函数定积分性质"><a href="#三角函数定积分性质" class="headerlink" title="三角函数定积分性质"></a>三角函数定积分性质</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210518093129490.png" alt="例题"></p>
-<h3 id="定积分积分法"><a href="#定积分积分法" class="headerlink" title="定积分积分法"></a>定积分积分法</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210518083848325.png" alt="分部积分例题"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210518084653918.png" alt="换元积分例题"></p>
-<h2 id="广义积分"><a href="#广义积分" class="headerlink" title="广义积分"></a>广义积分</h2><h3 id="非正常积分"><a href="#非正常积分" class="headerlink" title="非正常积分"></a>非正常积分</h3><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521205532567.png" alt="两个基本性质"></p>
-<p><em>注：第一类间断点可以看作积分为零</em></p>
-<h4 id="积分区间无限（上限·下限·上下限）"><a href="#积分区间无限（上限·下限·上下限）" class="headerlink" title="积分区间无限（上限·下限·上下限）"></a>积分区间无限（上限·下限·上下限）</h4><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521210719433.png" alt="上下限无限用一个点（０）分为两块积分"></p>
-<h4 id="积分区间无限－类似（a，b］"><a href="#积分区间无限－类似（a，b］" class="headerlink" title="积分区间无限－类似（ａ，ｂ］"></a>积分区间无限－类似（ａ，ｂ］</h4><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521211656403.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521212233903.png" alt="定义法"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521212329723.png" alt="判别法－１"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210521212435822.png" alt="判别法－２"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210524194252877.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210526172329757.png"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210604083940686.png" alt="image-20210604083940686"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210526204252184.png"></p>
-<h1 id="多元函数微分学"><a href="#多元函数微分学" class="headerlink" title="多元函数微分学"></a>多元函数微分学</h1><h2 id="可微"><a href="#可微" class="headerlink" title="可微"></a>可微</h2><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210604083848384.png" alt="引入可微"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210604084346693.png" alt="可微的判定步骤"></p>
-<h2 id="偏导"><a href="#偏导" class="headerlink" title="偏导"></a>偏导</h2><p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210603190225033.png" alt="偏导数连续性的证明"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210603203843285.png" alt="有分支为偏导"></p>
-<p><img src="https://gitee.com/qpwmio/blog-img-yun/raw/master/img/image-20210603204041656.png" alt="image-20210603204041656"></p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">文章加密</span><br><span class="line">password: 1217</span><br><span class="line">abstract: 🔒</span><br><span class="line">message: 🔑</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<h1 id="末"><a href="#末" class="headerlink" title="末"></a>末</h1></blockquote>
-]]></content>
-      <categories>
-        <category>考研</category>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>考研</tag>
-        <tag>高等数学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown笔记</title>
     <url>/2021/02/24/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p><em>马克飞象Markdown文本介绍</em></p>
@@ -1400,7 +1274,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号">@GGock</a></li>
-<li>邮箱：<a href="mailto:&#104;&#x75;&#x73;&#116;&#x67;&#x6f;&#x63;&#x6b;&#x40;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#104;&#x75;&#x73;&#116;&#x67;&#x6f;&#x63;&#x6b;&#x40;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a></li>
+<li>邮箱：<a href="mailto:&#x68;&#x75;&#x73;&#x74;&#103;&#111;&#99;&#x6b;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#x6f;&#109;">&#x68;&#x75;&#x73;&#x74;&#103;&#111;&#99;&#x6b;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#x6f;&#109;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
