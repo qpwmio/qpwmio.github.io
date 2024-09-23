@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+<meta name="baidu-site-verification" content="code-7mNtQ7fTSc" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"qpwmio.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="git的常用命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apk反编译后在打包📌">
+<meta property="og:url" content="https://qpwmio.github.io/2024/09/23/Apk%E5%8F%8D%E7%BC%96%E8%AF%91%E5%9C%A8%E6%89%93%E5%8C%85/index.html">
+<meta property="og:site_name" content="Aurora">
+<meta property="og:description" content="git的常用命令">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2015/02/git-command.jpg">
+<meta property="og:image" content="https://static.runoob.com/images/svg/git-brance.svg">
+<meta property="article:published_time" content="2024-09-23T12:25:12.983Z">
+<meta property="article:modified_time" content="2024-09-23T12:27:11.974Z">
+<meta property="article:author" content="qpwmio">
+<meta property="article:tag" content="issue">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.runoob.com/wp-content/uploads/2015/02/git-command.jpg">
+
+<link rel="canonical" href="https://qpwmio.github.io/2024/09/23/Apk%E5%8F%8D%E7%BC%96%E8%AF%91%E5%9C%A8%E6%89%93%E5%8C%85/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Apk反编译后在打包📌 | Aurora</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Aurora" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Aurora</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://qpwmio.github.io/2024/09/23/Apk%E5%8F%8D%E7%BC%96%E8%AF%91%E5%9C%A8%E6%89%93%E5%8C%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://s2.loli.net/2022/06/14/XP5qYForGt4yMH7.png">
+      <meta itemprop="name" content="qpwmio">
+      <meta itemprop="description" content="曹圣洁">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aurora">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Apk反编译后在打包📌
+        </h1>
+
+        <div class="post-meta">
+
+        
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-09-23 20:25:12 / 修改时间：20:27:11" itemprop="dateCreated datePublished" datetime="2024-09-23T20:25:12+08:00">2024-09-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><em>git的常用命令</em></p>
+<span id="more"></span>
+
+<h1 id="Git-基本操作"><a href="#Git-基本操作" class="headerlink" title="Git 基本操作"></a>Git 基本操作</h1><p>Git 的工作就是创建和保存你项目的快照及与之后的快照进行对比。</p>
+<p>本章将对有关创建与提交你的项目快照的命令作介绍。</p>
+<p>Git 常用的是以下 6 个命令：<strong>git clone</strong>、<strong>git push</strong>、<strong>git add</strong> 、<strong>git commit</strong>、<strong>git checkout</strong>、<strong>git pull</strong>，后面我们会详细介绍。</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2015/02/git-command.jpg" alt="img"></p>
+<p><strong>说明：</strong></p>
+<ul>
+<li>workspace：工作区</li>
+<li>staging area：暂存区/缓存区</li>
+<li>local repository：版本库或本地仓库</li>
+<li>remote repository：远程仓库</li>
+</ul>
+<p>一个简单的操作步骤：、</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git init    </span><br><span class="line">$ git add .    </span><br><span class="line">$ git commit  </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>git init - 初始化仓库。</li>
+<li>git add . - 添加文件到暂存区。</li>
+<li>git commit - 将暂存区内容添加到仓库中。</li>
+</ul>
+<h3 id="创建仓库命令"><a href="#创建仓库命令" class="headerlink" title="创建仓库命令"></a>创建仓库命令</h3><p>下表列出了 git 创建仓库的命令：</p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>git init</code></td>
+<td align="left">初始化仓库</td>
+</tr>
+<tr>
+<td align="left"><code>git clone</code></td>
+<td align="left">拷贝一份远程仓库，也就是下载一个项目。</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="提交与修改"><a href="#提交与修改" class="headerlink" title="提交与修改"></a>提交与修改</h2><p>Git 的工作就是创建和保存你的项目的快照及与之后的快照进行对比。</p>
+<p>下表列出了有关创建与提交你的项目的快照的命令：</p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>git add</code></td>
+<td align="left">添加文件到暂存区</td>
+</tr>
+<tr>
+<td align="left"><code>git status</code></td>
+<td align="left">查看仓库当前的状态，显示有变更的文件。</td>
+</tr>
+<tr>
+<td align="left"><code>git diff</code></td>
+<td align="left">比较文件的不同，即暂存区和工作区的差异。</td>
+</tr>
+<tr>
+<td align="left"><code>git commit</code></td>
+<td align="left">提交暂存区到本地仓库。</td>
+</tr>
+<tr>
+<td align="left"><code>git reset</code></td>
+<td align="left">回退版本。</td>
+</tr>
+<tr>
+<td align="left"><code>git rm</code></td>
+<td align="left">删除工作区文件。</td>
+</tr>
+<tr>
+<td align="left"><code>git mv</code></td>
+<td align="left">移动或重命名工作区文件。</td>
+</tr>
+</tbody></table>
+<h3 id="提交日志"><a href="#提交日志" class="headerlink" title="提交日志"></a>提交日志</h3><table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>git log</code></td>
+<td align="left">查看历史提交记录</td>
+</tr>
+<tr>
+<td align="left"><code>git blame &lt;file&gt;</code></td>
+<td align="left">以列表形式查看指定文件的历史修改记录</td>
+</tr>
+</tbody></table>
+<h3 id="远程操作"><a href="#远程操作" class="headerlink" title="远程操作"></a>远程操作</h3><table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>git remote</code></td>
+<td align="left">远程仓库操作</td>
+</tr>
+<tr>
+<td align="left"><code>git fetch</code></td>
+<td align="left">从远程获取代码库</td>
+</tr>
+<tr>
+<td align="left"><code>git pull</code></td>
+<td align="left">下载远程代码并合并</td>
+</tr>
+<tr>
+<td align="left"><code>git push</code></td>
+<td align="left">上传远程代码并合并</td>
+</tr>
+</tbody></table>
+<h1 id="Git-分支管理"><a href="#Git-分支管理" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h1><p>几乎每一种版本控制系统都以某种形式支持分支，一个分支代表一条独立的开发线。</p>
+<p>使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。</p>
+<p><img src="https://static.runoob.com/images/svg/git-brance.svg" alt="img"></p>
+<p>Git 分支实际上是指向更改快照的指针。</p>
+<p>有人把 Git 的分支模型称为<strong>必杀技特性</strong>，而正是因为它，将 <strong>Git</strong> 从版本控制系统家族里区分出来。</p>
+<p>创建分支命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch (branchname)</span><br></pre></td></tr></table></figure>
+
+<p>切换分支命令:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout (branchname)</span><br></pre></td></tr></table></figure>
+
+<p>当你切换分支的时候，Git 会用该分支的最后提交的快照替换你的工作目录的内容， 所以多个分支不需要多个目录。</p>
+<p>合并分支命令:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge </span><br></pre></td></tr></table></figure>
+
+<p>你可以多次合并到统一分支， 也可以选择在合并之后直接删除被并入的分支。</p>
+<p>开始前我们先创建一个测试目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir gitdemo</span><br><span class="line">$ cd gitdemo/</span><br><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository...</span><br><span class="line">$ touch README</span><br><span class="line">$ git add README</span><br><span class="line">$ git commit -m &#x27;第一次版本提交&#x27;</span><br><span class="line">[master (root-commit) 3b58100] 第一次版本提交</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 README</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Git-分支管理-1"><a href="#Git-分支管理-1" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h2><h3 id="列出分支"><a href="#列出分支" class="headerlink" title="列出分支"></a>列出分支</h3><p>列出分支基本命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+
+<p>没有参数时，<strong>git branch</strong> 会列出你在本地的分支。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
+
+<p>此例的意思就是，我们有一个叫做 <strong>master</strong> 的分支，并且该分支是当前分支。</p>
+<p>当你执行 <strong>git init</strong> 的时候，默认情况下 Git 就会为你创建 <strong>master</strong> 分支。</p>
+<p>如果我们要手动创建一个分支。执行 <strong>git branch (branchname)</strong> 即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git branch testing</span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line">  testing</span><br></pre></td></tr></table></figure>
+
+<p>现在我们可以看到，有了一个新分支 <strong>testing</strong>。</p>
+<p>当你以此方式在上次提交更新之后创建了新分支，如果后来又有更新提交， 然后又切换到了 <strong>testing</strong> 分支，Git 将还原你的工作目录到你创建分支时候的样子。</p>
+<p>接下来我们将演示如何切换分支，我们用 git checkout (branch) 切换到我们要修改的分支。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ ls</span><br><span class="line">README</span><br><span class="line">$ echo &#x27;runoob.com&#x27; &gt; test.txt</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m &#x27;add test.txt&#x27;</span><br><span class="line">[master 3e92c19] add test.txt</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"> create mode 100644 test.txt</span><br><span class="line">$ ls</span><br><span class="line">README        test.txt</span><br><span class="line">$ git checkout testing</span><br><span class="line">Switched to branch &#x27;testing&#x27;</span><br><span class="line">$ ls</span><br><span class="line">README</span><br></pre></td></tr></table></figure>
+
+<p>当我们切换到 <strong>testing</strong> 分支的时候，我们添加的新文件 test.txt 被移除了。切换回 <strong>master</strong> 分支的时候，它们又重新出现了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout master</span><br><span class="line">Switched to branch &#x27;master&#x27;</span><br><span class="line">$ ls</span><br><span class="line">README        test.txt</span><br></pre></td></tr></table></figure>
+
+<p>我们也可以使用 git checkout -b (branchname) 命令来创建新分支并立即切换到该分支下，从而在该分支中操作。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b newtest</span><br><span class="line">Switched to a new branch &#x27;newtest&#x27;</span><br><span class="line">$ git rm test.txt </span><br><span class="line">rm &#x27;test.txt&#x27;</span><br><span class="line">$ ls</span><br><span class="line">README</span><br><span class="line">$ touch runoob.php</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -am &#x27;removed test.txt、add runoob.php&#x27;</span><br><span class="line">[newtest c1501a2] removed test.txt、add runoob.php</span><br><span class="line"> 2 files changed, 1 deletion(-)</span><br><span class="line"> create mode 100644 runoob.php</span><br><span class="line"> delete mode 100644 test.txt</span><br><span class="line">$ ls</span><br><span class="line">README        runoob.php</span><br><span class="line">$ git checkout master</span><br><span class="line">Switched to branch &#x27;master&#x27;</span><br><span class="line">$ ls</span><br><span class="line">README        test.txt</span><br></pre></td></tr></table></figure>
+
+<p>如你所见，我们创建了一个分支，在该分支上移除了一些文件 test.txt，并添加了 runoob.php 文件，然后切换回我们的主分支，删除的 test.txt 文件又回来了，且新增加的 runoob.php 不存在主分支中。</p>
+<p>使用分支将工作切分开来，从而让我们能够在不同开发环境中做事，并来回切换。</p>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p>删除分支命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d (branchname)</span><br></pre></td></tr></table></figure>
+
+<p>例如我们要删除 testing 分支：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line">  testing</span><br><span class="line">$ git branch -d testing</span><br><span class="line">Deleted branch testing (was 85fc7e7).</span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
+
+<h3 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h3><p>一旦某分支有了独立内容，你终究会希望将它合并回到你的主分支。 你可以使用以下命令将任何分支合并到当前分支中去：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">git merge</span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line">  newtest</span><br><span class="line">$ ls</span><br><span class="line">README        test.txt</span><br><span class="line">$ git merge newtest</span><br><span class="line">Updating 3e92c19..c1501a2</span><br><span class="line">Fast-forward</span><br><span class="line"> runoob.php | 0</span><br><span class="line"> test.txt   | 1 -</span><br><span class="line"> 2 files changed, 1 deletion(-)</span><br><span class="line"> create mode 100644 runoob.php</span><br><span class="line"> delete mode 100644 test.txt</span><br><span class="line">$ ls</span><br><span class="line">README        runoob.php</span><br></pre></td></tr></table></figure>
+
+<p>以上实例中我们将 newtest 分支合并到主分支去，test.txt 文件被删除。</p>
+<p>合并完后就可以删除分支:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d newtest</span><br><span class="line">Deleted branch newtest (was c1501a2).</span><br></pre></td></tr></table></figure>
+
+<p>删除后， 就只剩下 master 分支了：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
+
+<h3 id="合并冲突"><a href="#合并冲突" class="headerlink" title="合并冲突"></a>合并冲突</h3><p>合并并不仅仅是简单的文件添加、移除的操作，Git 也会合并修改。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line">$ cat runoob.php</span><br></pre></td></tr></table></figure>
+
+<p>首先，我们创建一个叫做 change_site 的分支，切换过去，我们将 runoob.php 内容改为:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &#x27;runoob&#x27;;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p>创建 change_site 分支：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b change_site</span><br><span class="line">Switched to a new branch &#x27;change_site&#x27;</span><br><span class="line">$ vim runoob.php</span><br><span class="line">$ head -3 runoob.php</span><br><span class="line">&lt;?php</span><br><span class="line">echo &#x27;runoob&#x27;;</span><br><span class="line">?&gt;</span><br><span class="line">$ git commit -am &#x27;changed the runoob.php&#x27;</span><br><span class="line">[change_site 7774248] changed the runoob.php</span><br><span class="line"> 1 file changed, 3 insertions(+)</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<p>将修改的内容提交到 change_site 分支中。 现在，假如切换回 master 分支我们可以看内容恢复到我们修改前的(空文件，没有代码)，我们再次修改 runoob.php 文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout master</span><br><span class="line">Switched to branch &#x27;master&#x27;</span><br><span class="line">$ cat runoob.php</span><br><span class="line">$ vim runoob.php    # 修改内容如下</span><br><span class="line">$ cat runoob.php</span><br><span class="line">&lt;?php</span><br><span class="line">echo 1;</span><br><span class="line">?&gt;</span><br><span class="line">$ git diff</span><br><span class="line">diff --git a/runoob.php b/runoob.php</span><br><span class="line">index e69de29..ac60739 100644</span><br><span class="line">--- a/runoob.php</span><br><span class="line">+++ b/runoob.php</span><br><span class="line">@@ -0,0 +1,3 @@</span><br><span class="line">+&lt;?php</span><br><span class="line">+echo 1;</span><br><span class="line">+?&gt;</span><br><span class="line">$ git commit -am &#x27;修改代码&#x27;</span><br><span class="line">[master c68142b] 修改代码</span><br><span class="line"> 1 file changed, 3 insertions(+)</span><br></pre></td></tr></table></figure>
+
+<p>现在这些改变已经记录到我的 “master” 分支了。接下来我们将 “change_site” 分支合并过来。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ git merge change_site</span><br><span class="line">Auto-merging runoob.php</span><br><span class="line">CONFLICT (content): Merge conflict in runoob.php</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br><span class="line"></span><br><span class="line">$ cat runoob.php     # 打开文件，看到冲突内容</span><br><span class="line">&lt;?php</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">echo 1;</span><br><span class="line">=======</span><br><span class="line">echo &#x27;runoob&#x27;;</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; change_site</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p>我们将前一个分支合并到 master 分支，一个合并冲突就出现了，接下来我们需要手动去修改它。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ vim runoob.php </span><br><span class="line">$ cat runoob.php</span><br><span class="line">&lt;?php</span><br><span class="line">echo 1;</span><br><span class="line">echo &#x27;runoob&#x27;;</span><br><span class="line">?&gt;</span><br><span class="line">$ git diff</span><br><span class="line">diff --cc runoob.php</span><br><span class="line">index ac60739,b63d7d7..0000000</span><br><span class="line">--- a/runoob.php</span><br><span class="line">+++ b/runoob.php</span><br><span class="line">@@@ -1,3 -1,3 +1,4 @@@</span><br><span class="line">  &lt;?php</span><br><span class="line"> +echo 1;</span><br><span class="line">+ echo &#x27;runoob&#x27;;</span><br><span class="line">  ?&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在 Git 中，我们可以用 git add 要告诉 Git 文件冲突已经解决</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git status -s</span><br><span class="line">UU runoob.php</span><br><span class="line">$ git add runoob.php</span><br><span class="line">$ git status -s</span><br><span class="line">M  runoob.php</span><br><span class="line">$ git commit</span><br><span class="line">[master 88afe0e] Merge branch &#x27;change_site&#x27;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/issue/" rel="tag"><i class="fa fa-tag"></i> issue</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/07/13/%E5%85%AC%E5%8A%A1%E5%91%98%E6%8B%9B%E8%80%83%E4%BF%A1%E6%81%AF/" rel="prev" title="公务员招录信息">
+      <i class="fa fa-chevron-left"></i> 公务员招录信息
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Git-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">Git 基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.1.</span> <span class="nav-text">创建仓库命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E4%BA%A4%E4%B8%8E%E4%BF%AE%E6%94%B9"><span class="nav-number">1.1.</span> <span class="nav-text">提交与修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E4%BA%A4%E6%97%A5%E5%BF%97"><span class="nav-number">1.1.1.</span> <span class="nav-text">提交日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C"><span class="nav-number">1.1.2.</span> <span class="nav-text">远程操作</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git-%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">Git 分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86-1"><span class="nav-number">2.1.</span> <span class="nav-text">Git 分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E5%87%BA%E5%88%86%E6%94%AF"><span class="nav-number">2.1.1.</span> <span class="nav-text">列出分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="nav-number">2.1.2.</span> <span class="nav-text">删除分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6"><span class="nav-number">2.1.3.</span> <span class="nav-text">分支合并</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81"><span class="nav-number">2.1.4.</span> <span class="nav-text">合并冲突</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="qpwmio"
+      src="https://s2.loli.net/2022/06/14/XP5qYForGt4yMH7.png">
+  <p class="site-author-name" itemprop="name">qpwmio</p>
+  <div class="site-description" itemprop="description">曹圣洁</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/qpwmio" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;qpwmio" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/audient-42" title="ZhiHu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;audient-42" rel="noopener" target="_blank"><i class="fab fa-zhihu fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://music.163.com/#/playlist?id=642243392" title="网易云 → https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;playlist?id&#x3D;642243392" rel="noopener" target="_blank"><i class="fa fa-music fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/12654711" title="b站 → https:&#x2F;&#x2F;space.bilibili.com&#x2F;12654711" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://ddup.io/" title="https:&#x2F;&#x2F;ddup.io&#x2F;" rel="noopener" target="_blank">DayDayUp</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.jsdaima.com/js/demo/3906.html" title="https:&#x2F;&#x2F;www.jsdaima.com&#x2F;js&#x2F;demo&#x2F;3906.html" rel="noopener" target="_blank">当前时间</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.52pojie.cn/" title="https:&#x2F;&#x2F;www.52pojie.cn&#x2F;" rel="noopener" target="_blank">吾爱破解</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.cskaoyan.com/forum.php" title="http:&#x2F;&#x2F;www.cskaoyan.com&#x2F;forum.php" rel="noopener" target="_blank">王道论坛</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://app.yinxiang.com/Home.action?_sourcePage=NTmOiASVxBviMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP&__fp=wt8LWs1xeR83yWPvuidLz-TPR6I9Jhx8&rememberMe=true&login=true&username=qpwmio@163.com#n=d13f4e16-a7d2-4117-bfe1-c7b00de91508&s=s25&ses=4&sh=2&sds=5&" title="https:&#x2F;&#x2F;app.yinxiang.com&#x2F;Home.action?_sourcePage&#x3D;NTmOiASVxBviMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP&amp;__fp&#x3D;wt8LWs1xeR83yWPvuidLz-TPR6I9Jhx8&amp;rememberMe&#x3D;true&amp;login&#x3D;true&amp;username&#x3D;qpwmio%40163.com#n&#x3D;d13f4e16-a7d2-4117-bfe1-c7b00de91508&amp;s&#x3D;s25&amp;ses&#x3D;4&amp;sh&#x3D;2&amp;sds&#x3D;5&amp;" rel="noopener" target="_blank">印象笔记</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://tongji.baidu.com/web/10000341173/homepage/index" title="https:&#x2F;&#x2F;tongji.baidu.com&#x2F;web&#x2F;10000341173&#x2F;homepage&#x2F;index" rel="noopener" target="_blank">百度统计</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.gagahappy.com/" title="https:&#x2F;&#x2F;www.gagahappy.com&#x2F;" rel="noopener" target="_blank">灰太狼</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2021 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">qpwmio</span>
+</div>
+
+<!--添加网站的运行时间-->
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("01/01/2021 0:0:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
