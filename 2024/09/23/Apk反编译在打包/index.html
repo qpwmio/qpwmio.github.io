@@ -22,21 +22,18 @@
     var CONFIG = {"hostname":"qpwmio.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="git的常用命令">
+  <meta name="description" content="Apk反编译后在打包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Apk反编译后在打包📌">
 <meta property="og:url" content="https://qpwmio.github.io/2024/09/23/Apk%E5%8F%8D%E7%BC%96%E8%AF%91%E5%9C%A8%E6%89%93%E5%8C%85/index.html">
 <meta property="og:site_name" content="Aurora">
-<meta property="og:description" content="git的常用命令">
+<meta property="og:description" content="Apk反编译后在打包">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2015/02/git-command.jpg">
-<meta property="og:image" content="https://static.runoob.com/images/svg/git-brance.svg">
 <meta property="article:published_time" content="2024-09-23T12:25:12.983Z">
-<meta property="article:modified_time" content="2024-09-23T12:27:11.974Z">
+<meta property="article:modified_time" content="2024-09-23T13:34:40.749Z">
 <meta property="article:author" content="qpwmio">
 <meta property="article:tag" content="issue">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.runoob.com/wp-content/uploads/2015/02/git-command.jpg">
 
 <link rel="canonical" href="https://qpwmio.github.io/2024/09/23/Apk%E5%8F%8D%E7%BC%96%E8%AF%91%E5%9C%A8%E6%89%93%E5%8C%85/">
 
@@ -227,7 +224,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-09-23 20:25:12 / 修改时间：20:27:11" itemprop="dateCreated datePublished" datetime="2024-09-23T20:25:12+08:00">2024-09-23</time>
+              <time title="创建时间：2024-09-23 20:25:12 / 修改时间：21:34:40" itemprop="dateCreated datePublished" datetime="2024-09-23T20:25:12+08:00">2024-09-23</time>
             </span>
 
           
@@ -241,204 +238,65 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><em>git的常用命令</em></p>
+        <p><em>Apk反编译后在打包</em></p>
 <span id="more"></span>
-
-<h1 id="Git-基本操作"><a href="#Git-基本操作" class="headerlink" title="Git 基本操作"></a>Git 基本操作</h1><p>Git 的工作就是创建和保存你项目的快照及与之后的快照进行对比。</p>
-<p>本章将对有关创建与提交你的项目快照的命令作介绍。</p>
-<p>Git 常用的是以下 6 个命令：<strong>git clone</strong>、<strong>git push</strong>、<strong>git add</strong> 、<strong>git commit</strong>、<strong>git checkout</strong>、<strong>git pull</strong>，后面我们会详细介绍。</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2015/02/git-command.jpg" alt="img"></p>
-<p><strong>说明：</strong></p>
-<ul>
-<li>workspace：工作区</li>
-<li>staging area：暂存区/缓存区</li>
-<li>local repository：版本库或本地仓库</li>
-<li>remote repository：远程仓库</li>
+<p><strong>必要条件</strong><br>1、java环境<br>2、Apktool</p>
+<h1 id="如何进行Apk反编译加签名"><a href="#如何进行Apk反编译加签名" class="headerlink" title="如何进行Apk反编译加签名"></a>如何进行Apk反编译加签名</h1><p>本文档将介绍如何对 APK 进行反编译、修改以及重新签名的完整步骤。操作分为以下几个主要部分：</p>
+<h2 id="1-安装并使用-apktool"><a href="#1-安装并使用-apktool" class="headerlink" title="1. 安装并使用 apktool"></a>1. 安装并使用 <code>apktool</code></h2><h3 id="1-1-下载并安装-Apktool"><a href="#1-1-下载并安装-Apktool" class="headerlink" title="1.1 下载并安装 Apktool"></a>1.1 下载并安装 Apktool</h3><ul>
+<li>前往 <a target="_blank" rel="noopener" href="https://ibotpeaches.github.io/Apktool/">Apktool 下载页面</a> 下载 <code>apktool.jar</code> 和相应的脚本文件（Windows用户使用 <code>apktool.bat</code>）。</li>
+<li>在你的系统中创建一个文件夹，如 <code>C:\Apktool</code>，将下载的文件放置于此目录下。</li>
 </ul>
-<p>一个简单的操作步骤：、</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git init    </span><br><span class="line">$ git add .    </span><br><span class="line">$ git commit  </span><br></pre></td></tr></table></figure>
+<h3 id="1-2-配置-Apktool"><a href="#1-2-配置-Apktool" class="headerlink" title="1.2 配置 Apktool"></a>1.2 配置 Apktool</h3><h4 id="Windows-用户"><a href="#Windows-用户" class="headerlink" title="Windows 用户"></a>Windows 用户</h4><ol>
+<li>打开 “此电脑” -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量。</li>
+<li>在系统变量中找到 <code>Path</code>，双击编辑，将 <code>C:\Apktool</code> 目录路径添加到变量值中。</li>
+<li>打开命令提示符，输入以下命令，验证 Apktool 是否安装成功：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apktool</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>git init - 初始化仓库。</li>
-<li>git add . - 添加文件到暂存区。</li>
-<li>git commit - 将暂存区内容添加到仓库中。</li>
-</ul>
-<h3 id="创建仓库命令"><a href="#创建仓库命令" class="headerlink" title="创建仓库命令"></a>创建仓库命令</h3><p>下表列出了 git 创建仓库的命令：</p>
-<table>
-<thead>
-<tr>
-<th align="left">命令</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>git init</code></td>
-<td align="left">初始化仓库</td>
-</tr>
-<tr>
-<td align="left"><code>git clone</code></td>
-<td align="left">拷贝一份远程仓库，也就是下载一个项目。</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="提交与修改"><a href="#提交与修改" class="headerlink" title="提交与修改"></a>提交与修改</h2><p>Git 的工作就是创建和保存你的项目的快照及与之后的快照进行对比。</p>
-<p>下表列出了有关创建与提交你的项目的快照的命令：</p>
-<table>
-<thead>
-<tr>
-<th align="left">命令</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>git add</code></td>
-<td align="left">添加文件到暂存区</td>
-</tr>
-<tr>
-<td align="left"><code>git status</code></td>
-<td align="left">查看仓库当前的状态，显示有变更的文件。</td>
-</tr>
-<tr>
-<td align="left"><code>git diff</code></td>
-<td align="left">比较文件的不同，即暂存区和工作区的差异。</td>
-</tr>
-<tr>
-<td align="left"><code>git commit</code></td>
-<td align="left">提交暂存区到本地仓库。</td>
-</tr>
-<tr>
-<td align="left"><code>git reset</code></td>
-<td align="left">回退版本。</td>
-</tr>
-<tr>
-<td align="left"><code>git rm</code></td>
-<td align="left">删除工作区文件。</td>
-</tr>
-<tr>
-<td align="left"><code>git mv</code></td>
-<td align="left">移动或重命名工作区文件。</td>
-</tr>
-</tbody></table>
-<h3 id="提交日志"><a href="#提交日志" class="headerlink" title="提交日志"></a>提交日志</h3><table>
-<thead>
-<tr>
-<th align="left">命令</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>git log</code></td>
-<td align="left">查看历史提交记录</td>
-</tr>
-<tr>
-<td align="left"><code>git blame &lt;file&gt;</code></td>
-<td align="left">以列表形式查看指定文件的历史修改记录</td>
-</tr>
-</tbody></table>
-<h3 id="远程操作"><a href="#远程操作" class="headerlink" title="远程操作"></a>远程操作</h3><table>
-<thead>
-<tr>
-<th align="left">命令</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>git remote</code></td>
-<td align="left">远程仓库操作</td>
-</tr>
-<tr>
-<td align="left"><code>git fetch</code></td>
-<td align="left">从远程获取代码库</td>
-</tr>
-<tr>
-<td align="left"><code>git pull</code></td>
-<td align="left">下载远程代码并合并</td>
-</tr>
-<tr>
-<td align="left"><code>git push</code></td>
-<td align="left">上传远程代码并合并</td>
-</tr>
-</tbody></table>
-<h1 id="Git-分支管理"><a href="#Git-分支管理" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h1><p>几乎每一种版本控制系统都以某种形式支持分支，一个分支代表一条独立的开发线。</p>
-<p>使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。</p>
-<p><img src="https://static.runoob.com/images/svg/git-brance.svg" alt="img"></p>
-<p>Git 分支实际上是指向更改快照的指针。</p>
-<p>有人把 Git 的分支模型称为<strong>必杀技特性</strong>，而正是因为它，将 <strong>Git</strong> 从版本控制系统家族里区分出来。</p>
-<p>创建分支命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch (branchname)</span><br></pre></td></tr></table></figure>
+<p>如果显示 Apktool 的帮助信息，说明安装成功。</p>
+<h2 id="2-反编译-APK"><a href="#2-反编译-APK" class="headerlink" title="2. 反编译 APK"></a>2. 反编译 APK</h2><p>使用 Apktool 解包 APK 文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apktool d &lt;APK文件名&gt; -o &lt;输出目录&gt;</span><br></pre></td></tr></table></figure>
 
-<p>切换分支命令:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout (branchname)</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apktool d myapp.apk -o myapp</span><br></pre></td></tr></table></figure>
 
-<p>当你切换分支的时候，Git 会用该分支的最后提交的快照替换你的工作目录的内容， 所以多个分支不需要多个目录。</p>
-<p>合并分支命令:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge </span><br></pre></td></tr></table></figure>
+<p>此命令将 APK 文件解包到 <code>myapp</code> 文件夹中，你可以在该文件夹中修改资源文件（如背景、文字、logo等）。</p>
+<h2 id="3-重新打包-APK"><a href="#3-重新打包-APK" class="headerlink" title="3. 重新打包 APK"></a>3. 重新打包 APK</h2><p>在修改完成后，使用以下命令重新打包 APK：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apktool b &lt;解包目录&gt; -o &lt;输出APK文件名&gt;</span><br></pre></td></tr></table></figure>
 
-<p>你可以多次合并到统一分支， 也可以选择在合并之后直接删除被并入的分支。</p>
-<p>开始前我们先创建一个测试目录：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir gitdemo</span><br><span class="line">$ cd gitdemo/</span><br><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository...</span><br><span class="line">$ touch README</span><br><span class="line">$ git add README</span><br><span class="line">$ git commit -m &#x27;第一次版本提交&#x27;</span><br><span class="line">[master (root-commit) 3b58100] 第一次版本提交</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 README</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apktool b myapp -o mynewapp.apk</span><br></pre></td></tr></table></figure>
 
-<hr>
-<h2 id="Git-分支管理-1"><a href="#Git-分支管理-1" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h2><h3 id="列出分支"><a href="#列出分支" class="headerlink" title="列出分支"></a>列出分支</h3><p>列出分支基本命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+<h2 id="4-创建或获取密钥库"><a href="#4-创建或获取密钥库" class="headerlink" title="4. 创建或获取密钥库"></a>4. 创建或获取密钥库</h2><p>在重新打包之后，APK 需要进行签名。你可以使用以下命令创建一个新的密钥库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -v -keystore &lt;密钥库名称&gt;.jks -keyalg RSA -keysize 2048 -validity 10000 -<span class="built_in">alias</span> &lt;别名&gt;</span><br></pre></td></tr></table></figure>
 
-<p>没有参数时，<strong>git branch</strong> 会列出你在本地的分支。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -<span class="built_in">alias</span> my-key-alias</span><br></pre></td></tr></table></figure>
 
-<p>此例的意思就是，我们有一个叫做 <strong>master</strong> 的分支，并且该分支是当前分支。</p>
-<p>当你执行 <strong>git init</strong> 的时候，默认情况下 Git 就会为你创建 <strong>master</strong> 分支。</p>
-<p>如果我们要手动创建一个分支。执行 <strong>git branch (branchname)</strong> 即可。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git branch testing</span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line">  testing</span><br></pre></td></tr></table></figure>
+<h3 id="4-1-获取密钥库路径"><a href="#4-1-获取密钥库路径" class="headerlink" title="4.1 获取密钥库路径"></a>4.1 获取密钥库路径</h3><p>密钥库 <code>.jks</code> 文件生成后，将存放在当前工作目录下，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\&lt;用户名&gt;\my-release-key.jks</span><br></pre></td></tr></table></figure>
 
-<p>现在我们可以看到，有了一个新分支 <strong>testing</strong>。</p>
-<p>当你以此方式在上次提交更新之后创建了新分支，如果后来又有更新提交， 然后又切换到了 <strong>testing</strong> 分支，Git 将还原你的工作目录到你创建分支时候的样子。</p>
-<p>接下来我们将演示如何切换分支，我们用 git checkout (branch) 切换到我们要修改的分支。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ ls</span><br><span class="line">README</span><br><span class="line">$ echo &#x27;runoob.com&#x27; &gt; test.txt</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m &#x27;add test.txt&#x27;</span><br><span class="line">[master 3e92c19] add test.txt</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"> create mode 100644 test.txt</span><br><span class="line">$ ls</span><br><span class="line">README        test.txt</span><br><span class="line">$ git checkout testing</span><br><span class="line">Switched to branch &#x27;testing&#x27;</span><br><span class="line">$ ls</span><br><span class="line">README</span><br></pre></td></tr></table></figure>
+<p>你可以在签名时使用此路径。</p>
+<h2 id="5-签名-APK"><a href="#5-签名-APK" class="headerlink" title="5. 签名 APK"></a>5. 签名 APK</h2><h3 id="5-1-安装-apksigner"><a href="#5-1-安装-apksigner" class="headerlink" title="5.1 安装 apksigner"></a>5.1 安装 <code>apksigner</code></h3><p><code>apksigner</code> 是 Android SDK 工具的一部分。确保你已经安装了 Android SDK 并且包含 <code>build-tools</code> 组件。</p>
+<h3 id="5-2-配置环境变量"><a href="#5-2-配置环境变量" class="headerlink" title="5.2 配置环境变量"></a>5.2 配置环境变量</h3><p>将 Android SDK 的 <code>build-tools</code> 路径添加到环境变量 <code>Path</code> 中。通常路径为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\&lt;用户名&gt;\AppData\Local\Android\Sdk\build-tools\&lt;版本号&gt;</span><br></pre></td></tr></table></figure>
 
-<p>当我们切换到 <strong>testing</strong> 分支的时候，我们添加的新文件 test.txt 被移除了。切换回 <strong>master</strong> 分支的时候，它们又重新出现了。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout master</span><br><span class="line">Switched to branch &#x27;master&#x27;</span><br><span class="line">$ ls</span><br><span class="line">README        test.txt</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\YourUsername\AppData\Local\Android\Sdk\build-tools\31.0.0</span><br></pre></td></tr></table></figure>
 
-<p>我们也可以使用 git checkout -b (branchname) 命令来创建新分支并立即切换到该分支下，从而在该分支中操作。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b newtest</span><br><span class="line">Switched to a new branch &#x27;newtest&#x27;</span><br><span class="line">$ git rm test.txt </span><br><span class="line">rm &#x27;test.txt&#x27;</span><br><span class="line">$ ls</span><br><span class="line">README</span><br><span class="line">$ touch runoob.php</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -am &#x27;removed test.txt、add runoob.php&#x27;</span><br><span class="line">[newtest c1501a2] removed test.txt、add runoob.php</span><br><span class="line"> 2 files changed, 1 deletion(-)</span><br><span class="line"> create mode 100644 runoob.php</span><br><span class="line"> delete mode 100644 test.txt</span><br><span class="line">$ ls</span><br><span class="line">README        runoob.php</span><br><span class="line">$ git checkout master</span><br><span class="line">Switched to branch &#x27;master&#x27;</span><br><span class="line">$ ls</span><br><span class="line">README        test.txt</span><br></pre></td></tr></table></figure>
+<h3 id="5-3-签名-APK-文件"><a href="#5-3-签名-APK-文件" class="headerlink" title="5.3 签名 APK 文件"></a>5.3 签名 APK 文件</h3><p>使用 <code>apksigner</code> 命令对 APK 文件进行签名：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apksigner sign --ks &lt;密钥库路径&gt; --ks-key-alias &lt;别名&gt; --ks-pass pass:&lt;密钥库密码&gt; --key-pass pass:&lt;密钥密码&gt; --out &lt;签名后的APK路径&gt; &lt;APK路径&gt;</span><br></pre></td></tr></table></figure>
 
-<p>如你所见，我们创建了一个分支，在该分支上移除了一些文件 test.txt，并添加了 runoob.php 文件，然后切换回我们的主分支，删除的 test.txt 文件又回来了，且新增加的 runoob.php 不存在主分支中。</p>
-<p>使用分支将工作切分开来，从而让我们能够在不同开发环境中做事，并来回切换。</p>
-<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p>删除分支命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d (branchname)</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apksigner sign --ks my-release-key.jks --ks-key-alias my-key-alias --ks-pass pass:password --key-pass pass:password --out mynewapp_signed.apk mynewapp.apk</span><br></pre></td></tr></table></figure>
 
-<p>例如我们要删除 testing 分支：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line">  testing</span><br><span class="line">$ git branch -d testing</span><br><span class="line">Deleted branch testing (was 85fc7e7).</span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
+<h2 id="6-验证签名"><a href="#6-验证签名" class="headerlink" title="6. 验证签名"></a>6. 验证签名</h2><p>签名后，可以使用以下命令验证签名：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apksigner verify mynewapp_signed.apk</span><br></pre></td></tr></table></figure>
 
-<h3 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h3><p>一旦某分支有了独立内容，你终究会希望将它合并回到你的主分支。 你可以使用以下命令将任何分支合并到当前分支中去：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">git merge</span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line">  newtest</span><br><span class="line">$ ls</span><br><span class="line">README        test.txt</span><br><span class="line">$ git merge newtest</span><br><span class="line">Updating 3e92c19..c1501a2</span><br><span class="line">Fast-forward</span><br><span class="line"> runoob.php | 0</span><br><span class="line"> test.txt   | 1 -</span><br><span class="line"> 2 files changed, 1 deletion(-)</span><br><span class="line"> create mode 100644 runoob.php</span><br><span class="line"> delete mode 100644 test.txt</span><br><span class="line">$ ls</span><br><span class="line">README        runoob.php</span><br></pre></td></tr></table></figure>
+<h2 id="7-安装新的-APK"><a href="#7-安装新的-APK" class="headerlink" title="7. 安装新的 APK"></a>7. 安装新的 APK</h2><p>最后，使用 <code>adb</code> 将签名后的 APK 安装到设备上：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb install mynewapp_signed.apk</span><br></pre></td></tr></table></figure>
 
-<p>以上实例中我们将 newtest 分支合并到主分支去，test.txt 文件被删除。</p>
-<p>合并完后就可以删除分支:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d newtest</span><br><span class="line">Deleted branch newtest (was c1501a2).</span><br></pre></td></tr></table></figure>
-
-<p>删除后， 就只剩下 master 分支了：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
-
-<h3 id="合并冲突"><a href="#合并冲突" class="headerlink" title="合并冲突"></a>合并冲突</h3><p>合并并不仅仅是简单的文件添加、移除的操作，Git 也会合并修改。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line">$ cat runoob.php</span><br></pre></td></tr></table></figure>
-
-<p>首先，我们创建一个叫做 change_site 的分支，切换过去，我们将 runoob.php 内容改为:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &#x27;runoob&#x27;;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-
-<p>创建 change_site 分支：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b change_site</span><br><span class="line">Switched to a new branch &#x27;change_site&#x27;</span><br><span class="line">$ vim runoob.php</span><br><span class="line">$ head -3 runoob.php</span><br><span class="line">&lt;?php</span><br><span class="line">echo &#x27;runoob&#x27;;</span><br><span class="line">?&gt;</span><br><span class="line">$ git commit -am &#x27;changed the runoob.php&#x27;</span><br><span class="line">[change_site 7774248] changed the runoob.php</span><br><span class="line"> 1 file changed, 3 insertions(+)</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
-
-<p>将修改的内容提交到 change_site 分支中。 现在，假如切换回 master 分支我们可以看内容恢复到我们修改前的(空文件，没有代码)，我们再次修改 runoob.php 文件。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout master</span><br><span class="line">Switched to branch &#x27;master&#x27;</span><br><span class="line">$ cat runoob.php</span><br><span class="line">$ vim runoob.php    # 修改内容如下</span><br><span class="line">$ cat runoob.php</span><br><span class="line">&lt;?php</span><br><span class="line">echo 1;</span><br><span class="line">?&gt;</span><br><span class="line">$ git diff</span><br><span class="line">diff --git a/runoob.php b/runoob.php</span><br><span class="line">index e69de29..ac60739 100644</span><br><span class="line">--- a/runoob.php</span><br><span class="line">+++ b/runoob.php</span><br><span class="line">@@ -0,0 +1,3 @@</span><br><span class="line">+&lt;?php</span><br><span class="line">+echo 1;</span><br><span class="line">+?&gt;</span><br><span class="line">$ git commit -am &#x27;修改代码&#x27;</span><br><span class="line">[master c68142b] 修改代码</span><br><span class="line"> 1 file changed, 3 insertions(+)</span><br></pre></td></tr></table></figure>
-
-<p>现在这些改变已经记录到我的 “master” 分支了。接下来我们将 “change_site” 分支合并过来。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ git merge change_site</span><br><span class="line">Auto-merging runoob.php</span><br><span class="line">CONFLICT (content): Merge conflict in runoob.php</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br><span class="line"></span><br><span class="line">$ cat runoob.php     # 打开文件，看到冲突内容</span><br><span class="line">&lt;?php</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">echo 1;</span><br><span class="line">=======</span><br><span class="line">echo &#x27;runoob&#x27;;</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; change_site</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-
-<p>我们将前一个分支合并到 master 分支，一个合并冲突就出现了，接下来我们需要手动去修改它。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ vim runoob.php </span><br><span class="line">$ cat runoob.php</span><br><span class="line">&lt;?php</span><br><span class="line">echo 1;</span><br><span class="line">echo &#x27;runoob&#x27;;</span><br><span class="line">?&gt;</span><br><span class="line">$ git diff</span><br><span class="line">diff --cc runoob.php</span><br><span class="line">index ac60739,b63d7d7..0000000</span><br><span class="line">--- a/runoob.php</span><br><span class="line">+++ b/runoob.php</span><br><span class="line">@@@ -1,3 -1,3 +1,4 @@@</span><br><span class="line">  &lt;?php</span><br><span class="line"> +echo 1;</span><br><span class="line">+ echo &#x27;runoob&#x27;;</span><br><span class="line">  ?&gt;</span><br></pre></td></tr></table></figure>
-
-<p>在 Git 中，我们可以用 git add 要告诉 Git 文件冲突已经解决</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git status -s</span><br><span class="line">UU runoob.php</span><br><span class="line">$ git add runoob.php</span><br><span class="line">$ git status -s</span><br><span class="line">M  runoob.php</span><br><span class="line">$ git commit</span><br><span class="line">[master 88afe0e] Merge branch &#x27;change_site&#x27;</span><br></pre></td></tr></table></figure>
+<p>至此，你已经成功完成了 APK 的反编译、修改以及重新签名操作。</p>
 
     </div>
 
@@ -522,7 +380,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Git-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">Git 基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.1.</span> <span class="nav-text">创建仓库命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E4%BA%A4%E4%B8%8E%E4%BF%AE%E6%94%B9"><span class="nav-number">1.1.</span> <span class="nav-text">提交与修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E4%BA%A4%E6%97%A5%E5%BF%97"><span class="nav-number">1.1.1.</span> <span class="nav-text">提交日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C"><span class="nav-number">1.1.2.</span> <span class="nav-text">远程操作</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git-%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">Git 分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86-1"><span class="nav-number">2.1.</span> <span class="nav-text">Git 分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E5%87%BA%E5%88%86%E6%94%AF"><span class="nav-number">2.1.1.</span> <span class="nav-text">列出分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="nav-number">2.1.2.</span> <span class="nav-text">删除分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6"><span class="nav-number">2.1.3.</span> <span class="nav-text">分支合并</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81"><span class="nav-number">2.1.4.</span> <span class="nav-text">合并冲突</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8CApk%E5%8F%8D%E7%BC%96%E8%AF%91%E5%8A%A0%E7%AD%BE%E5%90%8D"><span class="nav-number">1.</span> <span class="nav-text">如何进行Apk反编译加签名</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85%E5%B9%B6%E4%BD%BF%E7%94%A8-apktool"><span class="nav-number">1.1.</span> <span class="nav-text">1. 安装并使用 apktool</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%AE%89%E8%A3%85-Apktool"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 下载并安装 Apktool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E9%85%8D%E7%BD%AE-Apktool"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 配置 Apktool</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows-%E7%94%A8%E6%88%B7"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">Windows 用户</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%8F%8D%E7%BC%96%E8%AF%91-APK"><span class="nav-number">1.2.</span> <span class="nav-text">2. 反编译 APK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E9%87%8D%E6%96%B0%E6%89%93%E5%8C%85-APK"><span class="nav-number">1.3.</span> <span class="nav-text">3. 重新打包 APK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%88%9B%E5%BB%BA%E6%88%96%E8%8E%B7%E5%8F%96%E5%AF%86%E9%92%A5%E5%BA%93"><span class="nav-number">1.4.</span> <span class="nav-text">4. 创建或获取密钥库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E8%8E%B7%E5%8F%96%E5%AF%86%E9%92%A5%E5%BA%93%E8%B7%AF%E5%BE%84"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1 获取密钥库路径</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E7%AD%BE%E5%90%8D-APK"><span class="nav-number">1.5.</span> <span class="nav-text">5. 签名 APK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E5%AE%89%E8%A3%85-apksigner"><span class="nav-number">1.5.1.</span> <span class="nav-text">5.1 安装 apksigner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">1.5.2.</span> <span class="nav-text">5.2 配置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-%E7%AD%BE%E5%90%8D-APK-%E6%96%87%E4%BB%B6"><span class="nav-number">1.5.3.</span> <span class="nav-text">5.3 签名 APK 文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E9%AA%8C%E8%AF%81%E7%AD%BE%E5%90%8D"><span class="nav-number">1.6.</span> <span class="nav-text">6. 验证签名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E5%AE%89%E8%A3%85%E6%96%B0%E7%9A%84-APK"><span class="nav-number">1.7.</span> <span class="nav-text">7. 安装新的 APK</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
